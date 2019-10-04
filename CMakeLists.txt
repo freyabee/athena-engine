@@ -7,7 +7,6 @@ add_library(prometheus
 
 add_executable(sandbox
   src/sandbox/main.cpp
-  
 )
 
 target_link_libraries(sandbox prometheus)
