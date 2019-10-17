@@ -1,7 +1,9 @@
-#include <iostream>
+#include "Core.h"
 
-int main()
+Core:: Core()
 {
-	std::cout << "Welcome to Prometheus Engine" << std::endl;
-	return 0;
+}
+
+Core::~Core()
+{
 }
