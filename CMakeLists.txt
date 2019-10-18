@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
 project(PROMETHEUS_ENGINE)
+include_directories(
+src
+lib
+)
 
 add_library(prometheus
 src/prometheus/Core.cpp
@@ -12,7 +16,7 @@ src/prometheus/Environment.cpp
 src/prometheus/Environment.h
 src/prometheus/Keyboard.cpp
 src/prometheus/Keyboard.h
-
+src/prometheus/prometheus.h
 )
 
 add_executable(game

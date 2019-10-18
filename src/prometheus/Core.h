@@ -3,12 +3,12 @@
 #define _CORE_H_
 
 //Includes
-#include "Environment.h"
-#include "Entity.h"
-#include "Keyboard.h"
 #include <memory>
 #include <vector>
 
+class Entity;
+class Keyboard;
+class Environment;
 //Body
 class Core
 {
@@ -16,7 +16,7 @@ public:
 	Core();
 	~Core();
 
-	std::shared_ptr<Core> initialize();
+	static std::shared_ptr<Core> initialize();
 	void start();
 	void stop();
 	std::shared_ptr<Entity> addEntity();
