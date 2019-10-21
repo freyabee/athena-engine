@@ -15,6 +15,7 @@ namespace prometheus
 		friend class Core;
 	public:
 		//Functions
+		
 		std::shared_ptr<Core> getCore();
 
 		//Templated add components
@@ -43,7 +44,7 @@ namespace prometheus
 		//Functions
 		void tick();
 		void display();
-
+		std::weak_ptr<Entity> self;
 	};
 
 }

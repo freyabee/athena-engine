@@ -17,10 +17,11 @@ src/prometheus/Environment.h
 src/prometheus/Keyboard.cpp
 src/prometheus/Keyboard.h
 src/prometheus/prometheus.h
+src/prometheus/testscreen.cpp
+src/prometheus/testscreen.h
 )
 
-add_executable(game
-  src/game/main.cpp
+add_executable(game src/game/main.cpp
 )
 
 target_link_libraries(game prometheus)

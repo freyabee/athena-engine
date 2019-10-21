@@ -12,6 +12,7 @@ namespace prometheus
 	class Keyboard;
 	class Environment;
 
+
 	class Core
 	{
 	public:
@@ -26,6 +27,7 @@ namespace prometheus
 		std::shared_ptr<Environment> environment;
 		std::vector<std::shared_ptr<Entity>> entities; //Vec holding entities in this core
 		std::shared_ptr<Keyboard> keyboard;
+		std::weak_ptr<Core> self;
 		bool running;
 	};
 }

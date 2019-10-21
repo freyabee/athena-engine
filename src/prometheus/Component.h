@@ -3,11 +3,12 @@
 #define _COMPONENT_H_
 //Includes
 #include <memory>
+
 namespace prometheus
 {
-	class Entity;
-	class Core;
 
+	class Core;
+	class Entity;
 
 	class Component
 	{

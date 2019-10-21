@@ -8,6 +8,7 @@ namespace prometheus
 
 	void Entity::tick()
 	{
+
 	}
 
 	void Entity::display()
