@@ -1,19 +1,22 @@
 #include "Environment.h"
-
-Environment::Environment()
+namespace prometheus
 {
+	Environment::Environment()
+	{
+	}
+
+	Environment::~Environment()
+	{
+	}
+
+	float Environment::getDeltaTime()
+	{
+		return 0.0f;
+	}
+
+	float Environment::deltaTime()
+	{
+		return 0.0f;
+	}
 }
 
-Environment::~Environment()
-{
-}
-
-float Environment::getDeltaTime()
-{
-	return 0.0f;
-}
-
-float Environment::deltaTime()
-{
-	return 0.0f;
-}

@@ -4,20 +4,23 @@
 #define _KEYBOARD_H_
 
 #include <vector>
-
-class Keyboard
+namespace prometheus
 {
-public:
-	Keyboard();
-	~Keyboard();
+	class Keyboard
+	{
+	public:
+		Keyboard();
+		~Keyboard();
 
-	bool getKey(int _keyCode);
-	bool getKeyDown(int _keyCode);
-	bool getKeyUp(int _keyCode);
+		bool getKey(int _keyCode);
+		bool getKeyDown(int _keyCode);
+		bool getKeyUp(int _keyCode);
 
-private:
-	std::vector<int> keyCodes;
+	private:
+		std::vector<int> keyCodes;
 
-};
+	};
+}
+
 
 #endif // !_KEYBOARD_H_

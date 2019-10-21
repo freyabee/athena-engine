@@ -1,22 +1,16 @@
 #include "Entity.h"
-
-Entity::Entity()
+namespace prometheus
 {
-}
+	std::shared_ptr<Core> Entity::getCore()
+	{
+		return core.lock();
+	}
 
-Entity::~Entity()
-{
-}
+	void Entity::tick()
+	{
+	}
 
-std::shared_ptr<Core> Entity::getCore()
-{
-	return std::shared_ptr<Core>();
-}
-
-void Entity::tick()
-{
-}
-
-void Entity::display()
-{
+	void Entity::display()
+	{
+	}
 }

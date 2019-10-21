@@ -6,26 +6,28 @@
 #include <memory>
 #include <vector>
 
-class Entity;
-class Keyboard;
-class Environment;
-//Body
-class Core
+namespace prometheus
 {
-public:
-	Core();
-	~Core();
+	class Entity;
+	class Keyboard;
+	class Environment;
 
-	static std::shared_ptr<Core> initialize();
-	void start();
-	void stop();
-	std::shared_ptr<Entity> addEntity();
+	class Core
+	{
+	public:
+		//Functions
+		static std::shared_ptr<Core> initialize();
+		void start();
+		void stop();
+		std::shared_ptr<Entity> addEntity();
 
-private:
-	std::shared_ptr<Environment> environment;
-	std::vector<std::shared_ptr<Entity>> entities;
-	std::shared_ptr<Keyboard> keyboard;
-	bool running;
-};
+	private:
+		//Variables
+		std::shared_ptr<Environment> environment;
+		std::vector<std::shared_ptr<Entity>> entities; //Vec holding entities in this core
+		std::shared_ptr<Keyboard> keyboard;
+		bool running;
+	};
+}
 
 #endif // !_CORE_H_

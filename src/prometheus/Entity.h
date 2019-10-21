@@ -8,38 +8,44 @@
 class Component;
 class Core;
 //Body
-
-class Entity
+namespace prometheus
 {
-public:
-	Entity();
-	~Entity();
-
-	std::shared_ptr<Core> getCore();
-	template<typename T> std::shared_ptr<T> addComponent()
+	class Entity
 	{
-		return std::shared_ptr<T>();
-	}
-	template<typename T, typename A> std::shared_ptr<T> addComponent(A _a)
-	{
-		return std::shared_ptr<T>();
-	}
-	template<typename T, typename A, typename B> std::shared_ptr<T> addComponent(A _a, B _b)
-	{
-		return std::shared_ptr<T>();
-	}
-	template<typename T, typename A, typename B, typename C> std::shared_ptr<T> addComponent(A _a, B _b, C _c)
-	{
-		return std::shared_ptr<T>();
-	}
+		friend class Core;
+	public:
+		//Functions
+		std::shared_ptr<Core> getCore();
 
-private:
-	std::vector<std::shared_ptr<Component>> components;
-	std::weak_ptr<Core> core;
+		//Templated add components
+		template<typename T> std::shared_ptr<T> addComponent()
+		{
+			return std::shared_ptr<T>();
+		}
+		template<typename T, typename A> std::shared_ptr<T> addComponent(A _a)
+		{
+			return std::shared_ptr<T>();
+		}
+		template<typename T, typename A, typename B> std::shared_ptr<T> addComponent(A _a, B _b)
+		{
+			return std::shared_ptr<T>();
+		}
+		template<typename T, typename A, typename B, typename C> std::shared_ptr<T> addComponent(A _a, B _b, C _c)
+		{
+			return std::shared_ptr<T>();
+		}
 
-	void tick();
-	void display();
+	private:
+		//Variables
+		std::vector<std::shared_ptr<Component>> components;
+		std::weak_ptr<Core> core;
 
-};
+		//Functions
+		void tick();
+		void display();
+
+	};
+
+}
 
 #endif // !_ENTITY_H_
