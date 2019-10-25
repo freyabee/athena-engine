@@ -6,7 +6,6 @@
 
 namespace prometheus
 {
-
 	class Core;
 	class Entity;
 
@@ -17,13 +16,17 @@ namespace prometheus
 
 	public:
 		//virtuals = a function declared in a base class that is re-defined in a derived class (override)
-		virtual ~Component();
+		~Component();
 
 		std::shared_ptr<Core> getCore();
 		std::shared_ptr<Entity> getEntity();
 
-	private:
+	protected:
 		std::weak_ptr<Entity> entity;
+		virtual void onInit() {};
+		virtual void onBegin() {};
+		virtual void onTick() {};
+		virtual void onDisplay() {};
 
 	};
 }

@@ -9,12 +9,23 @@ namespace prometheus
 		std::shared_ptr<Core> temp = std::make_shared<Core>();
 		temp->running = false;
 		temp->self = temp;
-
 		return temp;
 	}
 
 	void Core::start()
 	{
+		running = true;
+
+		while (running)
+		{
+			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
+			{
+				std::cout << "LOG: GAME LOOP" << std::endl;
+				(*it)->onTick();
+				(*it)->onDisplay();
+
+			}
+		}
 	}
 
 	void Core::stop()
@@ -23,11 +34,13 @@ namespace prometheus
 
 	std::shared_ptr<Entity> Core::addEntity()
 	{
-		std::shared_ptr<Entity> tempEntity = std::make_shared<Entity>();
-		entities.push_back(tempEntity);
-		tempEntity->self;
+		std::shared_ptr<Entity> rtn = std::make_shared<Entity>();
+		entities.push_back(rtn);
+		rtn->self;
+
 		std::cout << "LOG: Entity made" << std::endl;
-		return std::shared_ptr<Entity>(tempEntity);
+
+		return rtn;
 	}
 }
 

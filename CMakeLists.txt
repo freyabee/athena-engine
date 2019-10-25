@@ -17,11 +17,11 @@ src/prometheus/Environment.h
 src/prometheus/Keyboard.cpp
 src/prometheus/Keyboard.h
 src/prometheus/prometheus.h
-src/prometheus/testscreen.cpp
-src/prometheus/testscreen.h
+src/prometheus/trianglerenderer.h
+src/prometheus/trianglerenderer.cpp
 )
 
 add_executable(game src/game/main.cpp
 )
 
-target_link_libraries(game prometheus)
+target_link_libraries(game prometheus SDL2 glew32 opengl32)
