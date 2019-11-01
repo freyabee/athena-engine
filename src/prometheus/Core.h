@@ -11,7 +11,7 @@ namespace prometheus
 	class Entity;
 	class Keyboard;
 	class Environment;
-
+	class Transform;
 
 	class Core
 	{
@@ -21,6 +21,9 @@ namespace prometheus
 		void start();
 		void stop();
 		std::shared_ptr<Entity> addEntity();
+
+		std::shared_ptr<Environment> getEnvironment();
+		std::shared_ptr<Keyboard> getKeyboard();
 
 	private:
 		//Variables

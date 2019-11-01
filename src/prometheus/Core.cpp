@@ -37,10 +37,18 @@ namespace prometheus
 		std::shared_ptr<Entity> rtn = std::make_shared<Entity>();
 		entities.push_back(rtn);
 		rtn->self;
-
+		rtn->addComponent<Transform>();
 		std::cout << "LOG: Entity made" << std::endl;
 
 		return rtn;
+	}
+	std::shared_ptr<Environment> Core::getEnvironment()
+	{
+		return environment;
+	}
+	std::shared_ptr<Keyboard> Core::getKeyboard()
+	{
+		return keyboard;
 	}
 }
 

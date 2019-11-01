@@ -6,7 +6,9 @@
 #include "Entity.h"
 #include "Component.h"
 #include "TriangleRenderer.h"
-
+#include "Transform.h"
+#include "Keyboard.h"
+#include "Environment.h"
 
 #endif // !PROMETHEUS_H_
 

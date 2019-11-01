@@ -8,6 +8,9 @@ namespace prometheus
 {
 	class Core;
 	class Entity;
+	class Keyboard;
+	class Environment;
+
 
 	class Component
 	{
@@ -20,6 +23,8 @@ namespace prometheus
 
 		std::shared_ptr<Core> getCore();
 		std::shared_ptr<Entity> getEntity();
+		std::shared_ptr<Keyboard> getKeyboard();
+		std::shared_ptr<Environment> getEnvironment();
 
 	protected:
 		std::weak_ptr<Entity> entity;
