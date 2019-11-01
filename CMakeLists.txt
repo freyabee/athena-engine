@@ -19,6 +19,8 @@ src/prometheus/Keyboard.h
 src/prometheus/prometheus.h
 src/prometheus/trianglerenderer.h
 src/prometheus/trianglerenderer.cpp
+src/prometheus/transform.h
+src/prometheus/transform.cpp
 )
 
 add_executable(game src/game/main.cpp
