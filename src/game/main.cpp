@@ -7,7 +7,9 @@ int main()
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
 	std::shared_ptr<prometheus::Entity> entity = core->addEntity();
 	
-	std::shared_ptr<prometheus::TriangleRenderer> tr = entity->addComponent<prometheus::TriangleRenderer>();
+	std::shared_ptr<prometheus::MeshRenderer> renderer = entity->addComponent<prometheus::MeshRenderer>();
+
+
 	core->start();
 	//Create entity
 

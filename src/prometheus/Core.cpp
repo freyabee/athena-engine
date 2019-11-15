@@ -1,6 +1,8 @@
 #include "Core.h"
 #include "Entity.h"
 #include <iostream>
+
+
 namespace prometheus
 {
 	std::shared_ptr<Core> Core::initialize()
@@ -37,7 +39,7 @@ namespace prometheus
 		std::shared_ptr<Entity> rtn = std::make_shared<Entity>();
 		entities.push_back(rtn);
 		rtn->self;
-		rtn->addComponent<Transform>();
+		//rtn->addComponent<prometheus::Transform>();
 		std::cout << "LOG: Entity made" << std::endl;
 
 		return rtn;

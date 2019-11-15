@@ -5,7 +5,7 @@
 #include "Core.h"
 #include "Entity.h"
 #include "Component.h"
-#include "TriangleRenderer.h"
+#include "MeshRenderer.h"
 #include "Transform.h"
 #include "Keyboard.h"
 #include "Environment.h"

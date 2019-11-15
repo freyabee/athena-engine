@@ -15,7 +15,6 @@ namespace prometheus
 	{
 		friend class Core;
 	public:
-		//Functions
 		
 		std::shared_ptr<Core> getCore();
 
