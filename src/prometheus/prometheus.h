@@ -10,6 +10,10 @@
 #include "Keyboard.h"
 #include "Environment.h"
 
+namespace prometheus
+{
+	using namespace rend;
+}
 #endif // !PROMETHEUS_H_
 
 

@@ -54,19 +54,10 @@ namespace prometheus
 
 		//TODO: ABSTRACT INTO SCREEN CLASS!!!!!
 		//LEAVE UNTIL IMPLEMENT REND THO
-		if (SDL_Init(SDL_INIT_VIDEO) < 0)
-		{
-			throw std::exception();
-		}
+		
+		screen = std::make_shared<prometheus::Screen>(windowWidth,windowHeight);
 
-		window = SDL_CreateWindow("Lab 4 - Architecture",
-			SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-			windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
-
-		if (!SDL_GL_CreateContext(window))
-		{
-			throw std::exception();
-		}
+		
 
 		//REND
 
@@ -90,16 +81,14 @@ namespace prometheus
 	}
 	MeshRenderer::~MeshRenderer()
 	{
-		SDL_DestroyWindow(window);
-		SDL_Quit();
+		screen->DestroyScreen();
 	}
 	void MeshRenderer::onInit()
 	{
 	}
 	void MeshRenderer::onDisplay()
 	{
-		glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		screen->ClearWindow();
 
 
 		shader->setUniform("u_Projection", glm::perspective(glm::radians(45.0F), 1.0f, 0.1f, 100.0f));
@@ -107,7 +96,7 @@ namespace prometheus
 		shader->render();
 
 
-		SDL_GL_SwapWindow(window);
+		screen->SwapWindow();
 	}
 	void MeshRenderer::onTick()
 	{

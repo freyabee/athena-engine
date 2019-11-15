@@ -3,7 +3,7 @@
 #define _MESHRENDERER_H_
 #include <iostream>
 #include "Component.h"
-#include "SDL2/SDL.h"
+#include "Screen.h"
 #include "GL/glew.h"
 #include <rend/rend.h>
 namespace prometheus
@@ -20,13 +20,14 @@ namespace prometheus
 		std::shared_ptr<rend::Shader> shader;
 		std::shared_ptr<rend::Mesh> shape;
 
-
 		int windowHeight;
 		int windowWidth;
+
 		void onDisplay();
 		void onTick();
 		void onInit();
-		SDL_Window* window;
+		std::shared_ptr<prometheus::Screen> screen;
+		
 	};
 }
 

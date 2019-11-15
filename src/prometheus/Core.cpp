@@ -22,7 +22,7 @@ namespace prometheus
 		{
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
-				std::cout << "LOG: GAME LOOP" << std::endl;
+				//std::cout << "LOG: GAME LOOP" << std::endl;
 				(*it)->onTick();
 				(*it)->onDisplay();
 
