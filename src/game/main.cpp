@@ -11,13 +11,14 @@ int main()
 	
 	//add mesh renderer as component
 	std::shared_ptr<prometheus::MeshRenderer> renderer = entity->addComponent<prometheus::MeshRenderer>();
-
-	//TODO: load mesh resources into mesh object
-
-	std::shared_ptr<prometheus::Mesh> mesh;
-
+	
+	//Load Resources
+	std::shared_ptr<prometheus::Model> m1 = core->getResources()->load<prometheus::Model>("models/triangle");
 	//TODO:  setMesh in mesh renderer
+	renderer->setModel(m1);
 
+	std::shared_ptr<prometheus::Material> mat1 = core->getResources()->load<prometheus::Material>("shaders/simple");
+	renderer->setMaterial(mat1);
 
 	core->start();
 	//Create entity

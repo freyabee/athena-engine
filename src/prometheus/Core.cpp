@@ -1,5 +1,6 @@
 #include "Core.h"
 #include "Entity.h"
+#include "Resources.h"
 #include <iostream>
 
 
@@ -7,11 +8,14 @@ namespace prometheus
 {
 	std::shared_ptr<Core> Core::initialize()
 	{
-		
-		std::shared_ptr<Core> temp = std::make_shared<Core>();
-		temp->running = false;
-		temp->self = temp;
-		return temp;
+		std::shared_ptr<Core> rtn = std::make_shared<Core>();
+		rtn->running = false;
+		rtn->self = rtn;
+		rtn->context = rend::Context::initialize();
+		rtn->resources = std::make_shared<Resources>();
+		rtn->resources->core = rtn;
+
+		return rtn;
 	}
 
 	void Core::start()
@@ -52,5 +56,14 @@ namespace prometheus
 	{
 		return keyboard;
 	}
+	std::shared_ptr<rend::Context> Core::getContext()
+	{
+		return context;
+	}
+	std::shared_ptr<Resources> Core::getResources()
+	{
+		return resources;
+	}
+
 }
 

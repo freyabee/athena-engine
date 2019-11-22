@@ -9,7 +9,10 @@
 #include "Transform.h"
 #include "Keyboard.h"
 #include "Environment.h"
-
+#include "Model.h"
+#include "Material.h"
+#include "Resource.h"
+#include "Resources.h"
 namespace prometheus
 {
 	using namespace rend;

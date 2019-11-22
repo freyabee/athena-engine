@@ -46,6 +46,12 @@ src/prometheus/meshrenderer.h
 src/prometheus/meshrenderer.cpp
 src/prometheus/screen.h
 src/prometheus/screen.cpp
+src/prometheus/model.h
+src/prometheus/model.cpp
+src/prometheus/resources.h
+src/prometheus/resource.h
+src/prometheus/material.h
+src/prometheus/material.cpp
 )
 target_link_libraries(prometheus SDL2 rend)
 

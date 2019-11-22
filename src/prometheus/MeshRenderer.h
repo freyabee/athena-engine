@@ -3,11 +3,18 @@
 #define _MESHRENDERER_H_
 #include <iostream>
 #include "Component.h"
-#include "Screen.h"
 #include "GL/glew.h"
 #include <rend/rend.h>
+
+
+
 namespace prometheus
 {
+	class Model;
+	class Screen;
+	class Material;
+
+
 	class MeshRenderer : public Component
 	{
 	public:
@@ -15,11 +22,12 @@ namespace prometheus
 		~MeshRenderer();
 		
 
+		void setModel(std::shared_ptr<Model> _model);
+		void setMaterial(std::shared_ptr<Material> _mat);
 	private:
-		std::shared_ptr<rend::Context> context;
-		std::shared_ptr<rend::Shader> shader;
-		std::shared_ptr<rend::Mesh> shape;
-
+		
+		std::shared_ptr<Model> model;
+		std::shared_ptr<Material> material;
 		int windowHeight;
 		int windowWidth;
 
