@@ -25,7 +25,6 @@ namespace prometheus
 		void setModel(std::shared_ptr<Model> _model);
 		void setMaterial(std::shared_ptr<Material> _mat);
 	private:
-		
 		std::shared_ptr<Model> model;
 		std::shared_ptr<Material> material;
 		int windowHeight;
@@ -34,7 +33,7 @@ namespace prometheus
 		void onDisplay();
 		void onTick();
 		void onInit();
-		std::shared_ptr<prometheus::Screen> screen;
+		
 		
 	};
 }

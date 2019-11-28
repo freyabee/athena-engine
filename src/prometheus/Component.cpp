@@ -6,6 +6,11 @@ namespace prometheus
 {
 	Component::~Component() {}
 
+	void Component::setEntity(std::weak_ptr<Entity> _entity)
+	{
+		entity = _entity;
+	}
+
 	std::shared_ptr<Entity> Component::getEntity()
 	{
 		return entity.lock();
@@ -21,8 +26,14 @@ namespace prometheus
 		return getEntity()->getCore()->getEnvironment();
 	}
 
+	std::shared_ptr<Screen> Component::getScreen()
+	{
+		return getEntity()->getCore()->getScreen();
+	}
+
 	std::shared_ptr<Core> Component::getCore()
 	{
 		return getEntity()->getCore();
 	}
+
 }

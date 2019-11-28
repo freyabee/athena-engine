@@ -10,7 +10,7 @@ namespace prometheus
 	class Entity;
 	class Keyboard;
 	class Environment;
-
+	class Screen;
 
 	class Component
 	{
@@ -20,11 +20,13 @@ namespace prometheus
 	public:
 		//virtuals = a function declared in a base class that is re-defined in a derived class (override)
 		~Component();
+		void setEntity(std::weak_ptr<Entity> _entity);
 
 		std::shared_ptr<Core> getCore();
 		std::shared_ptr<Entity> getEntity();
 		std::shared_ptr<Keyboard> getKeyboard();
 		std::shared_ptr<Environment> getEnvironment();
+		std::shared_ptr<Screen> getScreen();
 
 	protected:
 		std::weak_ptr<Entity> entity;

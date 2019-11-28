@@ -7,14 +7,6 @@ namespace prometheus
 {
 	MeshRenderer::MeshRenderer()
 	{
-		windowHeight = 480;
-		windowWidth = 640;
-
-
-
-
-
-		screen = std::make_shared<prometheus::Screen>(windowWidth, windowHeight);
 		std::string s = "PLACEHOLDER";
 		try
 		{
@@ -42,7 +34,6 @@ namespace prometheus
 	}
 	MeshRenderer::~MeshRenderer()
 	{
-		screen->DestroyScreen();
 	}
 	void MeshRenderer::setModel(std::shared_ptr<Model> _model)
 	{
@@ -57,11 +48,11 @@ namespace prometheus
 	}
 	void MeshRenderer::onDisplay()
 	{
-		screen->ClearWindow();
+		
 		material->setUniform();
 		material->setModel(model);
 		material->getMaterial()->render();
-		screen->SwapWindow();
+		
 	}
 	void MeshRenderer::onTick()
 	{

@@ -3,6 +3,7 @@ project(PROMETHEUS_ENGINE)
 include_directories(
 src
 lib
+contrib
 )
 
 add_library(rend
@@ -21,6 +22,18 @@ if(MSVC)
 else()
   target_link_libraries(rend GLEW GL)
 endif()
+
+if(MSVC)
+  include_directories(
+    contrib/ogg/include
+    contrib/vorbis/include
+  )
+  link_directories(
+     ${CMAKE_SOURCE_DIR}/contrib/ogg/lib
+     ${CMAKE_SOURCE_DIR}/contrib/vorbis/lib
+  )
+endif()
+  
 
 add_library(prometheus
 src/prometheus/Core.cpp
@@ -52,8 +65,17 @@ src/prometheus/resources.h
 src/prometheus/resource.h
 src/prometheus/material.h
 src/prometheus/material.cpp
+src/prometheus/sound.h
+src/prometheus/sound.cpp
+src/prometheus/soundsource.h
+src/prometheus/soundsource.cpp
+src/prometheus/audiocontext.h
+src/prometheus/audiocontext.cpp
+
 )
-target_link_libraries(prometheus SDL2 rend)
+
+target_link_libraries(prometheus SDL2 rend OpenAL32 ogg vorbis vorbisfile OpenAL32)
+
 
 add_executable(game src/game/main.cpp
 )

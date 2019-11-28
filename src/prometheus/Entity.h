@@ -22,24 +22,28 @@ namespace prometheus
 		template<typename T> std::shared_ptr<T> addComponent()
 		{
 			std::shared_ptr<T> rtn = std::make_shared<T>();
+			rtn->setEntity(self);
 			components.push_back(rtn);
 			return rtn;
 		}
 		template<typename T, typename A> std::shared_ptr<T> addComponent(A _a)
 		{
 			std::shared_ptr<T> rtn = std::make_shared<T>(_a);
+			rtn->setEntity(self);
 			components.push_back(rtn);
 			return rtn;
 		}
 		template<typename T, typename A, typename B> std::shared_ptr<T> addComponent(A _a, B _b)
 		{
 			std::shared_ptr<T> rtn = std::make_shared<T>(_a, _b);
+			rtn->setEntity(self);
 			components.push_back(rtn);
 			return rtn;
 		}
 		template<typename T, typename A, typename B, typename C> std::shared_ptr<T> addComponent(A _a, B _b, C _c)
 		{
 			std::shared_ptr<T> rtn = std::make_shared<T>(_a, _b, _c);
+			rtn->setEntity(self);
 			components.push_back(rtn);
 			return rtn;
 		}
