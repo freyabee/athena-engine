@@ -4,19 +4,24 @@
 
 #include <string>
 #include <memory>
+#include "AL/al.h"
 #include "Resource.h"
 namespace prometheus
 {
+	class SoundSource;
+
+
 	class Sound : public Resource
 	{
 	public:
-		Sound();
-		Sound(std::string path);
 
 		void load(std::string path);
 		void play(float volume, float min, float max);
 		void play();
 	private:
+		friend class SoundSource;
+
+		ALuint bufferId;
 
 	};
 }

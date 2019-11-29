@@ -26,7 +26,7 @@ namespace prometheus
 	}
 	void Transform::rotate(glm::vec3 _amount)
 	{
-		//TODO: Finish this function with glm rotations
+		//TODO: Finish this function with glm rotation
 	}
 	void Transform::setLocalPosition(glm::vec3 _position)
 	{

@@ -23,19 +23,12 @@ else()
   target_link_libraries(rend GLEW GL)
 endif()
 
-if(MSVC)
-  include_directories(
-    contrib/ogg/include
-    contrib/vorbis/include
-  )
-  link_directories(
-     ${CMAKE_SOURCE_DIR}/contrib/ogg/lib
-     ${CMAKE_SOURCE_DIR}/contrib/vorbis/lib
-  )
-endif()
+
   
 
 add_library(prometheus
+src/prometheus/stb_vorbis.h
+src/prometheus/tinyobj.h
 src/prometheus/Core.cpp
 src/prometheus/Core.h
 src/prometheus/Component.cpp
@@ -71,10 +64,9 @@ src/prometheus/soundsource.h
 src/prometheus/soundsource.cpp
 src/prometheus/audiocontext.h
 src/prometheus/audiocontext.cpp
-
 )
 
-target_link_libraries(prometheus SDL2 rend OpenAL32 ogg vorbis vorbisfile OpenAL32)
+target_link_libraries(prometheus SDL2 rend OpenAL32)
 
 
 add_executable(game src/game/main.cpp

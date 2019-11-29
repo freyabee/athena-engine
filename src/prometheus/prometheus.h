@@ -13,6 +13,8 @@
 #include "Material.h"
 #include "Resource.h"
 #include "Resources.h"
+#include "Sound.h"
+#include "SoundSource.h"
 namespace prometheus
 {
 	using namespace rend;
