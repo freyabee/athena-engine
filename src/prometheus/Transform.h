@@ -20,10 +20,13 @@ namespace prometheus
 		void setLocalRotation(glm::vec3 _rotation);
 		void setLocalScale(glm::vec3 _scale);
 
+
+		std::unique_ptr<glm::mat4> GetModelMatrix();
 	private:
 		glm::vec3 localPosition;
 		glm::vec3 localRotation;
 		glm::vec3 localScale;
+		glm::mat4 modelMatrix;
 	};
 }
 #endif // !TRANSFORM_H_

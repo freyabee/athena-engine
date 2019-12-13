@@ -11,13 +11,16 @@ namespace prometheus
 {
 	class Component;
 	class Core;
+	class Transform;
+
+
 	class Entity
 	{
 		friend class Core;
 	public:
 		
 		std::shared_ptr<Core> getCore();
-
+		Entity();
 		//Templated add components
 		template<typename T> std::shared_ptr<T> addComponent()
 		{
@@ -48,11 +51,14 @@ namespace prometheus
 			return rtn;
 		}
 
+
+		std::shared_ptr<Transform> GetTransform();
+
 	private:
 		//Variables
 		std::vector<std::shared_ptr<Component>> components;
 		std::weak_ptr<Core> core;
-
+		std::weak_ptr<Transform> transform;
 		//Functions
 		void onTick();
 		void onDisplay();

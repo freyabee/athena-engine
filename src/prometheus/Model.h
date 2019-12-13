@@ -19,7 +19,6 @@ namespace prometheus
 	private:
 		std::shared_ptr<rend::Mesh> mesh;
 		std::string obj;
-		//const char* obj;
 
 	};
 

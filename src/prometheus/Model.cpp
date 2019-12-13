@@ -24,8 +24,6 @@ namespace prometheus
 		}
 
 		mesh->parse(obj);
-
-
 	}
 	std::shared_ptr<rend::Mesh> Model::getMesh()
 	{

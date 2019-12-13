@@ -21,4 +21,13 @@ namespace prometheus
 	{
 		return cameraPosition;
 	}
+	void Camera::setCameraPos(glm::vec3 newPosition)
+	{
+	}
+	void Camera::setProjection(glm::mat4 newProjection)
+	{
+	}
+	void Camera::setView(glm::mat4 newView)
+	{
+	}
 }

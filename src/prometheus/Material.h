@@ -18,7 +18,7 @@ namespace prometheus
 	public:
 		void load(std::string shader);
 		void setModel(std::shared_ptr<Model> model);
-		void setUniform();
+		void setUniform(glm::mat4 _modelMat);
 
 		std::shared_ptr<rend::Shader> getMaterial();
 

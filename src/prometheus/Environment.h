@@ -10,9 +10,17 @@ namespace prometheus
 		Environment();
 		~Environment();
 
-		float getDeltaTime();
+		void Initialize();
+		float GetDeltaTime();
+		void SetDeltaTime(float _deltaTime);
+		void UpdateDeltaTime();
+		void SleepOffTime();
+
+
 	private:
-		float deltaTime();
+		float deltaTime;
+		float lastTime;
+		float idealFPS;
 
 	};
 }

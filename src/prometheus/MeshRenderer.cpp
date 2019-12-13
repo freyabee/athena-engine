@@ -1,8 +1,11 @@
 #include "MeshRenderer.h"
-
+#include "Entity.h"
 #include "Screen.h"
 #include "Model.h"
+#include "Transform.h"
 #include "Material.h"
+
+
 namespace prometheus
 {
 	MeshRenderer::MeshRenderer()
@@ -45,11 +48,12 @@ namespace prometheus
 	}
 	void MeshRenderer::onInit()
 	{
+
 	}
 	void MeshRenderer::onDisplay()
 	{
 		
-		material->setUniform();
+		material->setUniform(*getEntity()->GetTransform()->GetModelMatrix());
 		material->setModel(model);
 		material->getMaterial()->render();
 		

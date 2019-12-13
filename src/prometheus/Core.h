@@ -48,6 +48,9 @@ namespace prometheus
 		ALCdevice* device;
 		//resources
 		std::shared_ptr<Resources> resources;
+		//environment
+
+		//core variables
 		std::weak_ptr<Core> self;
 		bool running;
 	};

@@ -1,8 +1,11 @@
+#include "Keyboard.h"
 #include "Core.h"
 #include "Entity.h"
 #include "Resources.h"
 #include <iostream>
 #include "Screen.h"
+#include "Environment.h"
+
 
 namespace prometheus
 {
@@ -26,8 +29,9 @@ namespace prometheus
 		//set resource pool ref
 		rtn->resources = std::make_shared<Resources>();
 		rtn->resources->core = rtn;
-
-
+		/* Initialize environment */
+		rtn->environment = std::make_shared<Environment>();
+		rtn->keyboard = std::make_shared<Keyboard>();
 		/*
 				AUDIO
 				TODO
@@ -85,18 +89,22 @@ namespace prometheus
 	{
 		running = true;
 
+
+		environment->Initialize();
+
 		while (running)
 		{
+			keyboard->OnTick();
 			screen->ClearWindow();
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
 				//std::cout << "LOG: GAME LOOP" << std::endl;
 				(*it)->onTick();
 				(*it)->onDisplay();
-				
-
 			}
 			screen->SwapWindow();
+			environment->UpdateDeltaTime();
+			keyboard->GetKey(10);
 		}
 	}
 
