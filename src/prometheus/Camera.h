@@ -11,13 +11,13 @@ namespace prometheus
 		Camera();
 		~Camera();
 
-		glm::mat4 getView();
-		glm::mat4 getProjection();
-		glm::vec3 getCameraPos();
+		glm::mat4 GetView();
+		glm::mat4 GetProjection();
+		glm::vec3 GetCameraPos();
 
-		void setCameraPos(glm::vec3 newPosition);
-		void setProjection(glm::mat4 newProjection);
-		void setView(glm::mat4 newView);
+		void SetCameraPos(glm::vec3 _cameraPosition);
+		void SetProjection(glm::mat4 _projectionMatrix);
+		void SetView(glm::mat4 _viewingMatrix);
 
 	private:
 		glm::mat4 viewingMatrix;

@@ -1,9 +1,10 @@
 #include "Component.h"
 #include "Transform.h"
 #include "Entity.h"
+
 namespace prometheus
 {
-	std::shared_ptr<Core> Entity::getCore()
+	std::shared_ptr<Core> Entity::GetCore()
 	{
 		return core.lock();
 	}
@@ -13,9 +14,20 @@ namespace prometheus
 		transform = addComponent<Transform>();
 	}
 
+	Entity::Entity(std::string _entityName)
+	{
+		transform = addComponent<Transform>();
+		entityName = _entityName;
+	}
+
 	std::shared_ptr<Transform> Entity::GetTransform()
 	{
 		return transform.lock();
+	}
+
+	std::string Entity::GetEntityName()
+	{
+		return entityName;
 	}
 
 	void Entity::onTick()
@@ -24,9 +36,6 @@ namespace prometheus
 		{
 			(*it)->onTick();
 		}
-
-		
-
 	}
 
 	void Entity::onDisplay()

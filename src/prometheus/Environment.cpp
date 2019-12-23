@@ -16,12 +16,21 @@ namespace prometheus
 	{
 		lastTime = SDL_GetTicks();
 		idealFPS = 60.f;
+		idealTime = 1.0f / idealFPS;
 	}
 
 	float Environment::GetDeltaTime()
 	{
+		std::cout << deltaTime << std::endl;
 		return deltaTime;
 	}
+
+	float Environment::GetIdealTime()
+	{
+		return idealTime;
+	}
+
+
 
 	void Environment::SetDeltaTime(float _deltaTime)
 	{
@@ -41,7 +50,7 @@ namespace prometheus
 
 	void Environment::SleepOffTime()
 	{
-		float idealTime = 1.0f / idealFPS;
+		
 
 		if (idealTime > deltaTime)
 		{

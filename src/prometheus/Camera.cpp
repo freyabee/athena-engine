@@ -9,25 +9,28 @@ namespace prometheus
 	Camera::~Camera()
 	{
 	}
-	glm::mat4 Camera::getView()
+	glm::mat4 Camera::GetView()
 	{
 		return viewingMatrix;
 	}
-	glm::mat4 Camera::getProjection()
+	glm::mat4 Camera::GetProjection()
 	{
 		return projectionMatrix;
 	}
-	glm::vec3 Camera::getCameraPos()
+	glm::vec3 Camera::GetCameraPos()
 	{
 		return cameraPosition;
 	}
-	void Camera::setCameraPos(glm::vec3 newPosition)
+	void Camera::SetCameraPos(glm::vec3 _cameraPosition)
 	{
+		cameraPosition = _cameraPosition;
 	}
-	void Camera::setProjection(glm::mat4 newProjection)
+	void Camera::SetProjection(glm::mat4 _projectionMatrix)
 	{
+		projectionMatrix = _projectionMatrix;
 	}
-	void Camera::setView(glm::mat4 newView)
+	void Camera::SetView(glm::mat4 _viewingMatrix)
 	{
+		viewingMatrix = _viewingMatrix;
 	}
 }

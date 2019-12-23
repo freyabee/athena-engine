@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Screen.h"
 #include "Environment.h"
-
+#include "Transform.h"
 
 namespace prometheus
 {
@@ -16,7 +16,7 @@ namespace prometheus
 		//store pointer to core
 		std::shared_ptr<Core> rtn = std::make_shared<Core>();
 		rtn->running = false;
-		//set self
+		//Set self
 		rtn->self = rtn;
 
 		//initialize window
@@ -24,22 +24,26 @@ namespace prometheus
 		int windowWidth = 640;
 		rtn->screen = std::make_shared<prometheus::Screen>(windowWidth, windowHeight);
 
-		//set rend context ref
+		/* Initialise Rend Context */
 		rtn->context = rend::Context::initialize();
-		//set resource pool ref
+		/* Initialise pool of resources*/
 		rtn->resources = std::make_shared<Resources>();
 		rtn->resources->core = rtn;
+
 		/* Initialize environment */
 		rtn->environment = std::make_shared<Environment>();
+		/* Initialize Keyboard */
 		rtn->keyboard = std::make_shared<Keyboard>();
+
+
+
 		/*
 				AUDIO
 				TODO
 				-Abstract out to AudioContext class
-
 		*/
 
-		//set device to be new device
+		//Set device to be new device
 		rtn->device = alcOpenDevice(NULL);
 
 		//If problem creating new device throw exception
@@ -88,23 +92,54 @@ namespace prometheus
 	void Core::start()
 	{
 		running = true;
+		
 
+		float angle = 0;
 
 		environment->Initialize();
 
 		while (running)
 		{
 			keyboard->OnTick();
+
+			float xAngle = 0.f;
+			float yAngle = 0.f;
+
+
+			if (keyboard->GetKey(SDLK_a))
+			{
+				xAngle = 5;
+			}
+			else if (keyboard->GetKey(SDLK_d))
+			{
+				xAngle = -5;
+			}
+
+
 			screen->ClearWindow();
+
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
 				//std::cout << "LOG: GAME LOOP" << std::endl;
 				(*it)->onTick();
 				(*it)->onDisplay();
+
+				(*it)->GetTransform()->rotate(xAngle, glm::vec3(0.f, 1.f, 0.f));
+				(*it)->GetTransform()->rotate(yAngle, glm::vec3(1.f, 0.f, 0.f));
 			}
+
 			screen->SwapWindow();
 			environment->UpdateDeltaTime();
-			keyboard->GetKey(10);
+
+
+
+			
+
+
+
+			//check for key and store bool in key variable
+			//bool key = ;
+			//std::cout << key << std::endl;
 		}
 	}
 
@@ -123,29 +158,29 @@ namespace prometheus
 
 		return rtn;
 	}
-	std::shared_ptr<Environment> Core::getEnvironment()
+	std::shared_ptr<Environment> Core::GetEnvironment()
 	{
 		return environment;
 	}
-	std::shared_ptr<Keyboard> Core::getKeyboard()
+	std::shared_ptr<Keyboard> Core::GetKeyboard()
 	{
 		return keyboard;
 	}
-	std::shared_ptr<rend::Context> Core::getContext()
+	std::shared_ptr<rend::Context> Core::GetContext()
 	{
 		return context;
 	}
-	std::shared_ptr<Resources> Core::getResources()
+	std::shared_ptr<Resources> Core::GetResources()
 	{
 		return resources;
 	}
 
-	std::shared_ptr<Screen> Core::getScreen()
+	std::shared_ptr<Screen> Core::GetScreen()
 	{
 		return screen;
 	}
 
-	ALCcontext * Core::getAudioContext()
+	ALCcontext * Core::GetAudioContext()
 	{
 		return audioContext;
 	}

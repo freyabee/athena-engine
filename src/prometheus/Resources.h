@@ -18,7 +18,7 @@ namespace prometheus
 		{
 			std::shared_ptr<T>rtn = std::make_shared<T>();
 			rtn->core = core;
-			rtn->load(path);
+			rtn->Load(path);
 			resources.push_back(rtn);
 			return rtn;
 		}

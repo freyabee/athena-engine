@@ -9,9 +9,9 @@
 
 namespace prometheus
 {
-	void Model::load(std::string path)
+	void Model::Load(std::string path)
 	{
-		std::shared_ptr<rend::Context> context = core.lock()->getContext();
+		std::shared_ptr<rend::Context> context = core.lock()->GetContext();
 		mesh = context->createMesh();
 
 		std::ifstream f(path);
@@ -25,7 +25,7 @@ namespace prometheus
 
 		mesh->parse(obj);
 	}
-	std::shared_ptr<rend::Mesh> Model::getMesh()
+	std::shared_ptr<rend::Mesh> Model::GetMesh()
 	{
 		return mesh;
 	}

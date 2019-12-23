@@ -6,34 +6,34 @@ namespace prometheus
 {
 	Component::~Component() {}
 
-	void Component::setEntity(std::weak_ptr<Entity> _entity)
+	void Component::SetEntity(std::weak_ptr<Entity> _entity)
 	{
 		entity = _entity;
 	}
 
-	std::shared_ptr<Entity> Component::getEntity()
+	std::shared_ptr<Entity> Component::GetEntity()
 	{
 		return entity.lock();
 	}
 
-	std::shared_ptr<Keyboard> Component::getKeyboard()
+	std::shared_ptr<Keyboard> Component::GetKeyboard()
 	{
-		return getEntity()->getCore()->getKeyboard();
+		return GetEntity()->GetCore()->GetKeyboard();
 	}
 
-	std::shared_ptr<Environment> Component::getEnvironment()
+	std::shared_ptr<Environment> Component::GetEnvironment()
 	{
-		return getEntity()->getCore()->getEnvironment();
+		return GetEntity()->GetCore()->GetEnvironment();
 	}
 
-	std::shared_ptr<Screen> Component::getScreen()
+	std::shared_ptr<Screen> Component::GetScreen()
 	{
-		return getEntity()->getCore()->getScreen();
+		return GetEntity()->GetCore()->GetScreen();
 	}
 
-	std::shared_ptr<Core> Component::getCore()
+	std::shared_ptr<Core> Component::GetCore()
 	{
-		return getEntity()->getCore();
+		return GetEntity()->GetCore();
 	}
 
 }

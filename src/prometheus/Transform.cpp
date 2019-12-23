@@ -26,8 +26,10 @@ namespace prometheus
 		glm::vec4 transformedScale = scalingMatrix * scale;
 		localScale = { transformedScale.x, transformedScale.y, transformedScale.z };
 	}
-	void Transform::rotate(glm::vec3 _amount)
+	void Transform::rotate(float _angle, glm::vec3 _axis)
 	{		
+		glm::mat4 rotationMatrix = glm::rotate(glm::radians(_angle), _axis);
+		modelMatrix = modelMatrix * rotationMatrix;
 	}
 	void Transform::setLocalPosition(glm::vec3 _position)
 	{

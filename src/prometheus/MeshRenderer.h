@@ -7,24 +7,29 @@
 #include <rend/rend.h>
 
 
-
 namespace prometheus
 {
 	class Model;
 	class Screen;
 	class Material;
-
+	class Core;
 
 	class MeshRenderer : public Component
 	{
+
 	public:
 		MeshRenderer();
 		~MeshRenderer();
 		
-
-		void setModel(std::shared_ptr<Model> _model);
-		void setMaterial(std::shared_ptr<Material> _mat);
+		/*GETTERS*/
+	
+		/*SETTERS*/
+		void SetModel(std::shared_ptr<Model> _model);
+		void SetMaterial(std::shared_ptr<Material> _mat);
+		bool LoadModel(std::string _modelPath, std::string _texturePath, std::string _shader);
 	private:
+		std::weak_ptr<Core> core;
+		std::weak_ptr<Entity> entity;
 		std::shared_ptr<Model> model;
 		std::shared_ptr<Material> material;
 		int windowHeight;

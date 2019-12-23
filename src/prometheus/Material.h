@@ -4,9 +4,8 @@
 #include <memory>
 #include <string>
 #include <rend/rend.h>
-
-
 #include "Resource.h"
+
 
 namespace prometheus
 {
@@ -16,14 +15,19 @@ namespace prometheus
 	class Material : public	Resource
 	{
 	public:
-		void load(std::string shader);
-		void setModel(std::shared_ptr<Model> model);
-		void setUniform(glm::mat4 _modelMat);
+		void Load(std::string _path);
 
-		std::shared_ptr<rend::Shader> getMaterial();
+		void LoadShader(std::string _path);
+		void LoadTexture(std::string _path);
 
+		void SetModel(std::shared_ptr<Model> _model);
+		void SetUniform(glm::mat4 _modelMat);
+
+		std::shared_ptr<rend::Shader> GetShader();
+		std::shared_ptr<rend::Texture> GetTexture();
 	private:
 		std::shared_ptr<rend::Shader> shader;
+		std::shared_ptr<rend::Texture> texture;
 		const char* src =
 			"#ifdef VERTEX                                 \n" \
 			"                                              \n" \

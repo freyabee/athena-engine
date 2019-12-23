@@ -14,8 +14,8 @@ namespace prometheus
 	{
 	public:
 
-		void load(std::string path);
-		std::shared_ptr<rend::Mesh> getMesh();
+		void Load(std::string path);
+		std::shared_ptr<rend::Mesh> GetMesh();
 	private:
 		std::shared_ptr<rend::Mesh> mesh;
 		std::string obj;

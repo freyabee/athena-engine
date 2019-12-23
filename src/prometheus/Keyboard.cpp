@@ -11,11 +11,15 @@ namespace prometheus
 	{
 	}
 
-	bool Keyboard::GetKey(int _keyCode)
+	bool Keyboard::GetKey(SDL_Keycode _key)
 	{
+		SDL_Scancode scan = SDL_GetScancodeFromKey(_key);
+		if (keystate[scan])
+		{
+			return true;
+		}
 		return false;
 	}
-
 	bool Keyboard::GetKeyDown(int _keyCode)
 	{
 		return false;

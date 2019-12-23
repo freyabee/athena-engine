@@ -14,7 +14,7 @@ namespace prometheus
 		Keyboard();
 		~Keyboard();
 
-		bool GetKey(int _key);
+		bool GetKey(SDL_Keycode _key);
 		bool GetKeyDown(int _key);
 		bool GetKeyUp(int _key);
 

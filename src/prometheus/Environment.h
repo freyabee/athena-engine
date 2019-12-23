@@ -12,6 +12,7 @@ namespace prometheus
 
 		void Initialize();
 		float GetDeltaTime();
+		float GetIdealTime();
 		void SetDeltaTime(float _deltaTime);
 		void UpdateDeltaTime();
 		void SleepOffTime();
@@ -21,7 +22,7 @@ namespace prometheus
 		float deltaTime;
 		float lastTime;
 		float idealFPS;
-
+		float idealTime;
 	};
 }
 

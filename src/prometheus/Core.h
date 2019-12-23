@@ -29,12 +29,12 @@ namespace prometheus
 		void stop();
 		std::shared_ptr<Entity> addEntity();
 
-		std::shared_ptr<Environment> getEnvironment();
-		std::shared_ptr<Keyboard> getKeyboard();
-		std::shared_ptr<rend::Context> getContext();
-		std::shared_ptr<Resources> getResources();
-		std::shared_ptr<Screen> getScreen();
-		ALCcontext* getAudioContext();
+		std::shared_ptr<Environment> GetEnvironment();
+		std::shared_ptr<Keyboard> GetKeyboard();
+		std::shared_ptr<rend::Context> GetContext();
+		std::shared_ptr<Resources> GetResources();
+		std::shared_ptr<Screen> GetScreen();
+		ALCcontext* GetAudioContext();
 
 	private:
 		//Variables
