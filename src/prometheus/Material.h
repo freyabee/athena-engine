@@ -10,8 +10,7 @@
 namespace prometheus
 {
 	class Model;
-
-
+	class Camera;
 	class Material : public	Resource
 	{
 	public:
@@ -25,6 +24,8 @@ namespace prometheus
 
 		std::shared_ptr<rend::Shader> GetShader();
 		std::shared_ptr<rend::Texture> GetTexture();
+		std::shared_ptr<Camera> GetCamera();
+
 	private:
 		std::shared_ptr<rend::Shader> shader;
 		std::shared_ptr<rend::Texture> texture;

@@ -16,10 +16,10 @@ namespace prometheus
 		void translate(glm::vec3 _amount);
 		void scale(glm::vec3 _amount);
 		void rotate(float _angle, glm::vec3 _axis);
-		void setLocalPosition(glm::vec3 _position);
-		void setLocalRotation(glm::vec3 _rotation);
-		void setLocalScale(glm::vec3 _scale);
-
+		void SetLocalPosition(glm::vec3 _position);
+		void SetLocalRotation(glm::vec3 _rotation);
+		void SetLocalScale(glm::vec3 _scale);
+		void Move(glm::vec3 _amount);
 
 		std::unique_ptr<glm::mat4> GetModelMatrix();
 	private:

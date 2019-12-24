@@ -5,6 +5,7 @@
 #include "Core.h"
 #include "Model.h"
 #include "Material.h"
+#include "Camera.h"
 
 namespace prometheus
 {
@@ -26,7 +27,7 @@ namespace prometheus
 		int w = 0;
 		int h = 0;
 		int bpp = 0;
-		unsigned char *data = stbi_load("../resources/images/curuthers.png", &w, &h, &bpp, 3);
+		unsigned char *data = stbi_load(_path.c_str(), &w, &h, &bpp, 3);
 
 
 
@@ -62,9 +63,8 @@ namespace prometheus
 	void Material::SetUniform(glm::mat4 _modelMat)
 	{
 		//rotate(90, vec3(0, 1, 0));
-
-
-		shader->setUniform("u_Projection", glm::perspective(glm::radians(45.0F), 1.0f, 0.1f, 100.0f));
+		//glm::perspective(glm::radians(110.0f), 1.0f, 0.1f, 100.0f)
+		shader->setUniform("u_Projection", Material::GetCamera()->GetProjection());
 		// later get this from transform
 		//shader->setUniform("u_Model", glm::mat4(1.0f));
 		shader->setUniform("u_Model", _modelMat);
@@ -80,6 +80,11 @@ namespace prometheus
 	std::shared_ptr<rend::Texture> Material::GetTexture()
 	{
 		return texture;
+	}
+
+	std::shared_ptr<Camera> Material::GetCamera()
+	{
+		return core.lock()->GetCamera();
 	}
 
 

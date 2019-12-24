@@ -9,7 +9,6 @@
 #include <vector>
 #include <rend/rend.h>
 
-
 namespace prometheus
 {
 	class Entity;
@@ -18,6 +17,8 @@ namespace prometheus
 	class Transform;
 	class Resources;
 	class Screen;
+	class Camera;
+	class Mouse;
 
 	class Core
 	{
@@ -34,6 +35,7 @@ namespace prometheus
 		std::shared_ptr<rend::Context> GetContext();
 		std::shared_ptr<Resources> GetResources();
 		std::shared_ptr<Screen> GetScreen();
+		std::shared_ptr<Camera> GetCamera();
 		ALCcontext* GetAudioContext();
 
 	private:
@@ -43,6 +45,8 @@ namespace prometheus
 		std::shared_ptr<Keyboard> keyboard;
 		std::shared_ptr<rend::Context> context;
 		std::shared_ptr<Screen> screen;
+		std::shared_ptr<Camera> camera;
+		std::shared_ptr<Mouse> mouse;
 		//audio
 		ALCcontext* audioContext;
 		ALCdevice* device;

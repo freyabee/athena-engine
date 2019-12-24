@@ -5,7 +5,7 @@
 //Includes
 #include <vector>
 #include <memory>
-
+#include <glm/glm.hpp>
 //Body
 namespace prometheus
 {
@@ -53,21 +53,27 @@ namespace prometheus
 			components.push_back(rtn);
 			return rtn;
 		}
+		/*SET*/
+		void SetPosition(glm::vec3 _position);
+		void SetRotation(glm::vec3 _rotation);
 
-
+		/*GET*/
 		std::shared_ptr<Transform> GetTransform();
 		std::string GetEntityName();
 
 	private:
 		//Variables
-		std::vector<std::shared_ptr<Component>> components;
 		std::weak_ptr<Core> core;
 		std::weak_ptr<Transform> transform;
+		std::weak_ptr<Entity> self;
+
+		std::vector<std::shared_ptr<Component>> components;
 		std::string entityName;
 		//Functions
 		void onTick();
 		void onDisplay();
-		std::weak_ptr<Entity> self;
+		void onInit();
+		
 	};
 
 }

@@ -6,7 +6,8 @@
 #include "Screen.h"
 #include "Environment.h"
 #include "Transform.h"
-
+#include "Camera.h"
+#include "Mouse.h"
 namespace prometheus
 {
 	std::shared_ptr<Core> Core::initialize()
@@ -34,8 +35,10 @@ namespace prometheus
 		rtn->environment = std::make_shared<Environment>();
 		/* Initialize Keyboard */
 		rtn->keyboard = std::make_shared<Keyboard>();
-
-
+		/* Initialize Mouse */
+		rtn->mouse = std::make_shared<Mouse>(windowWidth, windowHeight);
+		/* Initialize Camera */
+		rtn->camera = std::make_shared<Camera>(rtn->keyboard, rtn->mouse);
 
 		/*
 				AUDIO
@@ -92,40 +95,27 @@ namespace prometheus
 	void Core::start()
 	{
 		running = true;
-		
-
-		float angle = 0;
-
 		environment->Initialize();
+		camera->Initialize();
+
+
+		for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
+		{
+			(*it)->onInit();
+		}
+
 
 		while (running)
 		{
+			mouse->OnTick();
 			keyboard->OnTick();
-
-			float xAngle = 0.f;
-			float yAngle = 0.f;
-
-
-			if (keyboard->GetKey(SDLK_a))
-			{
-				xAngle = 5;
-			}
-			else if (keyboard->GetKey(SDLK_d))
-			{
-				xAngle = -5;
-			}
-
-
-			screen->ClearWindow();
+			screen->ClearWindow();			camera->OnTick();
 
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
 				//std::cout << "LOG: GAME LOOP" << std::endl;
 				(*it)->onTick();
 				(*it)->onDisplay();
-
-				(*it)->GetTransform()->rotate(xAngle, glm::vec3(0.f, 1.f, 0.f));
-				(*it)->GetTransform()->rotate(yAngle, glm::vec3(1.f, 0.f, 0.f));
 			}
 
 			screen->SwapWindow();
@@ -178,6 +168,11 @@ namespace prometheus
 	std::shared_ptr<Screen> Core::GetScreen()
 	{
 		return screen;
+	}
+
+	std::shared_ptr<Camera> Core::GetCamera()
+	{
+		return camera;
 	}
 
 	ALCcontext * Core::GetAudioContext()

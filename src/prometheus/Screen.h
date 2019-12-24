@@ -13,6 +13,7 @@ namespace prometheus
 		void DestroyScreen();
 		void SwapWindow();
 		void ClearWindow();
+		glm::ivec2 GetWindowDimensions();
 	private:
 		int windowHeight;
 		int windowWidth;

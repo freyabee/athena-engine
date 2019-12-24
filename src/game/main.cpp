@@ -45,16 +45,28 @@ int main()
 	std::string curuthersModel = "../resources/objs/curuthers.obj";
 	std::string curuthersTexture = "../resources/images/curuthers.png";
 
-	//Initialize core object
+
+	std::string graveyardModel = "../resources/objs/graveyard.obj";
+	std::string graveyardTexture = "../resources/images/graveyard.png";
+	/*Initialize core*/
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
 
-	//Initialize entity within core
-	std::shared_ptr<prometheus::Entity> entity = core->addEntity();
-	
-	//add mesh renderer as component
-	std::shared_ptr<prometheus::MeshRenderer> renderer = entity->addComponent<prometheus::MeshRenderer>();
-	
-	renderer->LoadModel(curuthersModel, curuthersTexture, materialShader);
+
+	/*Initialize player entity*/
+	std::shared_ptr<prometheus::Entity> playerEntity = core->addEntity();
+	/* Add mesh and texture to player entity */
+	std::shared_ptr<prometheus::MeshRenderer> playerRenderer = playerEntity->addComponent<prometheus::MeshRenderer>();
+	playerRenderer->LoadModel(curuthersModel, curuthersTexture, materialShader);
+	/*Add player component to player entity*/
+	std::shared_ptr<prometheus::Player> player = playerEntity->addComponent<prometheus::Player>();
+
+	/* TERRAIN */
+	/*Initialize terraom entity*/
+	std::shared_ptr<prometheus::Entity> terrainEntity = core->addEntity();
+	/* Add mesh and texture for terrain */
+	std::shared_ptr<prometheus::MeshRenderer> terrainRenderer = terrainEntity->addComponent<prometheus::MeshRenderer>();
+	terrainRenderer->LoadModel(graveyardModel, graveyardTexture, materialShader);
+	terrainEntity->SetPosition(glm::vec3(0.f, -5.f, 0.f));
 
 	/*
 	//Load Resources

@@ -50,4 +50,9 @@ namespace prometheus
 		
 	}
 
+	glm::ivec2 Screen::GetWindowDimensions()
+	{
+		return glm::ivec2(windowWidth, windowHeight);
+	}
+
 }

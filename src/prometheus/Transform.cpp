@@ -31,19 +31,25 @@ namespace prometheus
 		glm::mat4 rotationMatrix = glm::rotate(glm::radians(_angle), _axis);
 		modelMatrix = modelMatrix * rotationMatrix;
 	}
-	void Transform::setLocalPosition(glm::vec3 _position)
+
+	void Transform::SetLocalPosition(glm::vec3 _position)
 	{
 		localPosition = _position;
 		modelMatrix = glm::translate(glm::mat4(1.f), localPosition);
 	}
-	void Transform::setLocalRotation(glm::vec3 _rotation)
+	void Transform::SetLocalRotation(glm::vec3 _rotation)
 	{
 		localPosition = _rotation;
 
 	}
-	void Transform::setLocalScale(glm::vec3 _scale)
+	void Transform::SetLocalScale(glm::vec3 _scale)
 	{
 		localScale = _scale;
+	}
+	void Transform::Move(glm::vec3 _amount)
+	{
+		localPosition = localPosition + _amount;
+		modelMatrix = glm::translate(glm::mat4(1.f), localPosition);
 	}
 	std::unique_ptr<glm::mat4> Transform::GetModelMatrix()
 	{
