@@ -19,6 +19,7 @@ namespace prometheus
 	class Screen;
 	class Camera;
 	class Mouse;
+	class Timer;
 
 	class Core
 	{
@@ -37,6 +38,7 @@ namespace prometheus
 		std::shared_ptr<Screen> GetScreen();
 		std::shared_ptr<Camera> GetCamera();
 		ALCcontext* GetAudioContext();
+		std::shared_ptr<Timer> GetTimer();
 
 	private:
 		//Variables
@@ -47,6 +49,7 @@ namespace prometheus
 		std::shared_ptr<Screen> screen;
 		std::shared_ptr<Camera> camera;
 		std::shared_ptr<Mouse> mouse;
+		std::shared_ptr<Timer> timer;
 		//audio
 		ALCcontext* audioContext;
 		ALCdevice* device;

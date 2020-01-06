@@ -8,17 +8,23 @@
 #include "Transform.h"
 #include "Camera.h"
 #include "Mouse.h"
+#include "Timer.h"
 namespace prometheus
 {
 	std::shared_ptr<Core> Core::initialize()
 	{
-		
+
+
 
 		//store pointer to core
 		std::shared_ptr<Core> rtn = std::make_shared<Core>();
 		rtn->running = false;
 		//Set self
 		rtn->self = rtn;
+
+		rtn->timer = std::make_shared<Timer>();
+
+
 
 		//initialize window
 		int windowHeight = 480;
@@ -72,10 +78,9 @@ namespace prometheus
 			alcCloseDevice(rtn->device);
 			throw std::exception();
 		}
-
-
-
-
+		
+		
+		std::cout << "Core initalization completed in " << rtn->timer->GetTimeS() << "s." << std::endl;
 
 		return rtn;
 	}
@@ -123,7 +128,11 @@ namespace prometheus
 
 
 
-			
+			if (keyboard->GetKey(SDLK_ESCAPE))
+			{
+				screen->DestroyScreen();
+				break;
+			}
 
 
 
@@ -135,6 +144,7 @@ namespace prometheus
 
 	void Core::stop()
 	{
+
 	}
 
 	std::shared_ptr<Entity> Core::addEntity()
@@ -178,6 +188,11 @@ namespace prometheus
 	ALCcontext * Core::GetAudioContext()
 	{
 		return audioContext;
+	}
+
+	std::shared_ptr<Timer> Core::GetTimer()
+	{
+		return timer;
 	}
 
 }

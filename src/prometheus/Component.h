@@ -11,6 +11,7 @@ namespace prometheus
 	class Keyboard;
 	class Environment;
 	class Screen;
+	class Transform;
 
 	class Component
 	{
@@ -25,6 +26,9 @@ namespace prometheus
 		std::shared_ptr<Keyboard> GetKeyboard();
 		std::shared_ptr<Environment> GetEnvironment();
 		std::shared_ptr<Screen> GetScreen();
+		std::shared_ptr<Transform> GetTransform();
+
+
 	protected:
 		
 		virtual void onInit() {};

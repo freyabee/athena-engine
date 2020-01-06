@@ -19,30 +19,57 @@ GLuint Texture::getTexId()
 
 GLuint Texture::getId()
 {
-  if(dirty)
-  {
-    glBindTexture(GL_TEXTURE_2D, id);
-    pollForError();
+	/*
+	if (skybox && dirty)
+	{
+		/*
+		glBindTexture(GL_TEXTURE_CUBE_MAP, id);
+		pollForError();
 
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, size.x, size.y, 0, GL_RGBA, GL_FLOAT, &data.at(0));
-    pollForError();
 
-    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    pollForError();
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    pollForError();
+		for (GLuint i = 0; i < textures_faces.size(); i++)
+		{
+			unsigned char *data = stbi_load(faces[i].c_str(), &width, &height, &nrChannels, 0);
+			glTexImage2D(
+				GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+				0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data
+			);
+		}
 
-    glGenerateMipmap(GL_TEXTURE_2D);
-    pollForError();
+		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 
-    glBindTexture(GL_TEXTURE_2D, 0);
-    pollForError();
+		return id;
+		
+	}
+	*/
+    if(dirty)
+    {
+		glBindTexture(GL_TEXTURE_2D, id);
+		pollForError();
 
-    dirty = false;
-  }
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, size.x, size.y, 0, GL_RGBA, GL_FLOAT, &data.at(0));
+		pollForError();
 
-  return id;
+		//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		pollForError();
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		pollForError();
+
+		glGenerateMipmap(GL_TEXTURE_2D);
+		pollForError();
+
+		glBindTexture(GL_TEXTURE_2D, 0);
+		pollForError();
+
+		dirty = false;
+	}
+
+    return id;
 }
 
 ivec2 Texture::getSize() const

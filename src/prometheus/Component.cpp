@@ -1,7 +1,7 @@
 #include "Component.h"
 #include "Entity.h"
 #include "Core.h"
-
+#include "Transform.h"
 namespace prometheus
 {
 	Component::~Component() {}
@@ -10,6 +10,8 @@ namespace prometheus
 	{
 		entity = _entity;
 	}
+
+
 
 	std::shared_ptr<Entity> Component::GetEntity()
 	{
@@ -30,6 +32,12 @@ namespace prometheus
 	{
 		return GetEntity()->GetCore()->GetScreen();
 	}
+
+	std::shared_ptr<Transform> Component::GetTransform()
+	{
+		return GetEntity()->GetTransform();
+	}
+
 
 	std::shared_ptr<Core> Component::GetCore()
 	{

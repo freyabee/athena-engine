@@ -20,6 +20,14 @@ namespace prometheus
 	{
 		this->model = _model;
 	}
+
+
+
+
+
+
+
+
 	void MeshRenderer::SetMaterial(std::shared_ptr<Material> _mat)
 	{
 		this->material = _mat;
@@ -45,6 +53,20 @@ namespace prometheus
 		std::cout << "End of constructor reached" << std::endl;
 		return true;
 	}
+	bool MeshRenderer::LoadSkybox(std::string _modelPath, std::string _shader, std::vector<std::string> _texturepaths)
+	{
+		std::shared_ptr<prometheus::Model> _model = GetEntity()->GetCore()->GetResources()->load<prometheus::Model>(_modelPath);
+		this->model = _model;
+		std::cout << "Model at '" << _modelPath << "' loaded successfully." << std::endl;
+
+		std::shared_ptr<prometheus::Material> _material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(_shader);
+		material = _material;
+		material->LoadShader(_shader);
+
+
+
+		return true;
+	}
 	void MeshRenderer::onInit()
 	{
 
@@ -52,7 +74,7 @@ namespace prometheus
 	void MeshRenderer::onDisplay()
 	{
 		
-		material->SetUniform(*GetEntity()->GetTransform()->GetModelMatrix()*GetEntity()->GetCore()->GetCamera()->GetView());
+		material->SetUniform(*GetEntity()->GetTransform()->GetModelMatrix());
 		material->SetModel(model);
 		material->GetShader()->render();
 

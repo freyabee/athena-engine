@@ -29,6 +29,9 @@ struct Texture : public TextureAdapter, public std::sr1::noncopyable
   GLuint getId();
   GLuint getTexId();
 
+  /*EDITED CODE*/
+  //void SetSkybox();
+
 private:
   friend struct Context;
 
@@ -39,6 +42,7 @@ private:
   std::sr1::zero_initialized<bool> dirty;
   std::sr1::zero_initialized<int> bpp;
 
+  bool skybox;
   //GLuint getId();
 
 };

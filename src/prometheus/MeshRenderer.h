@@ -27,6 +27,7 @@ namespace prometheus
 		void SetModel(std::shared_ptr<Model> _model);
 		void SetMaterial(std::shared_ptr<Material> _mat);
 		bool LoadModel(std::string _modelPath, std::string _texturePath, std::string _shader);
+		bool LoadSkybox(std::string _modelPath, std::string _shader, std::vector<std::string> _texturepaths);
 	private:
 		std::weak_ptr<Core> core;
 		std::weak_ptr<Entity> entity;

@@ -1,0 +1,14 @@
+# Blender MTL File: 'parkbase.blend'
+# Material Count: 1
+
+newmtl Brick
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump f:\\Tileable Brick Ground Textures - Set 1\\Ground_02_Nrm.png
+map_Kd C:\\Users\\Freya\\Desktop\\GameEngine\\prometheus-engine\\resources\\images\\Pond.png

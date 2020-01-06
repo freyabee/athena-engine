@@ -54,6 +54,8 @@ namespace prometheus
 		stbi_image_free(data);
 	}
 
+
+
 	void Material::SetModel(std::shared_ptr<Model> _model)
 	{
 		shader->setMesh(_model->GetMesh());
@@ -62,15 +64,10 @@ namespace prometheus
 
 	void Material::SetUniform(glm::mat4 _modelMat)
 	{
-		//rotate(90, vec3(0, 1, 0));
-		//glm::perspective(glm::radians(110.0f), 1.0f, 0.1f, 100.0f)
-		shader->setUniform("u_Projection", Material::GetCamera()->GetProjection());
-		// later get this from transform
-		//shader->setUniform("u_Model", glm::mat4(1.0f));
+		shader->setUniform("u_Projection", GetCamera()->GetProjection());
+		shader->setUniform("u_View", GetCamera()->GetView());
 		shader->setUniform("u_Model", _modelMat);
-		//shader->setUniform("u_Model", translate(vec3(0, 0, -10)));
 	}
-
 
 	std::shared_ptr<rend::Shader> Material::GetShader()
 	{
