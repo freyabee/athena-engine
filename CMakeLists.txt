@@ -64,12 +64,26 @@ src/prometheus/soundsource.h
 src/prometheus/soundsource.cpp
 src/prometheus/audiocontext.h
 src/prometheus/audiocontext.cpp
+src/prometheus/mouse.h
+src/prometheus/mouse.cpp
+src/prometheus/timer.h
+src/prometheus/timer.cpp
+src/prometheus/staticmodelcollider.h
+src/prometheus/staticmodelcollider.cpp
+src/prometheus/boxcollider.h
+src/prometheus/boxcollider.cpp
+src/prometheus/tribox.cpp
 )
 
 target_link_libraries(prometheus SDL2 rend OpenAL32)
 
 
-add_executable(game src/game/main.cpp
+add_executable(game 
+src/game/main.cpp
+src/game/coin.h
+src/game/coin.cpp
+src/game/player.h
+src/game/player.cpp
 )
 
 target_link_libraries(game prometheus)

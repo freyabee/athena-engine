@@ -84,8 +84,13 @@ namespace prometheus
 		localRotation = { localRotation.x + _amount.x, localRotation.y + _amount.y, localRotation.z + _amount.z };
 		ApplyTransformations();
 	}
-	std::shared_ptr<glm::mat4> Transform::GetModelMatrix()
+	glm::mat4 Transform::GetModelMatrix()
 	{
-		return std::make_shared<glm::mat4>(modelMatrix);
+		//Change this to return by value
+		return modelMatrix;
+	}
+	glm::vec3 Transform::GetLocalPosition()
+	{
+		return localPosition;
 	}
 }

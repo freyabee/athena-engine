@@ -53,6 +53,22 @@ namespace prometheus
 			components.push_back(rtn);
 			return rtn;
 		}
+
+		template<typename T>
+		bool GetComponent()
+		{
+			std::shared_ptr<T> rtn = std::make_shared<T>();
+			for (auto it = components.begin(); it != components.end(); i++)
+			{
+				rtn = std::dynamic_pointer_cast<T>(*it);
+
+				if (rtn)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
 		/*SET*/
 		void SetPosition(glm::vec3 _position);
 		void SetRotation(glm::vec3 _rotation);

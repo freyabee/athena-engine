@@ -39,6 +39,22 @@ namespace prometheus
 		std::shared_ptr<Camera> GetCamera();
 		ALCcontext* GetAudioContext();
 		std::shared_ptr<Timer> GetTimer();
+		
+		template<typename T>
+		void GetEntities(std::vector<std::shared_ptr<Entity>>& _vector)
+		{
+			bool componentFound;
+
+			for (auto it = entities.begin(); it != entities.end(); it++)
+			{
+				componentFound = (*it)->GetComponent<T>();
+				if (componentFound)
+				{
+					_vector.emplace_back();
+				}
+			}
+		}
+
 
 	private:
 		//Variables

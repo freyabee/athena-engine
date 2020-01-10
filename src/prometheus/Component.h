@@ -13,6 +13,7 @@ namespace prometheus
 	class Screen;
 	class Transform;
 
+
 	class Component
 	{
 		//friend class can access private and protected members of another class which is declared as friends.

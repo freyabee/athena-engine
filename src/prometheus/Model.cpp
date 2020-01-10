@@ -1,6 +1,5 @@
 #include <fstream>
 #include <iostream>
-
 #include "Model.h"
 #include "Core.h"
 

@@ -1,5 +1,7 @@
+#include "Coin.h"
 #include <iostream>
 #include <prometheus/prometheus.h>
+
 
 int main()
 {
@@ -42,37 +44,6 @@ int main()
 		"                                              \n" \
 		"#endif                                        \n";
 
-	const char* skyboxShader =
-		"#ifdef VERTEX                                 \n" \
-		"                                              \n" \
-		"                                              \n" \
-		"layout (location=0) in vec3 aPos;             \n" \
-		"out vec3 TexCoords;                           \n" \
-		"uniform mat4 projection;                      \n" \
-		"uniform mat4 view;                            \n" \
-		"                                              \n" \
-		"void main()                                   \n" \
-		"{                                             \n" \
-		"  TexCoords = aPos                            \n" \
-		"  gl_Position = projection * view * vec4(aPos, 1.0); \n" \
-		"}                                             \n" \
-		"                                              \n" \
-		"#endif                                        \n" \
-		"#ifdef FRAGMENT                               \n" \
-		"                                              \n" \
-		"out vec4 FragColor                            \n" \
-		"                                              \n" \
-		"in vec3 TexCoords                             \n" \
-		"uniform samplerCube skybox;                   \n" \
-		"                                              \n" \
-		"void main()                                   \n" \
-		"{                                             \n" \
-		"  FragColor = texture(skybox, TexCoords);     \n" \
-		"  if(gl_FragColor.x == 9) gl_FragColor.x = v_Normal.x;  \n" \
-		"}                                             \n" \
-		"                                              \n" \
-		"#endif                                        \n";
-
 
 
 	std::string curuthersModel = "../resources/objs/curuthers.obj";
@@ -99,8 +70,7 @@ int main()
 	std::string shipTexture = "../resources/images/ship.png";
 
 	std::string parkModel = "../resources/objs/squarelake.obj";
-	std::string parkTexture = "../resources/images/squarelake
-		.png";
+	std::string parkTexture = "../resources/images/squarelake.png";
 	/*Initialize core*/
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
 
@@ -118,7 +88,7 @@ int main()
 	std::shared_ptr<prometheus::Entity> eCoin = core->addEntity();
 	std::shared_ptr<prometheus::MeshRenderer> coinRenderer = eCoin->addComponent<prometheus::MeshRenderer>();
 	coinRenderer->LoadModel(coinModel, coinTexture, materialShader);
-	std::shared_ptr<prometheus::Coin> coin = eCoin->addComponent<prometheus::Coin>();
+	std::shared_ptr<Coin> coin = eCoin->addComponent<Coin>();
 
 
 

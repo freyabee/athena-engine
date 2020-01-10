@@ -23,10 +23,13 @@ namespace prometheus
 		void SetLocalScale(glm::vec3 _scale);
 		void ApplyTransformations();
 
+
 		void Move(glm::vec3 _difference);
 		void AddRotation(glm::vec3 _amount);
-		std::shared_ptr<glm::mat4> GetModelMatrix();
+		glm::mat4 GetModelMatrix();
+		glm::vec3 GetLocalPosition();
 	private:
+
 		glm::vec3 localPosition;
 		glm::vec3 localRotation;
 		glm::vec3 localScale;
