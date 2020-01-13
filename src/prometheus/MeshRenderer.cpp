@@ -67,20 +67,20 @@ namespace prometheus
 
 		return true;
 	}
-	void MeshRenderer::onInit()
+	void MeshRenderer::OnInit()
 	{
 
 	}
-	void MeshRenderer::onDisplay()
+	void MeshRenderer::OnDisplay()
 	{
 		
-		material->SetUniform(*GetEntity()->GetTransform()->GetModelMatrix());
+		material->SetUniform(GetEntity()->GetTransform()->GetModelMatrix());
 		material->SetModel(model);
 		material->GetShader()->render();
 
 		
 	}
-	void MeshRenderer::onTick()
+	void MeshRenderer::OnTick()
 	{
 	}
 }

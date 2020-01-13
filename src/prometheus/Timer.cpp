@@ -5,6 +5,7 @@ namespace prometheus
 	Timer::Timer()
 	{
 		startTime = SDL_GetTicks();
+		currentTime = startTime;
 	}
 	Timer::~Timer()
 	{
@@ -18,5 +19,15 @@ namespace prometheus
 	{
 		float rtn = GetTimeMs() / 1000;
 		return rtn;
+	}
+	float Timer::GetDeltaTime()
+	{
+		return deltaTime;
+	}
+	void Timer::OnTick()
+	{
+		lastTime = currentTime;
+		currentTime = GetTimeMs();
+		deltaTime = (currentTime - lastTime);
 	}
 }

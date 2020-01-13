@@ -47,10 +47,10 @@ namespace prometheus
 
 			for (auto it = entities.begin(); it != entities.end(); it++)
 			{
-				componentFound = (*it)->GetComponent<T>();
+				componentFound = (*it)->HasComponent<T>();
 				if (componentFound)
 				{
-					_vector.emplace_back();
+					_vector.emplace_back(*it);
 				}
 			}
 		}

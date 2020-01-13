@@ -9,8 +9,8 @@ Player::~Player()
 }
 void Player::HandleInput()
 {
-	//PlayerRotation();
-	//PlayerMovement();
+	PlayerRotation();
+	PlayerMovement();
 }
 void Player::PlayerRotation()
 {
@@ -30,36 +30,64 @@ void Player::PlayerRotation()
 }
 void Player::PlayerMovement()
 {
+	float speed = 0.1f;
 	float dx = 0.f;
 	float dy = 0.f;
 	float dz = 0.f;
+
+	float rotationX = 0.f;
 	if (keyboard->GetKey(SDLK_w))
 	{
-		dz += 1.f;
+		dz += 1.f*speed;
 	}
 	if (keyboard->GetKey(SDLK_s))
 	{
-		dz += -1.f;
+		dz += -1.f*speed;
 	}
 	if (keyboard->GetKey(SDLK_a))
 	{
-		dx += 1.f;
+		dx += 1.f*speed;
+		//rotationX += 1.f;
 	}
 	if (keyboard->GetKey(SDLK_d))
 	{
-		dx += -1.f;
+		dx += -1.f*speed;
+		//rotationX -= 1.f;
 	}
-	GetEntity()->GetTransform()->Move(glm::vec3(dx, dy, dz));
 
+	
+	//GetEntity()->GetTransform()->AddRotation(glm::vec3(0.f, rotationX, 0.f));
+	//glm::vec3 heading = GetTransform()->GetLocalRotation();
+	//glm::vec3 movement(0.f);
+	//movement.x = -dz * cos(heading.y);
+	//movement.z = -dz * sin(heading.y);
+	glm::vec3 movement(0.f);
+	movement.x = dx;
+	movement.z = dz;
+
+
+	GetEntity()->GetTransform()->Move(glm::vec3(movement.x, movement.y, movement.z));
+
+	//std::cout << movement.x << "," << movement.y << std::endl;
+	//std::cout << heading.x << heading.y << heading.z << std::endl;
+
+
+
+	glm::vec3 playerPosition = GetTransform()->GetLocalPosition();
+	glm::vec3 offset(0.f, 4.f, -4.f);
+
+
+	GetCamera()->Follow(playerPosition, offset);
 }
-void Player::onDisplay()
+void Player::OnDisplay()
 {
 }
-void Player::onInit()
+void Player::OnInit()
 {
 	keyboard = GetCore()->GetKeyboard();
+	GetTransform()->SetLocalPosition(0.f, 1.f, -3.f);
 }
-void Player::onTick()
+void Player::OnTick()
 {
 	HandleInput();
 }

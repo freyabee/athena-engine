@@ -11,9 +11,9 @@ public:
 	Coin();
 	~Coin();
 
-	void onDisplay();
-	void onTick();
-	void onInit();
+	void OnDisplay();
+	void OnTick();
+	void OnInit();
 
 private:
 	float angleRotation;

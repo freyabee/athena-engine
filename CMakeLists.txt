@@ -68,8 +68,6 @@ src/prometheus/mouse.h
 src/prometheus/mouse.cpp
 src/prometheus/timer.h
 src/prometheus/timer.cpp
-src/prometheus/staticmodelcollider.h
-src/prometheus/staticmodelcollider.cpp
 src/prometheus/boxcollider.h
 src/prometheus/boxcollider.cpp
 src/prometheus/tribox.cpp

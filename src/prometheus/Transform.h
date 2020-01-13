@@ -28,6 +28,7 @@ namespace prometheus
 		void AddRotation(glm::vec3 _amount);
 		glm::mat4 GetModelMatrix();
 		glm::vec3 GetLocalPosition();
+		glm::vec3 GetLocalRotation();
 	private:
 
 		glm::vec3 localPosition;

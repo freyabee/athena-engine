@@ -10,14 +10,10 @@ namespace prometheus
 	{
 		entity = _entity;
 	}
-
-
-
 	std::shared_ptr<Entity> Component::GetEntity()
 	{
 		return entity.lock();
 	}
-
 	std::shared_ptr<Keyboard> Component::GetKeyboard()
 	{
 		return GetEntity()->GetCore()->GetKeyboard();
@@ -38,6 +34,10 @@ namespace prometheus
 		return GetEntity()->GetTransform();
 	}
 
+	std::shared_ptr<Camera> Component::GetCamera()
+	{
+		return GetEntity()->GetCore()->GetCamera();
+	}
 
 	std::shared_ptr<Core> Component::GetCore()
 	{

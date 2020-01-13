@@ -1,8 +1,8 @@
 #include "Keyboard.h"
 #include "Mouse.h"
-
+#include "Core.h"
 #include "Camera.h"
-
+#include "Timer.h"
 
 namespace prometheus
 {
@@ -10,10 +10,11 @@ namespace prometheus
 	{
 		projectionMatrix = glm::perspective(glm::radians(45.0f), 1.0f, 0.1f, 100.0f);
 	}
-	Camera::Camera(std::shared_ptr<Keyboard> _keyboard, std::shared_ptr<Mouse> _mouse)
+	Camera::Camera(std::shared_ptr<Keyboard> _keyboard, std::shared_ptr<Mouse> _mouse, std::shared_ptr<Timer> _timer)
 	{
 		mouse = _mouse;
 		keyboard = _keyboard;
+		timer = _timer;
 	}
 	Camera::Camera(glm::vec3 _position,  glm::vec3 _target, std::shared_ptr<Keyboard> _keyboard, std::shared_ptr<Mouse> _mouse)
 	{
@@ -28,7 +29,7 @@ namespace prometheus
 	}
 	void Camera::OnTick()
 	{
-		HandleKeyboardInput();
+		//HandleKeyboardInput();
 		HandleMouseInput();
 		viewingMatrix = glm::lookAt(cameraPosition, (cameraPosition + cameraFront), cameraUp);
 	}
@@ -43,6 +44,11 @@ namespace prometheus
 		pitch = 0;
 		viewingMatrix = glm::lookAt(cameraPosition, (cameraPosition + cameraFront), cameraUp);
 		return true;
+	}
+
+	std::weak_ptr<Core> Camera::GetCore()
+	{
+		return core.lock();
 	}
 
 
@@ -120,5 +126,18 @@ namespace prometheus
 	void Camera::SetView(glm::mat4 _viewingMatrix)
 	{
 		viewingMatrix = _viewingMatrix;
+	}
+	void Camera::Follow(glm::vec3 _goalPosition, glm::vec3 _offset)
+	{
+		glm::vec3 goal = _goalPosition + _offset;
+		float lerp = 0.1f;
+		glm::vec3 pos = cameraPosition;
+		glm::vec3 diff(0.f);
+
+		diff = (goal - pos)*0.1f;
+		cameraPosition += diff;
+		//std::cout << diff.x << "," << diff.y << "," << diff.z << std::endl;
+
+		//viewingMatrix = glm::lookAt(cameraPosition+_offset, _goalPosition, cameraUp);
 	}
 }

@@ -40,26 +40,26 @@ namespace prometheus
 		return entityName;
 	}
 
-	void Entity::onTick()
+	void Entity::OnTick()
 	{
 		for (std::vector<std::shared_ptr<Component>>::iterator it = components.begin(); it != components.end(); ++it)
 		{
-			(*it)->onTick();
+			(*it)->OnTick();
 		}
 	}
 
-	void Entity::onDisplay()
+	void Entity::OnDisplay()
 	{
 		for (std::vector<std::shared_ptr<Component>>::iterator it = components.begin(); it != components.end(); ++it)
 		{
-			(*it)->onDisplay();
+			(*it)->OnDisplay();
 		}
 	}
-	void Entity::onInit()
+	void Entity::OnInit()
 	{
 		for (std::vector<std::shared_ptr<Component>>::iterator it = components.begin(); it != components.end(); ++it)
 		{
-			(*it)->onInit();
+			(*it)->OnInit();
 		}
 	}
 }

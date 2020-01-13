@@ -14,22 +14,48 @@ namespace prometheus
 	std::shared_ptr<Core> Core::initialize()
 	{
 
+		std::cout << "Core initalization starting:" << std::endl;
 
-
-		//store pointer to core
 		std::shared_ptr<Core> rtn = std::make_shared<Core>();
+
+		std::cout << "Initialising self"<< std::endl;
 		rtn->running = false;
-		//Set self
 		rtn->self = rtn;
 
-		rtn->timer = std::make_shared<Timer>();
+		
+		try
+		{
+			std::cout << "Initialising timer: ";
 
+			rtn->timer = std::make_shared<Timer>();
 
-
-		//initialize window
+			std::cout << "success" << std::endl;
+		}
+		catch (const std::exception& e)
+		{
+		std::cout << "failure" << std::endl;
+		std::cout << &e << std::endl;
+		}
+		
 		int windowHeight = 480;
 		int windowWidth = 640;
-		rtn->screen = std::make_shared<prometheus::Screen>(windowWidth, windowHeight);
+
+		try
+		{
+			std::cout << "Initialising window: ";
+			
+			rtn->screen = std::make_shared<prometheus::Screen>(windowWidth, windowHeight);
+
+			std::cout << "success" << std::endl;
+		}
+		catch (const std::exception& e)
+		{
+			std::cout << "failure" << std::endl;
+			std::cout << &e << std::endl;
+		}
+
+
+		
 
 		/* Initialise Rend Context */
 		rtn->context = rend::Context::initialize();
@@ -44,7 +70,7 @@ namespace prometheus
 		/* Initialize Mouse */
 		rtn->mouse = std::make_shared<Mouse>(windowWidth, windowHeight);
 		/* Initialize Camera */
-		rtn->camera = std::make_shared<Camera>(rtn->keyboard, rtn->mouse);
+		rtn->camera = std::make_shared<Camera>(rtn->keyboard, rtn->mouse, rtn->timer);
 
 		/*
 				AUDIO
@@ -106,7 +132,7 @@ namespace prometheus
 
 		for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 		{
-			(*it)->onInit();
+			(*it)->OnInit();
 		}
 
 
@@ -114,13 +140,16 @@ namespace prometheus
 		{
 			mouse->OnTick();
 			keyboard->OnTick();
-			screen->ClearWindow();			camera->OnTick();
+			camera->OnTick();
+			timer->OnTick();
 
+			screen->ClearWindow();
+			//On tick
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
 				//std::cout << "LOG: GAME LOOP" << std::endl;
-				(*it)->onTick();
-				(*it)->onDisplay();
+				(*it)->OnTick();
+				(*it)->OnDisplay();
 			}
 
 			screen->SwapWindow();

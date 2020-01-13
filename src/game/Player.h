@@ -15,9 +15,9 @@ public:
 	void PlayerRotation();
 	void PlayerMovement();
 private:
-	void onDisplay();
-	void onTick();
-	void onInit();
+	void OnDisplay();
+	void OnTick();
+	void OnInit();
 
 	std::shared_ptr<prometheus::Keyboard> keyboard;
 	float xAngle = 0.f;

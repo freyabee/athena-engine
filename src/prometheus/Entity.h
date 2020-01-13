@@ -5,14 +5,15 @@
 //Includes
 #include <vector>
 #include <memory>
+#include "Component.h"
 #include <glm/glm.hpp>
+#include <exception>
 //Body
 namespace prometheus
 {
-	class Component;
+	//class Component;
 	class Core;
 	class Transform;
-
 
 	class Entity
 	{
@@ -53,12 +54,32 @@ namespace prometheus
 			components.push_back(rtn);
 			return rtn;
 		}
-
-		template<typename T>
-		bool GetComponent()
+		/// Retrieves reference to component of type T from entity.
+		///
+		/// @returns shared_ptr of type T
+		template<typename T> std::shared_ptr<T> GetComponent()
 		{
 			std::shared_ptr<T> rtn = std::make_shared<T>();
-			for (auto it = components.begin(); it != components.end(); i++)
+			for (auto it = components.begin(); it != components.end(); it++)
+			{
+				rtn = std::dynamic_pointer_cast<T>(*it);
+
+				if (rtn)
+				{
+					return rtn;
+				}
+			}
+			throw std::exception("Component not found");
+		}
+
+		/// Checks vector of components in entity for component of type T.
+		///
+		/// @returns boolean denoting presence of component of type T in entity component vector.
+		/// @see GetComponent()
+		template<typename T> bool HasComponent()
+		{
+			std::shared_ptr<T> rtn = std::make_shared<T>();
+			for (auto it = components.begin(); it != components.end(); it++)
 			{
 				rtn = std::dynamic_pointer_cast<T>(*it);
 
@@ -86,9 +107,9 @@ namespace prometheus
 		std::vector<std::shared_ptr<Component>> components;
 		std::string entityName;
 		//Functions
-		void onTick();
-		void onDisplay();
-		void onInit();
+		void OnTick();
+		void OnDisplay();
+		void OnInit();
 		
 	};
 

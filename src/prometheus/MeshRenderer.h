@@ -36,9 +36,9 @@ namespace prometheus
 		int windowHeight;
 		int windowWidth;
 
-		void onDisplay();
-		void onTick();
-		void onInit();
+		void OnDisplay();
+		void OnTick();
+		void OnInit();
 		
 		
 	};

@@ -3,12 +3,12 @@
 
 namespace prometheus
 {
-	void SoundSource::onInit()
+	void SoundSource::OnInit()
 	{
 		
 		
 	}
-	void SoundSource::onInit(std::shared_ptr<Sound> audio)
+	void SoundSource::OnInit(std::shared_ptr<Sound> audio)
 	{
 		sourceID = 0;
 		alGenSources(1, &sourceID);
@@ -17,7 +17,7 @@ namespace prometheus
 		alSourcei(sourceID, AL_BUFFER, audio->bufferId);
 		alSourcePlay(sourceID);
 	}
-	void SoundSource::onTick()
+	void SoundSource::OnTick()
 	{
 
 	}

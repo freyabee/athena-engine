@@ -13,8 +13,13 @@ namespace prometheus
 		~Timer();
 		Uint32 GetTimeMs();
 		float GetTimeS();
+		float GetDeltaTime();
+		void OnTick();
+
 	private:
 		Uint32 startTime;
-
+		float deltaTime;
+		float lastTime;
+		float currentTime;
 	};
 }

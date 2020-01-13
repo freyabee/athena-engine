@@ -1,7 +1,7 @@
 #include "BoxCollider.h"
-#include "StaticModelCollider.h"
 #include "Core.h"
 #include "Transform.h"
+#include "Entity.h"
 
 namespace prometheus
 {
@@ -23,66 +23,67 @@ namespace prometheus
 
 	void BoxCollider::OnTick()
 	{
-		CollideStaticMesh();
+		//CollideStaticMesh();
 		CollideBox();
 	}
 
 	void BoxCollider::CollideBox()
 	{
-		std::vector<std::sr1::shared_ptr<Entity> > bces;
+		std::vector<std::shared_ptr<Entity> > boxColliderEntities;
 
+		GetCore()->GetEntities<BoxCollider>(boxColliderEntities);
 
+		glm::vec3 newPosition = GetTransform()->GetLocalPosition() + offset;
 
-		GetCore()->GetEntities<BoxCollider>(bces);
-		glm::vec3 np = GetTransform()->GetLocalPosition() + offset;
-
-		for (std::vector<std::sr1::shared_ptr<Entity> >::iterator it = bces.begin();
-			it != bces.end(); it++)
+		for (std::vector<std::shared_ptr<Entity> >::iterator it = boxColliderEntities.begin();
+			it != boxColliderEntities.end(); it++)
 		{
 			if (*it == GetEntity())
 			{
 				continue;
 			}
-
-			std::sr1::shared_ptr<BoxCollider> bc = (*it)->GetComponent<BoxCollider>();
-
-			glm::vec3 sp = bc->GetCollisionResponse(np, size);
-			np = sp;
-			np = np - offset;
-			GetTransform()->SetLocalPosition(np);
-			lastPosition = np;
+			std::shared_ptr<BoxCollider> otherCollider = (*it)->GetComponent<BoxCollider>();
+			glm::vec3 sp = otherCollider->GetCollisionResponse(newPosition, size);
+			newPosition = sp;
+			newPosition = newPosition - offset;
+			GetTransform()->SetLocalPosition(newPosition);
+			lastPosition = newPosition;
+			
 		}
 	}
 
 	void BoxCollider::CollideStaticMesh()
 	{
+		/*
 		std::vector<std::sr1::shared_ptr<Entity> > smces;
 
-		GetCore()->GetEntities<StaticModelCollider>(smces);
+		//GetCore()->GetEntities<StaticModelCollider>(smces);
 
 		glm::vec3 np = GetTransform()->GetLocalPosition() + offset;
 
 		for (std::vector<std::sr1::shared_ptr<Entity> >::iterator it = smces.begin();
-			it != smces.end(); it++)
+		it != smces.end(); it++)
 		{
-			std::sr1::shared_ptr<StaticModelCollider> smc = (*it)->getComponent<StaticModelCollider>();
+		//std::sr1::shared_ptr<StaticModelCollider> smc = (*it)->getComponent<StaticModelCollider>();
 
-			bool solved = false;
-			glm::vec3 sp = smc->GetCollisionResponse(np, size, solved);
+		bool solved = false;
+		glm::vec3 sp = smc->GetCollisionResponse(np, size, solved);
 
-			if (solved)
-			{
-				np = sp;
-			}
-			else
-			{
-				np = lastPosition + offset;
-			}
-
-			np = np - offset;
-			GetTransform()->SetPosition(np);
-			lastPosition = np;
+		if (solved)
+		{
+		np = sp;
 		}
+		else
+		{
+		np = lastPosition + offset;
+		}
+
+		np = np - offset;
+		GetTransform()->SetLocalPosition(np);
+		lastPosition = np;
+		}
+		*/
+		
 	}
 
 	bool BoxCollider::IsColliding(glm::vec3 position, glm::vec3 size)

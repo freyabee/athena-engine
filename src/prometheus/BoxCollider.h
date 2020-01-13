@@ -1,5 +1,5 @@
 #include "Component.h"
-
+#include <glm/glm.hpp>
 
 namespace prometheus
 {
@@ -21,7 +21,6 @@ namespace prometheus
 		glm::vec3 lastPosition;
 
 		bool IsColliding(glm::vec3 position, glm::vec3 size);
-
 		glm::vec3 GetCollisionResponse(glm::vec3 position, glm::vec3 size);
 	};
 }

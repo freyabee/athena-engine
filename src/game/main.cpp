@@ -1,7 +1,7 @@
 #include "Coin.h"
 #include <iostream>
 #include <prometheus/prometheus.h>
-
+#include "Player.h"
 
 int main()
 {
@@ -89,20 +89,23 @@ int main()
 	std::shared_ptr<prometheus::MeshRenderer> coinRenderer = eCoin->addComponent<prometheus::MeshRenderer>();
 	coinRenderer->LoadModel(coinModel, coinTexture, materialShader);
 	std::shared_ptr<Coin> coin = eCoin->addComponent<Coin>();
-
+	std::shared_ptr<prometheus::BoxCollider> coinCollider = eCoin->addComponent<prometheus::BoxCollider>();
+	coinCollider->SetSize(glm::vec3(1.f));
 
 
 	/* TERRAIN */
 	std::shared_ptr<prometheus::Entity> ePark = core->addEntity();
 	std::shared_ptr<prometheus::MeshRenderer> parkRenderer = ePark->addComponent<prometheus::MeshRenderer>();
 	parkRenderer->LoadModel(parkModel, parkTexture, materialShader);
-	ePark->SetPosition(glm::vec3(0.f, 0.f,0.f));
+	ePark->SetPosition(glm::vec3(0.f, 0.f, 0.f));
 
 	//Ship
 	std::shared_ptr<prometheus::Entity> eShip = core->addEntity();
 	std::shared_ptr<prometheus::MeshRenderer> shipRenderer = eShip->addComponent<prometheus::MeshRenderer>();
 	shipRenderer->LoadModel(shipModel, shipTexture, materialShader);
-	eShip->SetPosition(glm::vec3(0.f, 0.f, 0.f));
+	std::shared_ptr<prometheus::BoxCollider> shipCollider = eShip->addComponent<prometheus::BoxCollider>();
+	shipCollider->SetSize(glm::vec3(1.f));
+	eShip->addComponent<Player>();
 
 	/*
 	std::shared_ptr<prometheus::Sound> sound1 = core->GetResources()->load<prometheus::Sound>("../resources/sounds/dixie_horn.ogg");

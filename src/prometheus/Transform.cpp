@@ -67,9 +67,7 @@ namespace prometheus
 		rotationMatrix *= glm::rotate(glm::radians(localRotation.y), glm::vec3(0.f, 1.f, 0.f));
 		rotationMatrix *= glm::rotate(glm::radians(localRotation.z), glm::vec3(0.f, 0.f, 1.f));
 
-
 		glm::mat4 translationMatrix = glm::translate(glm::mat4(1.f), localPosition);
-
 
 		modelMatrix = translationMatrix * rotationMatrix;
 	}
@@ -93,4 +91,9 @@ namespace prometheus
 	{
 		return localPosition;
 	}
+	glm::vec3 Transform::GetLocalRotation()
+	{
+		return localRotation;
+	}
+
 }

@@ -14,9 +14,9 @@ namespace prometheus
 	class SoundSource : public Component
 	{
 	public:
-		void onInit();
-		void onInit(std::shared_ptr<Sound> audio);
-		void onTick();
+		void OnInit();
+		void OnInit(std::shared_ptr<Sound> audio);
+		void OnTick();
 		void setAutoRemove(bool _autoRemove);
 		void setAudio(std::shared_ptr<Sound> audio);
 

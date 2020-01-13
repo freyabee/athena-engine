@@ -12,7 +12,7 @@ namespace prometheus
 	class Environment;
 	class Screen;
 	class Transform;
-
+	class Camera;
 
 	class Component
 	{
@@ -28,14 +28,14 @@ namespace prometheus
 		std::shared_ptr<Environment> GetEnvironment();
 		std::shared_ptr<Screen> GetScreen();
 		std::shared_ptr<Transform> GetTransform();
-
+		std::shared_ptr<Camera> GetCamera();
 
 	protected:
 		
-		virtual void onInit() {};
+		virtual void OnInit() {};
 		virtual void onBegin() {};
-		virtual void onTick() {};
-		virtual void onDisplay() {};
+		virtual void OnTick() {};
+		virtual void OnDisplay() {};
 
 	private:
 		void SetEntity(std::weak_ptr<Entity> _entity);
