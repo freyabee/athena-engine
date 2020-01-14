@@ -17,6 +17,7 @@
 #include "SoundSource.h"
 #include "Camera.h"
 #include "BoxCollider.h"
+#include "Gui.h"
 namespace prometheus
 {
 	using namespace rend;

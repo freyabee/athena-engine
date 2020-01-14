@@ -73,6 +73,7 @@ namespace prometheus
 		/* Initialize Camera */
 		rtn->camera = std::make_shared<Camera>(rtn->keyboard, rtn->mouse, rtn->timer);
 
+		rtn->gui = std::make_shared<Gui>();
 		/*
 				AUDIO
 				TODO
@@ -105,6 +106,8 @@ namespace prometheus
 			alcCloseDevice(rtn->device);
 			throw std::exception();
 		}
+
+		
 		
 		
 		std::cout << "Core initalization completed in " << rtn->timer->GetTimeS() << "s." << std::endl;
@@ -231,6 +234,11 @@ namespace prometheus
 	std::shared_ptr<Timer> Core::GetTimer()
 	{
 		return timer;
+	}
+
+	std::shared_ptr<Gui> Core::GetGUI()
+	{
+		return gui;
 	}
 
 }

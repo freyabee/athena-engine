@@ -36,6 +36,7 @@ namespace prometheus
 		virtual void onBegin() {};
 		virtual void OnTick() {};
 		virtual void OnDisplay() {};
+		virtual void OnGUI() {};
 
 	private:
 		void SetEntity(std::weak_ptr<Entity> _entity);

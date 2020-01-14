@@ -32,20 +32,10 @@ namespace prometheus
 		//HandleKeyboardInput();
 		HandleMouseInput();
 
-		//glm::mat4 lookatmatrix = glm::lookAt(cameraPosition + offset, playerPosition, cameraUp);
-		//glm::vec3 cameraUpVect = glm::mat3(lookatmatrix) * glm::vec3(0, 1, 0);
-		//glm::vec3 cameraForwardVect = - glm::normalize(playerPosition - (cameraPosition + offset));
-		//glm::vec3 leftVect = glm::normalize(glm::cross(cameraUpVect, cameraForwardVect));
-		//glm::mat4 rotationMatrix = glm::mat4(glm::mat3(lookatmatrix));
-
-
-		//gets player heading, uses as rotation matrix for camera. 
-		//
 		glm::mat4 rotationMatrix = glm::rotate(glm::mat4(1), glm::radians(-playerHeading.y - 180.0f), glm::vec3(0, 1, 0));
 		// player position, creates matrix
 		glm::mat4 translationMatrix = glm::translate(glm::mat4(1), playerPosition);
 
-		// glm::vec3(0.f, -5.f, -7.f)
 		//Building viewing matrix
 		viewingMatrix = glm::mat4(1);
 		//Applying rotation of mouse control to the viewing matrix

@@ -8,23 +8,28 @@
 /// Manages rendering of GUI elements to screen.
 ///
 /// Holds projections, shaders and meshes and textures for GUI elements.
+	class Texture;
+
 namespace prometheus
 {
 	class Model;
 	class Material;
 	class Core;
 
+
+
 	class Gui
 	{
 	public:
 		Gui();
 		~Gui();
-		void LoadButtonMesh(std::string path);
-		void LoadButtonMaterial(std::string shaderPath, std::string texturePath);
+		void OnInit();
 		std::shared_ptr<Core> GetCore();
+		void Texture(glm::vec4 position, std::shared_ptr<rend::Texture> texture);
 	private:
-		std::shared_ptr<Model> model;
-		std::shared_ptr<Material> material;
+		std::shared_ptr<rend::Mesh> mesh;
+		std::shared_ptr<rend::Shader> shader;
+		glm::mat4 projection;
 		std::weak_ptr<Core> core;
 
 	};

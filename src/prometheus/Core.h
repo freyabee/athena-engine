@@ -20,6 +20,7 @@ namespace prometheus
 	class Camera;
 	class Mouse;
 	class Timer;
+	class Gui;
 
 	class Core
 	{
@@ -39,6 +40,7 @@ namespace prometheus
 		std::shared_ptr<Camera> GetCamera();
 		ALCcontext* GetAudioContext();
 		std::shared_ptr<Timer> GetTimer();
+		std::shared_ptr<Gui> GetGUI();
 		
 		template<typename T>
 		void GetEntities(std::vector<std::shared_ptr<Entity>>& _vector)
@@ -66,6 +68,7 @@ namespace prometheus
 		std::shared_ptr<Camera> camera;
 		std::shared_ptr<Mouse> mouse;
 		std::shared_ptr<Timer> timer;
+		std::shared_ptr<Gui> gui;
 		//audio
 		ALCcontext* audioContext;
 		ALCdevice* device;
