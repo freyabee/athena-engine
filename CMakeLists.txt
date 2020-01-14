@@ -71,6 +71,8 @@ src/prometheus/timer.cpp
 src/prometheus/boxcollider.h
 src/prometheus/boxcollider.cpp
 src/prometheus/tribox.cpp
+src/prometheus/gui.h
+src/prometheus/gui.cpp
 )
 
 target_link_libraries(prometheus SDL2 rend OpenAL32)
@@ -82,6 +84,8 @@ src/game/coin.h
 src/game/coin.cpp
 src/game/player.h
 src/game/player.cpp
+src/game/score.h
+src/game/score.cpp
 )
 
 target_link_libraries(game prometheus)

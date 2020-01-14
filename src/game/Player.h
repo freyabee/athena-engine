@@ -22,5 +22,6 @@ private:
 	std::shared_ptr<prometheus::Keyboard> keyboard;
 	float xAngle = 0.f;
 	float yAngle = 0.f;
-
+	float velocity;
+	float maxVelocity;
 };

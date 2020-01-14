@@ -3,6 +3,7 @@
 
 Player::Player()
 {
+
 }
 Player::~Player()
 {
@@ -40,30 +41,39 @@ void Player::PlayerMovement()
 	{
 		dz += 1.f*speed;
 	}
+	else
+	{
+		if (speed > 0)
+		{
+
+		}
+	}
 	if (keyboard->GetKey(SDLK_s))
 	{
 		dz += -1.f*speed;
 	}
 	if (keyboard->GetKey(SDLK_a))
 	{
-		dx += 1.f*speed;
-		//rotationX += 1.f;
+		//dx += 1.f*speed;
+		rotationX += 1.f;
 	}
 	if (keyboard->GetKey(SDLK_d))
 	{
-		dx += -1.f*speed;
-		//rotationX -= 1.f;
+		//dx += -1.f*speed;
+		rotationX -= 1.f;
 	}
 
-	
-	//GetEntity()->GetTransform()->AddRotation(glm::vec3(0.f, rotationX, 0.f));
-	//glm::vec3 heading = GetTransform()->GetLocalRotation();
-	//glm::vec3 movement(0.f);
-	//movement.x = -dz * cos(heading.y);
-	//movement.z = -dz * sin(heading.y);
+	if (dz != 0.f)
+	{
+		GetEntity()->GetTransform()->AddRotation(glm::vec3(0.f, rotationX, 0.f));	
+	}
 	glm::vec3 movement(0.f);
-	movement.x = dx;
-	movement.z = dz;
+	glm::vec3 heading = GetTransform()->GetLocalRotation();
+	movement.x = dz * sin(glm::radians(heading.y));
+	movement.z = dz * cos(glm::radians(heading.y));
+	//glm::vec3 movement(0.f);
+	//movement.x = dx;
+	//movement.z = dz;
 
 
 	GetEntity()->GetTransform()->Move(glm::vec3(movement.x, movement.y, movement.z));

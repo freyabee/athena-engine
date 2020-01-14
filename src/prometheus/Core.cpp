@@ -37,8 +37,8 @@ namespace prometheus
 		std::cout << &e << std::endl;
 		}
 		
-		int windowHeight = 480;
-		int windowWidth = 640;
+		int windowHeight = 1080;
+		int windowWidth = 1940;
 
 		try
 		{
