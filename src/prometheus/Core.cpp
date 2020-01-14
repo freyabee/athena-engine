@@ -9,6 +9,7 @@
 #include "Camera.h"
 #include "Mouse.h"
 #include "Timer.h"
+
 namespace prometheus
 {
 	std::shared_ptr<Core> Core::initialize()
@@ -37,8 +38,8 @@ namespace prometheus
 		std::cout << &e << std::endl;
 		}
 		
-		int windowHeight = 1080;
-		int windowWidth = 1940;
+		int windowHeight =800;
+		int windowWidth = 800;
 
 		try
 		{
@@ -50,7 +51,7 @@ namespace prometheus
 		}
 		catch (const std::exception& e)
 		{
-			std::cout << "failure" << std::endl;
+			std::cout << "failed" << std::endl;
 			std::cout << &e << std::endl;
 		}
 

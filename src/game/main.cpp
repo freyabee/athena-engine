@@ -68,23 +68,14 @@ int main()
 	std::string sTreeTexture = "../resources/images/SmallTree.png";
 	std::string shipModel = "../resources/objs/ship.obj";
 	std::string shipTexture = "../resources/images/ship.png";
-
 	std::string parkModel = "../resources/objs/squarelake.obj";
 	std::string parkTexture = "../resources/images/squarelake.png";
-	/*Initialize core*/
+
+
+	//Initialize core
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
 
-
-	/*Initialize player entity*/
-	//std::shared_ptr<prometheus::Entity> playerEntity = core->addEntity();
-	/* Add mesh and texture to player entity */
-	//std::shared_ptr<prometheus::MeshRenderer> playerRenderer = playerEntity->addComponent<prometheus::MeshRenderer>();
-	//playerRenderer->LoadModel(curuthersModel, curuthersTexture, materialShader);
-	/*Add player component to player entity*/
-	//std::shared_ptr<prometheus::Player> player = playerEntity->addComponent<prometheus::Player>();
-
-	/*Coin*/
-
+	//Coin
 	std::shared_ptr<prometheus::Entity> eCoin = core->addEntity();
 	std::shared_ptr<prometheus::MeshRenderer> coinRenderer = eCoin->addComponent<prometheus::MeshRenderer>();
 	coinRenderer->LoadModel(coinModel, coinTexture, materialShader);
@@ -92,8 +83,7 @@ int main()
 	std::shared_ptr<prometheus::BoxCollider> coinCollider = eCoin->addComponent<prometheus::BoxCollider>();
 	coinCollider->SetSize(glm::vec3(1.f));
 
-
-	/* TERRAIN */
+	//TERRAIN
 	std::shared_ptr<prometheus::Entity> ePark = core->addEntity();
 	std::shared_ptr<prometheus::MeshRenderer> parkRenderer = ePark->addComponent<prometheus::MeshRenderer>();
 	parkRenderer->LoadModel(parkModel, parkTexture, materialShader);
