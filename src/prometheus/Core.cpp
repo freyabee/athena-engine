@@ -1,5 +1,4 @@
 #include "Keyboard.h"
-#include "Core.h"
 #include "Entity.h"
 #include "Resources.h"
 #include <iostream>
@@ -9,6 +8,8 @@
 #include "Camera.h"
 #include "Mouse.h"
 #include "Timer.h"
+#include "Gui.h"
+#include "Core.h"
 
 namespace prometheus
 {

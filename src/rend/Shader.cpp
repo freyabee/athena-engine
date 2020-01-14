@@ -80,8 +80,24 @@ void Shader::render(const std::sr1::shared_ptr<RenderTexture>& target)
 
 void Shader::render()
 {
-  glEnable(GL_DEPTH_TEST); pollForError();
-  glEnable(GL_CULL_FACE); pollForError();
+	if (depthTestCheck)
+	{
+		glEnable(GL_DEPTH_TEST); pollForError();
+	}
+	else
+	{
+		glDisable(GL_DEPTH_TEST); pollForError();
+	}
+
+	if (backfaceCheck)
+	{
+		glEnable(GL_CULL_FACE); pollForError();
+	}
+	else
+	{
+		glDisable(GL_CULL_FACE); pollForError();
+	}
+
   glEnable(GL_BLEND); pollForError();
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); pollForError();
 
@@ -220,6 +236,16 @@ void Shader::setMesh(const std::sr1::shared_ptr<Mesh>& value)
   {
     setSampler((*it)->name, (*it)->texture);
   }
+}
+
+void Shader::setDepthTest(bool b)
+{
+	depthTestCheck = b;
+}
+
+void Shader::setBackface(bool b)
+{
+	backfaceCheck = b;
 }
 
 std::sr1::shared_ptr<VariableInfo> Shader::getVariableInfo(const std::string& name, GLenum type, bool attrib)

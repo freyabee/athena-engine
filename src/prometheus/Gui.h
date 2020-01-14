@@ -4,18 +4,19 @@
 #endif // !_GUI_H_
 #include <memory>
 #include <string>
+#include <rend/rend.h>
+#include <glm/glm.hpp>
 
 /// Manages rendering of GUI elements to screen.
 ///
 /// Holds projections, shaders and meshes and textures for GUI elements.
-	class Texture;
 
 namespace prometheus
 {
 	class Model;
 	class Material;
 	class Core;
-
+	class Texture;
 
 
 	class Gui

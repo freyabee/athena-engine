@@ -3,10 +3,10 @@
 #include "Resources.h"
 #include "Material.h"
 #include <exception>
-#include "rend/Texture.h"
 #include <fstream>
-#include "Gui.h"
 #include "Screen.h"
+#include "Gui.h"
+
 namespace prometheus
 {
 	/// Allows GUI elements to be displayed on the screen.
@@ -16,12 +16,14 @@ namespace prometheus
 	{
 
 	}
+
 	Gui::~Gui()
 	{
 
 	}
 	void Gui::OnInit()
 	{
+		/*
 		std::string shaderData;
 		std::ifstream file(" ../resources/shaders/guiShader.txt");
 		if(!file.is_open())
@@ -49,7 +51,7 @@ namespace prometheus
 		mesh->setBuffer("a_Position", buffer);
 		mesh->setBuffer("a_TexCoord", buffer);
 
-
+*/
 	}
 	std::shared_ptr<Core> Gui::GetCore()
 	{
@@ -57,7 +59,17 @@ namespace prometheus
 	}
 	void Gui::Texture(glm::vec4 position, std::shared_ptr<rend::Texture> texture)
 	{
-		sw = GetCore()->GetScreen()->
-		shader->setUniform("u_Projection", rend::ortho(0, sw, sh, 0));
+		/*
+		glm::ivec2 screenDimensions = GetCore()->GetScreen()->GetWindowDimensions();
+		float sw = screenDimensions.x;
+		float sh = screenDimensions.y;
+		shader->setUniform("u_Projection", glm::ortho(0.f, sw, sh, 0.f));
+		glm::mat4 model(1.f);
+		model = glm::translate(model, glm::vec3(position.x, position.y, 0));
+		model = glm::scale(model, glm::vec3(position.z, position.w, 1.f));
+		shader->setUniform("u_Model", model);
+		mesh->setTexture("u_Texture", texture);
+		shader->setMesh(mesh);
+		*/
 	}
 }

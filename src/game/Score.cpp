@@ -1,5 +1,5 @@
+#include "prometheus/prometheus.h"
 #include "Score.h"
-
 
 namespace prometheus
 {
@@ -16,10 +16,10 @@ namespace prometheus
 	}
 	void Score::OnInit()
 	{
-		logo = GetCore()->GetResources()->load<Texture>(texturePath);
+		//logo = GetCore()->GetResources()->load<rend::Texture>(texturePath);
 	}
 	void Score::OnGUI()
 	{
-		GetCore()->GetGUI()->
+		//GetCore()->GetGUI()->
 	}
 }

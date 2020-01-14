@@ -38,10 +38,13 @@ struct Shader : public std::sr1::noncopyable
   void setAttribute(const std::string& variable, const std::sr1::shared_ptr<Buffer>& value);
   void setSampler(const std::string& variable, const std::sr1::shared_ptr<TextureAdapter>& value);
   void setMesh(const std::sr1::shared_ptr<Mesh>& value);
-
+  void setDepthTest(bool b);
+  void setBackface(bool b);
 private:
   friend struct Context;
 
+  bool depthTestCheck = true;
+  bool backfaceCheck = true;
   std::sr1::shared_ptr<Context> context;
   std::sr1::zero_initialized<GLuint> id;
   std::sr1::vector<std::sr1::shared_ptr<VariableInfo> > cache;
