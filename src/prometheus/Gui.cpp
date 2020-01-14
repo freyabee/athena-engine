@@ -9,9 +9,11 @@ namespace prometheus
 {
 	Gui::Gui()
 	{
+
 	}
 	Gui::~Gui()
 	{
+
 	}
 	void Gui::LoadButtonMesh(std::string path)
 	{

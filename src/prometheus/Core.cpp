@@ -141,7 +141,7 @@ namespace prometheus
 		{
 			mouse->OnTick();
 			keyboard->OnTick();
-			camera->OnTick();
+			
 			timer->OnTick();
 
 			screen->ClearWindow();
@@ -150,9 +150,17 @@ namespace prometheus
 			{
 				//std::cout << "LOG: GAME LOOP" << std::endl;
 				(*it)->OnTick();
+			}
+
+			camera->OnTick();
+
+			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
+			{
+				//std::cout << "LOG: GAME LOOP" << std::endl;
 				(*it)->OnDisplay();
 			}
 
+			
 			screen->SwapWindow();
 			environment->UpdateDeltaTime();
 

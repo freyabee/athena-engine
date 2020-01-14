@@ -14,7 +14,7 @@ int main()
 		"                                              \n" \
 		"uniform mat4 u_Projection;                    \n" \
 		"uniform mat4 u_Model;                         \n" \
-		"uniform mat4 u_View;                         \n" \
+		"uniform mat4 u_View;                          \n" \
 		"                                              \n" \
 		"varying vec3 v_Normal;                        \n" \
 		"varying vec2 v_TexCoord;                      \n" \
@@ -22,7 +22,7 @@ int main()
 		"void main()                                   \n" \
 		"{                                             \n" \
 		"  gl_Position = u_Projection *                \n" \
-		"    u_View * u_Model * vec4(a_Position, 1);            \n" \
+		"    u_View * u_Model * vec4(a_Position, 1);   \n" \
 		"                                              \n" \
 		"  v_Normal = a_Normal;                        \n" \
 		"  v_TexCoord = a_TexCoord;                    \n" \
@@ -66,7 +66,7 @@ int main()
 	std::string benchTexture = "../resources/images/BenchRock.png";
 	std::string sTreeModel = "../resources/objs/SmallTree.obj";
 	std::string sTreeTexture = "../resources/images/SmallTree.png";
-	std::string shipModel = "../resources/objs/ship.obj";
+	std::string shipModel = "../resources/objs/ship2.obj";
 	std::string shipTexture = "../resources/images/ship.png";
 	std::string parkModel = "../resources/objs/squarelake.obj";
 	std::string parkTexture = "../resources/images/squarelake.png";

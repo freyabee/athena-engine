@@ -34,7 +34,7 @@ namespace prometheus
 		void SetCameraPos(glm::vec3 _cameraPosition);
 		void SetProjection(glm::mat4 _projectionMatrix);
 		void SetView(glm::mat4 _viewingMatrix);
-		void Follow(glm::vec3 _goalPosition, glm::vec3 _offset);
+		void Follow(glm::vec3 _goalPosition, glm::vec3 _offset, glm::vec3 heading);
 	private:
 		std::weak_ptr<Core> core;
 		std::shared_ptr<Mouse> mouse;
@@ -47,6 +47,9 @@ namespace prometheus
 		glm::vec3 cameraDirection;
 		glm::vec3 cameraUp;
 		glm::vec3 cameraFront;
+		glm::vec3 offset;
+		glm::vec3 playerPosition;
+		glm::vec3 playerHeading;
 
 		float pitch;
 		float yaw;
