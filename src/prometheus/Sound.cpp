@@ -1,7 +1,5 @@
 #include "Sound.h"
-
 #include "stb_vorbis.h"
-
 #include <string>
 #include <memory>
 
@@ -11,7 +9,7 @@ namespace prometheus
 	void load_ogg(const std::string& fileName, std::vector<char>& buffer,
 		ALenum &format, ALsizei &freq);
 
-	void prometheus::Sound::load(std::string path)
+	void prometheus::Sound::Load(std::string path)
 	{
 		bufferId = 0;
 		ALenum format = 0;
@@ -25,12 +23,14 @@ namespace prometheus
 
 	}
 
-	void prometheus::Sound::play(float volume, float min, float max)
+	void prometheus::Sound::Play(float volume, float min, float max)
 	{
+
 	}
 
-	void prometheus::Sound::play()
+	void prometheus::Sound::Play()
 	{
+
 	}
 
 	void load_ogg(const std::string& fileName, std::vector<char>& buffer,

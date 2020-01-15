@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"functions_vars_y.html":[1,3,2,21],
 "functions_w.html":[1,3,0,20],
 "functions_x.html":[1,3,0,21],
 "functions_y.html":[1,3,0,22],
@@ -23,8 +24,8 @@ var NAVTREEINDEX2 =
 "namespaceprometheus.html":[0,0,0],
 "namespaceprometheus.html":[1,0,0],
 "namespaces.html":[0,0],
-"namespacetinyobj.html":[0,0,1],
 "namespacetinyobj.html":[1,0,1],
+"namespacetinyobj.html":[0,0,1],
 "pages.html":[],
 "prometheus_8h.html":[2,0,0,0,35],
 "prometheus_8h_source.html":[2,0,0,0,35],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "struct_mapping_channel.html":[1,0,9],
 "struct_mapping_channel.html#a293cfec33390fdd5cee99df910f2d694":[1,0,9,2],
 "struct_mapping_channel.html#a78fa29206ca367159792f11c1f604510":[1,0,9,0],
-"struct_mapping_channel.html#afd6e4cb4de3874833192c5c67daaa272":[1,0,9,1],
-"struct_mode.html":[1,0,10]
+"struct_mapping_channel.html#afd6e4cb4de3874833192c5c67daaa272":[1,0,9,1]
 };

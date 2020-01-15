@@ -84,7 +84,7 @@ void Player::PlayerMovement()
 
 
 	glm::vec3 playerPosition = GetTransform()->GetLocalPosition();
-	glm::vec3 offset(0.f, -5.f, -7.f);
+	glm::vec3 offset(0.f, -2.f, -3.f);
 	//offset.z = -cos(glm::radians(heading.y))*2.f;
 	//offset.x = -sin(glm::radians(heading.y))*2.f;
 	GetCamera()->Follow(playerPosition, offset, heading);

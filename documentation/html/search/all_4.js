@@ -1,20 +1,7 @@
 var searchData=
 [
-  ['decode_143',['DECODE',['../stb__vorbis_8h.html#ac9e9bac3b3e48646f9a430d0c7411ae5',1,'stb_vorbis.h']]],
-  ['decode_5fraw_144',['DECODE_RAW',['../stb__vorbis_8h.html#a0c23d1b38c11a185d8cf8a30010f5537',1,'stb_vorbis.h']]],
-  ['decode_5fvq_145',['DECODE_VQ',['../stb__vorbis_8h.html#ae8daba892ecc7da0dace8b1a1f7d2a18',1,'stb_vorbis.h']]],
-  ['delta_5fvalue_146',['delta_value',['../struct_codebook.html#a5f68e4a9acd173f69425233d995c37ed',1,'Codebook']]],
-  ['deltatime_147',['deltaTime',['../classprometheus_1_1_environment.html#a8e527845432b06ecb1a48617aa82040a',1,'prometheus::Environment::deltaTime()'],['../classprometheus_1_1_timer.html#ae8ca47849331ce98d10ac9470c73c551',1,'prometheus::Timer::deltaTime()']]],
-  ['destroyscreen_148',['DestroyScreen',['../classprometheus_1_1_screen.html#a2ea189d312e7154b1efa82c577073604',1,'prometheus::Screen']]],
-  ['device_149',['device',['../classprometheus_1_1_audio_context.html#aa444316a3615773db82a261fe38c265c',1,'prometheus::AudioContext::device()'],['../classprometheus_1_1_core.html#a2175ac22a8e59616136dd675b5005a61',1,'prometheus::Core::device()']]],
-  ['diffuse_150',['diffuse',['../structtinyobj_1_1__material__t.html#a46bf455c24cd99c84c240d14b36199d8',1,'tinyobj::_material_t']]],
-  ['diffuse_5ftexname_151',['diffuse_texname',['../structtinyobj_1_1__material__t.html#ab45a4a37ecf00c251e96727b9f91389f',1,'tinyobj::_material_t']]],
-  ['diffuse_5ftexopt_152',['diffuse_texopt',['../structtinyobj_1_1__material__t.html#aca33ad89bdef666d6f7848a7dc06b651',1,'tinyobj::_material_t']]],
-  ['dimensions_153',['dimensions',['../struct_codebook.html#af2c97899a7fc32b58c0e05d2c357fbd4',1,'Codebook']]],
-  ['discard_5fsamples_5fdeferred_154',['discard_samples_deferred',['../structstb__vorbis.html#adbacf2120eaa0099f886770c51d633d2',1,'stb_vorbis']]],
-  ['displacement_5ftexname_155',['displacement_texname',['../structtinyobj_1_1__material__t.html#a680b8bd03d9b6b83378760e0bfee8607',1,'tinyobj::_material_t']]],
-  ['displacement_5ftexopt_156',['displacement_texopt',['../structtinyobj_1_1__material__t.html#a470ce89fa6ef8ec7c0fa2ca2192a5581',1,'tinyobj::_material_t']]],
-  ['dissolve_157',['dissolve',['../structtinyobj_1_1__material__t.html#ab396900d4fe29af090197b83c27bfbf2',1,'tinyobj::_material_t']]],
-  ['dot_158',['DOT',['../tribox_8cpp.html#a7942047af87f6f42fe6880a4c7c842ae',1,'tribox.cpp']]],
-  ['dummy_159',['dummy',['../structtinyobj_1_1__material__t.html#a913613d302142320cb08525b8c2816b0',1,'tinyobj::_material_t']]]
+  ['deltatime_65',['deltaTime',['../classprometheus_1_1_environment.html#a8e527845432b06ecb1a48617aa82040a',1,'prometheus::Environment::deltaTime()'],['../classprometheus_1_1_timer.html#ae8ca47849331ce98d10ac9470c73c551',1,'prometheus::Timer::deltaTime()']]],
+  ['destroyscreen_66',['DestroyScreen',['../classprometheus_1_1_screen.html#a2ea189d312e7154b1efa82c577073604',1,'prometheus::Screen']]],
+  ['device_67',['device',['../classprometheus_1_1_audio_context.html#aa444316a3615773db82a261fe38c265c',1,'prometheus::AudioContext']]],
+  ['dot_68',['DOT',['../tribox_8cpp.html#a7942047af87f6f42fe6880a4c7c842ae',1,'tribox.cpp']]]
 ];

@@ -58,11 +58,8 @@ var dir_870962b077f7280efa0dd3135fbadadf =
       [ "ColliderColumn", "structprometheus_1_1_collider_column.html", "structprometheus_1_1_collider_column" ],
       [ "StaticModelCollider", "classprometheus_1_1_static_model_collider.html", "classprometheus_1_1_static_model_collider" ]
     ] ],
-    [ "stb_image.h", "stb__image_8h.html", "stb__image_8h" ],
-    [ "stb_vorbis.h", "stb__vorbis_8h.html", "stb__vorbis_8h" ],
     [ "Timer.cpp", "_timer_8cpp.html", null ],
     [ "Timer.h", "_timer_8h.html", "_timer_8h" ],
-    [ "tinyobj.h", "tinyobj_8h.html", "tinyobj_8h" ],
     [ "Transform.cpp", "_transform_8cpp.html", null ],
     [ "Transform.h", "_transform_8h.html", "_transform_8h" ],
     [ "tribox.cpp", "tribox_8cpp.html", "tribox_8cpp" ]

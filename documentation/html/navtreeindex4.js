@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"tribox_8cpp.html#a275587ce22080c4c09deb818b1ce3564":[2,0,0,0,53,6],
 "tribox_8cpp.html#a27cf54160e51334c0f90ede5b9a30173":[2,0,0,0,53,8],
 "tribox_8cpp.html#a2f2534d1e427de530b66531a42a7af82":[2,0,0,0,53,5],
 "tribox_8cpp.html#a51591cf51bdd6c1f6015532422e7770e":[2,0,0,0,53,12],

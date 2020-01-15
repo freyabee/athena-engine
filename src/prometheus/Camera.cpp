@@ -10,17 +10,17 @@ namespace prometheus
 	{
 		//projectionMatrix = glm::perspective(glm::radians(70.0f), 1.0f, 0.1f, 100.0f);
 	}
-	Camera::Camera(std::shared_ptr<Keyboard> _keyboard, std::shared_ptr<Mouse> _mouse, std::shared_ptr<Timer> _timer)
+	Camera::Camera(std::shared_ptr<Keyboard> keyboard, std::shared_ptr<Mouse> mouse, std::shared_ptr<Timer> timer)
 	{
-		mouse = _mouse;
-		keyboard = _keyboard;
-		timer = _timer;
+		this->mouse = mouse;
+		this->keyboard = keyboard;
+		this->timer = timer;
 	}
-	Camera::Camera(glm::vec3 _position,  glm::vec3 _target, std::shared_ptr<Keyboard> _keyboard, std::shared_ptr<Mouse> _mouse)
+	Camera::Camera(glm::vec3 position,  glm::vec3 target, std::shared_ptr<Keyboard> keyboard, std::shared_ptr<Mouse> mouse)
 	{
-		cameraPosition = _position;
-		cameraTarget = _target;
-		keyboard = _keyboard;
+		this->cameraPosition = position;
+		this->cameraTarget = target;
+		this->keyboard = keyboard;
 	}
 
 	Camera::~Camera()
@@ -137,24 +137,24 @@ namespace prometheus
 		//std::cout << pitch << std::endl;
 		cameraFront = glm::normalize(tmp);
 	}
-	void Camera::SetCameraPos(glm::vec3 _cameraPosition)
+	void Camera::SetCameraPos(glm::vec3 cameraPosition)
 	{
-		cameraPosition = _cameraPosition;
+		this->cameraPosition = cameraPosition;
 	}
-	void Camera::SetProjection(glm::mat4 _projectionMatrix)
+	void Camera::SetProjection(glm::mat4 projectionMatrix)
 	{
-		projectionMatrix = _projectionMatrix;
+		this->projectionMatrix = projectionMatrix;
 	}
-	void Camera::SetView(glm::mat4 _viewingMatrix)
+	void Camera::SetView(glm::mat4 viewingMatrix)
 	{
-		viewingMatrix = _viewingMatrix;
+		this->viewingMatrix = viewingMatrix;
 	}
-	void Camera::Follow(glm::vec3 _goalPosition, glm::vec3 _offset, glm::vec3 heading)
+	void Camera::Follow(glm::vec3 goalPosition, glm::vec3 offset, glm::vec3 heading)
 	{
-		playerPosition = _goalPosition;
+		this->playerPosition = goalPosition;
 		playerHeading = heading;
-		offset = _offset;
-		glm::vec3 goal = _goalPosition + offset;
+		this->offset = offset;
+		glm::vec3 goal = goalPosition + offset;
 		float lerp = 0.1f;
 		glm::vec3 pos = cameraPosition;
 		glm::vec3 diff(0.f);

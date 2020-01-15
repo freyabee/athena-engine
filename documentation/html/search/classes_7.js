@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['index_5ft_768',['index_t',['../structtinyobj_1_1index__t.html',1,'tinyobj']]]
+  ['noncopyable_306',['NonCopyable',['../classprometheus_1_1_non_copyable.html',1,'prometheus']]]
 ];

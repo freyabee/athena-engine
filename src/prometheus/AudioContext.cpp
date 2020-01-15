@@ -34,9 +34,23 @@ namespace prometheus
 			alcCloseDevice(device);
 			throw std::exception();
 		}
+
+
+
 	}
 	AudioContext::~AudioContext()
 	{
+		alcMakeContextCurrent(NULL);
+		alcDestroyContext(context);
+		alcCloseDevice(device);
 
+	}
+	ALCcontext * AudioContext::GetContext()
+	{
+		return context;	
+	}
+	ALCdevice * AudioContext::GetDevice()
+	{
+		return device;
 	}
 }

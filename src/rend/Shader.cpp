@@ -81,6 +81,7 @@ void Shader::render(const std::sr1::shared_ptr<RenderTexture>& target)
 
 void Shader::render()
 {
+	//MYCODE ADAPTED TO CHANGE DEPTH TEST ETC
 	if (depthTestCheck)
 	{
 		glEnable(GL_DEPTH_TEST); pollForError();
@@ -276,6 +277,7 @@ std::sr1::shared_ptr<VariableInfo> Shader::getVariableInfo(const std::string& na
   GLint unusedB = 0;
   GLenum rtnType = 0;
 
+  
   if(attrib == false)
   {
     rtn->loc = glGetUniformLocation(id, name.c_str());
@@ -313,6 +315,8 @@ std::sr1::shared_ptr<VariableInfo> Shader::getVariableInfo(const std::string& na
       //throw Exception("The requested attribute had the wrong type");
     }
   }
+  
+  
 
   cache.push_back(rtn);
 

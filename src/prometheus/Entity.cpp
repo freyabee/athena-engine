@@ -14,10 +14,10 @@ namespace prometheus
 		transform = addComponent<Transform>();
 	}
 
-	Entity::Entity(std::string _entityName)
+	Entity::Entity(std::string entityName)
 	{
 		transform = addComponent<Transform>();
-		entityName = _entityName;
+		this->entityName = entityName;
 	}
 
 	void Entity::SetPosition(glm::vec3 _position)

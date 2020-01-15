@@ -10,6 +10,7 @@
 #include "Timer.h"
 #include "Gui.h"
 #include "Core.h"
+#include "AudioContext.h"
 
 namespace prometheus
 {
@@ -45,9 +46,7 @@ namespace prometheus
 		try
 		{
 			std::cout << "Initialising window: ";
-			
 			rtn->screen = std::make_shared<prometheus::Screen>(windowWidth, windowHeight);
-
 			std::cout << "success" << std::endl;
 		}
 		catch (const std::exception& e)
@@ -55,32 +54,114 @@ namespace prometheus
 			std::cout << "failed" << std::endl;
 			std::cout << &e << std::endl;
 		}
-
+		try 
+		{
+			std::cout << "Initializing render context: ";
+			rtn->context = rend::Context::initialize();
+			std::cout << "success" << std::endl;
+		}
+		catch (const std::exception& e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
+		
+		try 
+		{
+			//Initialising pools of resources
+			std::cout << "Initialising resources: ";
+			rtn->resources = std::make_shared<Resources>();
+			rtn->resources->core = rtn;
+			std::cout << "success" << std::endl;
+		}
+		catch (const std::exception & e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
 
 		
 
-		/* Initialise Rend Context */
-		rtn->context = rend::Context::initialize();
-		/* Initialise pool of resources*/
-		rtn->resources = std::make_shared<Resources>();
-		rtn->resources->core = rtn;
+		try
+		{
+			std::cout << "Initialising environment: ";
+			rtn->environment = std::make_shared<Environment>();
+			std::cout << "success" << std::endl;
+		}
+		catch(std::exception & e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
 
-		/* Initialize environment */
-		rtn->environment = std::make_shared<Environment>();
-		/* Initialize Keyboard */
-		rtn->keyboard = std::make_shared<Keyboard>();
-		/* Initialize Mouse */
-		rtn->mouse = std::make_shared<Mouse>(windowWidth, windowHeight);
-		/* Initialize Camera */
-		rtn->camera = std::make_shared<Camera>(rtn->keyboard, rtn->mouse, rtn->timer);
+		try
+		{
+			std::cout << "Initialising keyboard: ";
+			rtn->keyboard = std::make_shared<Keyboard>();
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception&e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
+		try
+		{
+			std::cout << "Initialising mouse: ";
+			rtn->mouse = std::make_shared<Mouse>(windowWidth, windowHeight);
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception&e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
 
-		rtn->gui = std::make_shared<Gui>(rtn);
+		try
+		{
+			std::cout << "Initialising camera: ";
+			rtn->camera = std::make_shared<Camera>(rtn->keyboard, rtn->mouse, rtn->timer);
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception&e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
+
+		try
+		{
+			std::cout << "Initialising gui: ";
+			rtn->gui = std::make_shared<Gui>(rtn);
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception&e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
+
+		try
+		{
+			std::cout << "Initialising audio context: ";
+			rtn->audioContext = std::make_shared<AudioContext>();
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception&e)
+		{
+			std::cout << "failed" << std::endl;
+			std::cout << &e << std::endl;
+		}
+
+		
+
+		
 		/*
 				AUDIO
 				TODO
 				-Abstract out to AudioContext class
 		*/
-
+		/*
 		//Set device to be new device
 		rtn->device = alcOpenDevice(NULL);
 
@@ -107,6 +188,9 @@ namespace prometheus
 			alcCloseDevice(rtn->device);
 			throw std::exception();
 		}
+		*/
+		
+		
 
 		
 		
@@ -118,12 +202,6 @@ namespace prometheus
 
 	Core::~Core()
 	{
-		//Cleanup raw audiocontext and device pointers 
-		//and make current context null
-
-		alcMakeContextCurrent(NULL);
-		alcDestroyContext(audioContext);
-		alcCloseDevice(device);
 
 	}
 
@@ -209,9 +287,6 @@ namespace prometheus
 		entities.push_back(rtn);
 		rtn->self = rtn;
 		rtn->core = self;
-		//rtn->addComponent<prometheus::Transform>();
-		std::cout << "LOG: Entity made" << std::endl;
-
 		return rtn;
 	}
 	std::shared_ptr<Environment> Core::GetEnvironment()
@@ -241,10 +316,6 @@ namespace prometheus
 		return camera;
 	}
 
-	ALCcontext * Core::GetAudioContext()
-	{
-		return audioContext;
-	}
 
 	std::shared_ptr<Timer> Core::GetTimer()
 	{
@@ -254,6 +325,11 @@ namespace prometheus
 	std::shared_ptr<Gui> Core::GetGUI()
 	{
 		return gui;
+	}
+
+	std::shared_ptr<AudioContext> Core::GetAudioContext()
+	{
+		return audioContext;
 	}
 
 }

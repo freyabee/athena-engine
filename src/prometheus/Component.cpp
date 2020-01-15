@@ -6,9 +6,9 @@ namespace prometheus
 {
 	Component::~Component() {}
 
-	void Component::SetEntity(std::weak_ptr<Entity> _entity)
+	void Component::SetEntity(std::weak_ptr<Entity> entity)
 	{
-		entity = _entity;
+		this->entity = entity;
 	}
 	std::shared_ptr<Entity> Component::GetEntity()
 	{

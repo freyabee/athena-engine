@@ -20,8 +20,8 @@ int main()
 	std::string parkModel = "../resources/objs/squarelake.obj";
 	std::string parkTexture = "../resources/images/squarelake.png";
 	//Waterplane
-	std::string mWater = "../resources/objs/waterplane.obj";
-	std::string tWater = "../resources/images/water.png";
+	std::string mWater = "../resources/objs/lake8.obj";
+	std::string tWater = "../resources/images/lake8.png";
 	//Shaders
 	std::string materialShader = "../resources/shaders/matShader.txt";
 	//std::string waterShader = "../resources/shaders/waterShader.txt";
@@ -54,19 +54,20 @@ int main()
 	eShip->addComponent<Player>();
 
 	//Water
-	//std::shared_ptr<prometheus::Entity> eWater = core->addEntity();
-	//std::shared_ptr<prometheus::MeshRenderer> rWater = eWater->addComponent<prometheus::MeshRenderer>();
-	//rWater->LoadModel(mWater, tWater, materialShader);
+	std::shared_ptr<prometheus::Entity> eWater = core->addEntity();
+	std::shared_ptr<prometheus::MeshRenderer> rWater = eWater->addComponent<prometheus::MeshRenderer>();
+	rWater->LoadModel(mWater, tWater, materialShader);
+	eWater->SetPosition(glm::vec3(0.f, 0.f, 0.f));
 
 	//GUI
 	std::shared_ptr<prometheus::Entity> eGUI = core->addEntity();
 	eGUI->addComponent<Score>("../resources/images/dab.png");
 
-	/*
+	
 	std::shared_ptr<prometheus::Sound> sound1 = core->GetResources()->load<prometheus::Sound>("../resources/sounds/dixie_horn.ogg");
-	std::shared_ptr<prometheus::SoundSource> dixie = entity->addComponent<prometheus::SoundSource>();
-	dixie->onInit(sound1);
-	*/
+	std::shared_ptr<prometheus::Entity> soundPlayer = core->addEntity();
+	std::shared_ptr<prometheus::SoundSource> sound = soundPlayer->addComponent <prometheus::SoundSource>();
+	sound->OnInit(sound1);
 
 	core->start();
 

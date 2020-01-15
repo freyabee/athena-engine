@@ -7,19 +7,20 @@
 #include "Material.h"
 #include "Camera.h"
 
+
+
 namespace prometheus
 {
-	void Material::Load(std::string _path)
+	void Material::Load(std::string path)
 	{
 		shader = core.lock()->GetContext()->createShader();
+		texture = core.lock()->GetContext()->createTexture();
 	}
 	void Material::LoadShader(std::string shaderPath)
 	{
 		shader = core.lock()->GetContext()->createShader();
 		shader->ParseFromPath(shaderPath);
 	}
-
-
 	void Material::LoadTexture(std::string texturePath)
 	{
 		texture = core.lock()->GetContext()->createTexture();
@@ -61,7 +62,7 @@ namespace prometheus
 		int h = 0;
 		int bpp = 0;
 		stbi_set_flip_vertically_on_load(true);
-		unsigned char *data = stbi_load(texturePath.c_str(), &w, &h, &bpp, 3);
+		unsigned char *data = stbi_load(texturePath.c_str(), &w, &h, &bpp, 4);
 
 
 
@@ -76,12 +77,13 @@ namespace prometheus
 		{
 			for (int x = 0; x < w; x++)
 			{
-				int r = y * w * 3 + x * 3;
+				int r = y * w * 4 + x * 4;
 
-				texture->setPixel(x, y, glm::vec3(
+				texture->setPixel(x, y, glm::vec4(
 					data[r] / 255.0f,
 					data[r + 1] / 255.0f,
-					data[r + 2] / 255.0f));
+					data[r + 2] / 255.0f,
+					data[r + 3] / 255.0f));
 			}
 		}
 
@@ -91,17 +93,17 @@ namespace prometheus
 
 
 
-	void Material::SetModel(std::shared_ptr<Model> _model)
+	void Material::SetModel(std::shared_ptr<Model> model)
 	{
-		shader->setMesh(_model->GetMesh());
+		shader->setMesh(model->GetMesh());
 
 	}
 
-	void Material::SetUniform(glm::mat4 _modelMat)
+	void Material::SetUniform(glm::mat4 modelMat)
 	{
 		shader->setUniform("u_Projection", GetCamera()->GetProjection());
 		shader->setUniform("u_View", GetCamera()->GetView());
-		shader->setUniform("u_Model", _modelMat);
+		shader->setUniform("u_Model", modelMat);
 	}
 
 	std::shared_ptr<rend::Shader> Material::GetShader()

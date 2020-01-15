@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buffer_5fsize_1486',['BUFFER_SIZE',['../stb__vorbis_8h.html#a6b20d41d6252e9871430c242cb1a56e7',1,'BUFFER_SIZE():&#160;stb_vorbis.h'],['../stb__vorbis_8h.html#a6b20d41d6252e9871430c242cb1a56e7',1,'BUFFER_SIZE():&#160;stb_vorbis.h']]]
+  ['cross_603',['CROSS',['../tribox_8cpp.html#a275587ce22080c4c09deb818b1ce3564',1,'tribox.cpp']]]
 ];

@@ -103,13 +103,16 @@ $(document).ready(function(){initNavTree('classprometheus_1_1_material.html','')
 </div><!--header-->
 <div class="contents">
 
+<p>Class to load the texture and shader for an object.  
+ <a href="classprometheus_1_1_material.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_material_8h_source.html">Material.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for prometheus::Material:</div>
 <div class="dyncontent">
 <div class="center"><img src="classprometheus_1_1_material__inherit__graph.png" border="0" usemap="#prometheus_1_1_material_inherit__map" alt="Inheritance graph"/></div>
 <map name="prometheus_1_1_material_inherit__map" id="prometheus_1_1_material_inherit__map">
-<area shape="rect" title=" " alt="" coords="10,80,154,107"/>
+<area shape="rect" title="Class to load the texture and shader for an object." alt="" coords="10,80,154,107"/>
 <area shape="rect" href="classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -118,37 +121,48 @@ Collaboration diagram for prometheus::Material:</div>
 <div class="dyncontent">
 <div class="center"><img src="classprometheus_1_1_material__coll__graph.png" border="0" usemap="#prometheus_1_1_material_coll__map" alt="Collaboration graph"/></div>
 <map name="prometheus_1_1_material_coll__map" id="prometheus_1_1_material_coll__map">
-<area shape="rect" title=" " alt="" coords="10,80,154,107"/>
+<area shape="rect" title="Class to load the texture and shader for an object." alt="" coords="10,80,154,107"/>
 <area shape="rect" href="classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a52ff8018d4a33e53c3ca2a8c000ca024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a52ff8018d4a33e53c3ca2a8c000ca024">Load</a> (std::string _path)</td></tr>
-<tr class="separator:a52ff8018d4a33e53c3ca2a8c000ca024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d0c830f0a3dbd72734da37a9c10f3ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a0d0c830f0a3dbd72734da37a9c10f3ba">LoadShader</a> (std::string _path)</td></tr>
-<tr class="separator:a0d0c830f0a3dbd72734da37a9c10f3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0beb22099832fe7ba7b9ee1bfccd1405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a0beb22099832fe7ba7b9ee1bfccd1405">LoadTexture</a> (std::string _path)</td></tr>
-<tr class="separator:a0beb22099832fe7ba7b9ee1bfccd1405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25bdda8561c7eac93ceb9d91e122848f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a25bdda8561c7eac93ceb9d91e122848f">LoadTexture</a> (std::string _path, std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt; <a class="el" href="classprometheus_1_1_resource.html#a216e07b6b83ccb81dfaa71949ac5db17">core</a>)</td></tr>
-<tr class="separator:a25bdda8561c7eac93ceb9d91e122848f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09754259687312d784b9b478e752d58b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a09754259687312d784b9b478e752d58b">SetModel</a> (std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_model.html">Model</a> &gt; _model)</td></tr>
-<tr class="separator:a09754259687312d784b9b478e752d58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0d78e73c291ddaaf553e0d7b10f2cc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#af0d78e73c291ddaaf553e0d7b10f2cc7">SetUniform</a> (glm::mat4 _modelMat)</td></tr>
-<tr class="separator:af0d78e73c291ddaaf553e0d7b10f2cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bbf5a5c507eee0dad88b1e26e66989c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a2bbf5a5c507eee0dad88b1e26e66989c">Load</a> (std::string path)</td></tr>
+<tr class="memdesc:a2bbf5a5c507eee0dad88b1e26e66989c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises shader and texture objects.  <a href="classprometheus_1_1_material.html#a2bbf5a5c507eee0dad88b1e26e66989c">More...</a><br /></td></tr>
+<tr class="separator:a2bbf5a5c507eee0dad88b1e26e66989c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71af072087d7593c57e3ce7f3d432a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#ab71af072087d7593c57e3ce7f3d432a0">LoadShader</a> (std::string shaderPath)</td></tr>
+<tr class="memdesc:ab71af072087d7593c57e3ce7f3d432a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises shader variable and loads shader from path.  <a href="classprometheus_1_1_material.html#ab71af072087d7593c57e3ce7f3d432a0">More...</a><br /></td></tr>
+<tr class="separator:ab71af072087d7593c57e3ce7f3d432a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7bd3b9179fb23ae2d8aaafcce836b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#aba7bd3b9179fb23ae2d8aaafcce836b3">LoadTexture</a> (std::string texturePath)</td></tr>
+<tr class="memdesc:aba7bd3b9179fb23ae2d8aaafcce836b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises texture variable and loads texture from texture path.  <a href="classprometheus_1_1_material.html#aba7bd3b9179fb23ae2d8aaafcce836b3">More...</a><br /></td></tr>
+<tr class="separator:aba7bd3b9179fb23ae2d8aaafcce836b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01ba92279830f30a70255be8018111d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#ae01ba92279830f30a70255be8018111d">LoadTexture</a> (std::string texturePath, std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt; <a class="el" href="classprometheus_1_1_resource.html#a216e07b6b83ccb81dfaa71949ac5db17">core</a>)</td></tr>
+<tr class="memdesc:ae01ba92279830f30a70255be8018111d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises texture variable and loads texture from texture path.  <a href="classprometheus_1_1_material.html#ae01ba92279830f30a70255be8018111d">More...</a><br /></td></tr>
+<tr class="separator:ae01ba92279830f30a70255be8018111d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd6a2065e67a785b5929eecd6a944c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a4cd6a2065e67a785b5929eecd6a944c7">SetModel</a> (std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_model.html">Model</a> &gt; model)</td></tr>
+<tr class="memdesc:a4cd6a2065e67a785b5929eecd6a944c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets shader mesh.  <a href="classprometheus_1_1_material.html#a4cd6a2065e67a785b5929eecd6a944c7">More...</a><br /></td></tr>
+<tr class="separator:a4cd6a2065e67a785b5929eecd6a944c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3647047cd2810cf0543ca4799494674"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#aa3647047cd2810cf0543ca4799494674">SetUniform</a> (glm::mat4 modelMat)</td></tr>
+<tr class="memdesc:aa3647047cd2810cf0543ca4799494674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets projection, view and model uniforms in shader.  <a href="classprometheus_1_1_material.html#aa3647047cd2810cf0543ca4799494674">More...</a><br /></td></tr>
+<tr class="separator:aa3647047cd2810cf0543ca4799494674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce880537f1e612d868a978d50acfdcf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; rend::Shader &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a8ce880537f1e612d868a978d50acfdcf">GetShader</a> ()</td></tr>
+<tr class="memdesc:a8ce880537f1e612d868a978d50acfdcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to shader.  <a href="classprometheus_1_1_material.html#a8ce880537f1e612d868a978d50acfdcf">More...</a><br /></td></tr>
 <tr class="separator:a8ce880537f1e612d868a978d50acfdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9292c0393c0745f5ef00170f7c22bcc"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; rend::Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#ac9292c0393c0745f5ef00170f7c22bcc">GetTexture</a> ()</td></tr>
+<tr class="memdesc:ac9292c0393c0745f5ef00170f7c22bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to texture.  <a href="classprometheus_1_1_material.html#ac9292c0393c0745f5ef00170f7c22bcc">More...</a><br /></td></tr>
 <tr class="separator:ac9292c0393c0745f5ef00170f7c22bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26b12e7eff88d3b705c1eb6dfcc34ef5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a26b12e7eff88d3b705c1eb6dfcc34ef5">GetCamera</a> ()</td></tr>
+<tr class="memdesc:a26b12e7eff88d3b705c1eb6dfcc34ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to camera.  <a href="classprometheus_1_1_material.html#a26b12e7eff88d3b705c1eb6dfcc34ef5">More...</a><br /></td></tr>
 <tr class="separator:a26b12e7eff88d3b705c1eb6dfcc34ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a344e92be962fcd92b4e96190240d3983"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; rend::Shader &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a344e92be962fcd92b4e96190240d3983">shader</a></td></tr>
+<tr class="memdesc:a344e92be962fcd92b4e96190240d3983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable holding material's shader.  <a href="classprometheus_1_1_material.html#a344e92be962fcd92b4e96190240d3983">More...</a><br /></td></tr>
 <tr class="separator:a344e92be962fcd92b4e96190240d3983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56762565493f9ed8a909092a6fd49b54"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; rend::Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_material.html#a56762565493f9ed8a909092a6fd49b54">texture</a></td></tr>
+<tr class="memdesc:a56762565493f9ed8a909092a6fd49b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable holding material's texture.  <a href="classprometheus_1_1_material.html#a56762565493f9ed8a909092a6fd49b54">More...</a><br /></td></tr>
 <tr class="separator:a56762565493f9ed8a909092a6fd49b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -157,7 +171,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_resource.html#a216e07b6b83ccb81dfaa71949ac5db17">core</a></td></tr>
 <tr class="separator:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class to load the texture and shader for an object. </p>
+<p>Encapsulates and contains the shader and textures for models, interfacing with the rend classes. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a26b12e7eff88d3b705c1eb6dfcc34ef5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26b12e7eff88d3b705c1eb6dfcc34ef5">&#9670;&nbsp;</a></span>GetCamera()</h2>
 
@@ -172,6 +189,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns pointer to camera. </p>
+<p>Calls the <a class="el" href="classprometheus_1_1_material.html#a26b12e7eff88d3b705c1eb6dfcc34ef5" title="Returns pointer to camera.">GetCamera()</a> function in core. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to instance of camera from core. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>"Core.h" </dd></dl>
 
 </div>
 </div>
@@ -190,6 +211,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns pointer to shader. </p>
+<dl class="section return"><dt>Returns</dt><dd>Smart pointer to rend::shader instance. </dd></dl>
+
 </div>
 </div>
 <a id="ac9292c0393c0745f5ef00170f7c22bcc"></a>
@@ -207,10 +231,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns pointer to texture. </p>
+<dl class="section return"><dt>Returns</dt><dd>Smart pointer to rend::texture instance. </dd></dl>
+
 </div>
 </div>
-<a id="a52ff8018d4a33e53c3ca2a8c000ca024"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52ff8018d4a33e53c3ca2a8c000ca024">&#9670;&nbsp;</a></span>Load()</h2>
+<a id="a2bbf5a5c507eee0dad88b1e26e66989c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bbf5a5c507eee0dad88b1e26e66989c">&#9670;&nbsp;</a></span>Load()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,16 +246,24 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void prometheus::Material::Load </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>_path</em></td><td>)</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialises shader and texture objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a0d0c830f0a3dbd72734da37a9c10f3ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d0c830f0a3dbd72734da37a9c10f3ba">&#9670;&nbsp;</a></span>LoadShader()</h2>
+<a id="ab71af072087d7593c57e3ce7f3d432a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71af072087d7593c57e3ce7f3d432a0">&#9670;&nbsp;</a></span>LoadShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,16 +272,24 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void prometheus::Material::LoadShader </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>_path</em></td><td>)</td>
+          <td class="paramname"><em>shaderPath</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialises shader variable and loads shader from path. </p>
+<p>Uses ParseFromPath function from the rend::Shader class to load shader from path. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Path</td><td>to shader of type string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a0beb22099832fe7ba7b9ee1bfccd1405"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0beb22099832fe7ba7b9ee1bfccd1405">&#9670;&nbsp;</a></span>LoadTexture() <span class="overload">[1/2]</span></h2>
+<a id="aba7bd3b9179fb23ae2d8aaafcce836b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7bd3b9179fb23ae2d8aaafcce836b3">&#9670;&nbsp;</a></span>LoadTexture() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,16 +298,24 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void prometheus::Material::LoadTexture </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>_path</em></td><td>)</td>
+          <td class="paramname"><em>texturePath</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialises texture variable and loads texture from texture path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Path</td><td>to texture of type string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a25bdda8561c7eac93ceb9d91e122848f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25bdda8561c7eac93ceb9d91e122848f">&#9670;&nbsp;</a></span>LoadTexture() <span class="overload">[2/2]</span></h2>
+<a id="ae01ba92279830f30a70255be8018111d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01ba92279830f30a70255be8018111d">&#9670;&nbsp;</a></span>LoadTexture() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +324,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void prometheus::Material::LoadTexture </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>_path</em>, </td>
+          <td class="paramname"><em>texturePath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -289,10 +340,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialises texture variable and loads texture from texture path. </p>
+<p>Uses core passed into function instead of core.lock(), used for non-entity textures such as GUI. </p>
+
 </div>
 </div>
-<a id="a09754259687312d784b9b478e752d58b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09754259687312d784b9b478e752d58b">&#9670;&nbsp;</a></span>SetModel()</h2>
+<a id="a4cd6a2065e67a785b5929eecd6a944c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd6a2065e67a785b5929eecd6a944c7">&#9670;&nbsp;</a></span>SetModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,16 +355,25 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void prometheus::Material::SetModel </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_model.html">Model</a> &gt;&#160;</td>
-          <td class="paramname"><em>_model</em></td><td>)</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets shader mesh. </p>
+<p>Retrieves mesh from prometheus::model and passes into shader. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Path</td><td>to texture of type string. </td></tr>
+    <tr><td class="paramname">Pointer</td><td>to core instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="af0d78e73c291ddaaf553e0d7b10f2cc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0d78e73c291ddaaf553e0d7b10f2cc7">&#9670;&nbsp;</a></span>SetUniform()</h2>
+<a id="aa3647047cd2810cf0543ca4799494674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3647047cd2810cf0543ca4799494674">&#9670;&nbsp;</a></span>SetUniform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,11 +382,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void prometheus::Material::SetUniform </td>
           <td>(</td>
           <td class="paramtype">glm::mat4&#160;</td>
-          <td class="paramname"><em>_modelMat</em></td><td>)</td>
+          <td class="paramname"><em>modelMat</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets projection, view and model uniforms in shader. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classprometheus_1_1_model.html">Model</a></td><td>matrix </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -348,6 +419,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Variable holding material's shader. </p>
+
 </div>
 </div>
 <a id="a56762565493f9ed8a909092a6fd49b54"></a>
@@ -369,6 +442,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Variable holding material's texture. </p>
 
 </div>
 </div>

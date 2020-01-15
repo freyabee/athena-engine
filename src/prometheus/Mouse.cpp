@@ -9,13 +9,9 @@ namespace prometheus
 	}
 	Mouse::Mouse(int _screenWidth, int _screenHeight)
 	{
-		std::cout << "Mouse instantiated" << std::endl;
-		//Set mouse to relative mode
 		screenWidth = _screenWidth;
 		screenHeight = _screenHeight;
-
 		HideCursor();
-
 	}
 	Mouse::~Mouse()
 	{
@@ -23,7 +19,6 @@ namespace prometheus
 	}
 	void Mouse::OnTick()
 	{
-		//GetRelativeMousePosition();
 	}
 	void Mouse::ShowCursor()
 	{
@@ -38,7 +33,6 @@ namespace prometheus
 	glm::ivec2 Mouse::GetRelativeMousePosition()
 	{
 		SDL_GetRelativeMouseState(&xPos, &yPos);
-		//std::cout << xPos << "," << yPos << std::endl;
 		return glm::ivec2(xPos, yPos);
 	}
 }

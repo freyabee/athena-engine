@@ -15,9 +15,9 @@ namespace prometheus
 	{
 	public:
 
-		void load(std::string path);
-		void play(float volume, float min, float max);
-		void play();
+		void Load(std::string path);
+		void Play(float volume, float min, float max);
+		void Play();
 	private:
 		friend class SoundSource;
 

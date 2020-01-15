@@ -15,7 +15,7 @@ namespace prometheus
 		alListener3f(AL_POSITION, 0.0f, 0.0f, 0.0f);
 		alSource3f(sourceID, AL_POSITION, 0.0f, 0.0f, 0.0f);
 		alSourcei(sourceID, AL_BUFFER, audio->bufferId);
-		alSourcePlay(sourceID);
+		//alSourcePlay(sourceID);
 	}
 	void SoundSource::OnTick()
 	{
@@ -27,6 +27,6 @@ namespace prometheus
 	}
 	void SoundSource::setAudio(std::shared_ptr<Sound> audio)
 	{
-
+		alSourcei(sourceID, AL_BUFFER, audio->bufferId);
 	}
 }

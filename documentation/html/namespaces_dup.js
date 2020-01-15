@@ -1,5 +1,4 @@
 var namespaces_dup =
 [
-    [ "prometheus", "namespaceprometheus.html", null ],
-    [ "tinyobj", "namespacetinyobj.html", null ]
+    [ "prometheus", "namespaceprometheus.html", null ]
 ];

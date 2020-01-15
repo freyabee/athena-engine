@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"struct_mode.html":[1,0,10],
 "struct_mode.html#a000084125ae3760f66182ab4adae705e":[1,0,10,3],
 "struct_mode.html#a2f78100869ebed55b17f89e6a0202aac":[1,0,10,2],
 "struct_mode.html#a56d2ce10834c4f563f402359db99af9f":[1,0,10,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "tribox_8cpp.html#a1d05ae6a2797f7196e4d253976e1c3ab":[2,0,0,0,53,14],
 "tribox_8cpp.html#a207fd5507206d307cd63f95374fcd00d":[2,0,0,0,53,10],
 "tribox_8cpp.html#a2409651c6dcde598145e0434cc80f8cb":[2,0,0,0,53,2],
-"tribox_8cpp.html#a241dda3a0a43611f1187bdfebc3391d7":[2,0,0,0,53,9],
-"tribox_8cpp.html#a275587ce22080c4c09deb818b1ce3564":[2,0,0,0,53,6]
+"tribox_8cpp.html#a241dda3a0a43611f1187bdfebc3391d7":[2,0,0,0,53,9]
 };
