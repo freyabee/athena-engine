@@ -14,8 +14,8 @@ int main()
 	std::string coinModel = "../resources/objs/coin.obj";
 	std::string coinTexture = "../resources/images/coin.png";
 	//Ship
-	std::string shipModel = "../resources/objs/ship2.obj";
-	std::string shipTexture = "../resources/images/ship.png";
+	std::string shipModel = "../resources/objs/sailboat.obj";
+	std::string shipTexture = "../resources/images/sailboat.png";
 	//Park
 	std::string parkModel = "../resources/objs/squarelake.obj";
 	std::string parkTexture = "../resources/images/squarelake.png";
@@ -24,15 +24,12 @@ int main()
 	std::string tWater = "../resources/images/water.png";
 	//Shaders
 	std::string materialShader = "../resources/shaders/matShader.txt";
-	std::string waterShader = "../resources/shaders/waterShader.txt";
+	//std::string waterShader = "../resources/shaders/waterShader.txt";
 
 	//Initialize core
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
 
-	//Water
-	std::shared_ptr<prometheus::Entity> eWater = core->addEntity();
-	std::shared_ptr<prometheus::MeshRenderer> rWater = eWater->addComponent<prometheus::MeshRenderer>();
-	rWater->LoadModel(mWater, tWater, waterShader);
+	
 
 	//Coin
 	std::shared_ptr<prometheus::Entity> eCoin = core->addEntity();
@@ -56,15 +53,14 @@ int main()
 	shipCollider->SetSize(glm::vec3(1.f));
 	eShip->addComponent<Player>();
 
-	
+	//Water
+	//std::shared_ptr<prometheus::Entity> eWater = core->addEntity();
+	//std::shared_ptr<prometheus::MeshRenderer> rWater = eWater->addComponent<prometheus::MeshRenderer>();
+	//rWater->LoadModel(mWater, tWater, materialShader);
 
 	//GUI
 	std::shared_ptr<prometheus::Entity> eGUI = core->addEntity();
 	eGUI->addComponent<Score>("../resources/images/dab.png");
-
-
-
-
 
 	/*
 	std::shared_ptr<prometheus::Sound> sound1 = core->GetResources()->load<prometheus::Sound>("../resources/sounds/dixie_horn.ogg");
