@@ -27,7 +27,7 @@ void Player::PlayerRotation()
 		xAngle = -5.f;
 	}
 	GetEntity()->GetTransform()->rotate(xAngle, glm::vec3(0.f, 1.f, 0.f));
-	GetEntity()->GetTransform()->rotate(yAngle, glm::vec3(1.f, 0.f, 0.f));
+	//GetEntity()->GetTransform()->rotate(yAngle, glm::vec3(1.f, 0.f, 0.f));
 }
 void Player::PlayerMovement()
 {

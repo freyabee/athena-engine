@@ -60,6 +60,7 @@ namespace prometheus
 		int w = 0;
 		int h = 0;
 		int bpp = 0;
+		stbi_set_flip_vertically_on_load(true);
 		unsigned char *data = stbi_load(texturePath.c_str(), &w, &h, &bpp, 3);
 
 
@@ -83,6 +84,7 @@ namespace prometheus
 					data[r + 2] / 255.0f));
 			}
 		}
+
 
 		stbi_image_free(data);
 	}

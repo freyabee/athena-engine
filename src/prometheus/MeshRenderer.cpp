@@ -56,23 +56,18 @@ namespace prometheus
 		std::shared_ptr<prometheus::Material> _material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(_shader);
 		material = _material;
 		material->LoadShader(_shader);
-
-
-
 		return true;
 	}
+
 	void MeshRenderer::OnInit()
 	{
 
 	}
 	void MeshRenderer::OnDisplay()
 	{
-		
 		material->SetUniform(GetEntity()->GetTransform()->GetModelMatrix());
 		material->SetModel(model);
 		material->GetShader()->render();
-
-		
 	}
 	void MeshRenderer::OnTick()
 	{

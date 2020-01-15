@@ -337,14 +337,18 @@ void Shader::ParseFromPath(const std::string & path)
 	{
 		std::cout << "Problem opening shader file." << std::endl;
 	}
-	while (!file.eof())
+	else
 	{
-		std::string line;
-		std::getline(file, line);
-		shaderData += line + "\n";
+		while (!file.eof())
+		{
+			std::string line;
+			std::getline(file, line);
+			shaderData += line + "\n";
+		}
+		pollForError();
+		std::cout << "Successfully loaded shader from " << path << "."<< std::endl;
 	}
-
-	std::cout << shaderData << std::endl;
+	//std::cout << shaderData << std::endl;
 	file.close();
 	pollForError();
 	parse(shaderData);

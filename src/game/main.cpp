@@ -9,79 +9,30 @@
 
 int main()
 {
-	/*
-	const char* materialShader =
-		"#ifdef VERTEX                                 \n" \
-		"                                              \n" \
-		"attribute vec3 a_Position;                    \n" \
-		"attribute vec2 a_TexCoord;                    \n" \
-		"attribute vec3 a_Normal;                      \n" \
-		"                                              \n" \
-		"uniform mat4 u_Projection;                    \n" \
-		"uniform mat4 u_Model;                         \n" \
-		"uniform mat4 u_View;                          \n" \
-		"                                              \n" \
-		"varying vec3 v_Normal;                        \n" \
-		"varying vec2 v_TexCoord;                      \n" \
-		"                                              \n" \
-		"void main()                                   \n" \
-		"{                                             \n" \
-		"  gl_Position = u_Projection *                \n" \
-		"    u_View * u_Model * vec4(a_Position, 1);   \n" \
-		"                                              \n" \
-		"  v_Normal = a_Normal;                        \n" \
-		"  v_TexCoord = a_TexCoord;                    \n" \
-		"}                                             \n" \
-		"                                              \n" \
-		"#endif                                        \n" \
-		"#ifdef FRAGMENT                               \n" \
-		"                                              \n" \
-		"uniform sampler2D u_Texture;                  \n" \
-		"                                              \n" \
-		"varying vec3 v_Normal;                        \n" \
-		"varying vec2 v_TexCoord;                      \n" \
-		"                                              \n" \
-		"void main()                                   \n" \
-		"{                                             \n" \
-		"  gl_FragColor = texture2D(u_Texture, v_TexCoord);      \n" \
-		"  if(gl_FragColor.x == 9) gl_FragColor.x = v_Normal.x;  \n" \
-		"}                                             \n" \
-		"                                              \n" \
-		"#endif                                        \n";
-	*/
-	
-
-
-
-	std::string curuthersModel = "../resources/objs/curuthers.obj";
-	std::string curuthersTexture = "../resources/images/curuthers.png";
-	//std::string terrainModel = "../resources/objs/pond.obj";
-	//std::string terrainTexture = "../resources/images/pond.png";
+	//Models
+	//Coin
 	std::string coinModel = "../resources/objs/coin.obj";
 	std::string coinTexture = "../resources/images/coin.png";
-	std::string grassModel = "../resources/objs/Grass.obj";
-	std::string grassTexture = "../resources/images/Grass.png";
-	std::string pondModel = "../resources/objs/Pond.obj";
-	std::string pondTexture = "../resources/images/Pond.png";
-	std::string waterModel = "../resources/objs/Water.obj";
-	std::string waterTexture = "../resources/images/Water.png";
-	std::string treeModel = "../resources/objs/Tree.obj";
-	std::string treeTexture = "../resources/images/Tree.png";
-	std::string tree2Model = "../resources/objs/TwoTrees.obj";
-	std::string tree2Texture = "../resources/images/TwoTrees.png";
-	std::string benchModel = "../resources/objs/BenchRock.obj";
-	std::string benchTexture = "../resources/images/BenchRock.png";
-	std::string sTreeModel = "../resources/objs/SmallTree.obj";
-	std::string sTreeTexture = "../resources/images/SmallTree.png";
+	//Ship
 	std::string shipModel = "../resources/objs/ship2.obj";
 	std::string shipTexture = "../resources/images/ship.png";
+	//Park
 	std::string parkModel = "../resources/objs/squarelake.obj";
 	std::string parkTexture = "../resources/images/squarelake.png";
-
+	//Waterplane
+	std::string mWater = "../resources/objs/waterplane.obj";
+	std::string tWater = "../resources/images/water.png";
+	//Shaders
 	std::string materialShader = "../resources/shaders/matShader.txt";
+	std::string waterShader = "../resources/shaders/waterShader.txt";
 
 	//Initialize core
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
+
+	//Water
+	std::shared_ptr<prometheus::Entity> eWater = core->addEntity();
+	std::shared_ptr<prometheus::MeshRenderer> rWater = eWater->addComponent<prometheus::MeshRenderer>();
+	rWater->LoadModel(mWater, tWater, waterShader);
 
 	//Coin
 	std::shared_ptr<prometheus::Entity> eCoin = core->addEntity();
@@ -105,9 +56,15 @@ int main()
 	shipCollider->SetSize(glm::vec3(1.f));
 	eShip->addComponent<Player>();
 
+	
+
+	//GUI
 	std::shared_ptr<prometheus::Entity> eGUI = core->addEntity();
-	//std::shared_ptr<prometheus::MeshRenderer> guiRenderer = eGUI->addComponent<prometheus::MeshRenderer>();
 	eGUI->addComponent<Score>("../resources/images/dab.png");
+
+
+
+
 
 	/*
 	std::shared_ptr<prometheus::Sound> sound1 = core->GetResources()->load<prometheus::Sound>("../resources/sounds/dixie_horn.ogg");
