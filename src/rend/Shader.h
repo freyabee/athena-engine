@@ -28,6 +28,7 @@ struct Shader : public std::sr1::noncopyable
 
   GLuint getId();
   void setSource(const std::string& source);
+  void ParseFromPath(const std::string& path);
   void parse(const std::string& source);
 
   void setUniform(const std::string& variable, float value);

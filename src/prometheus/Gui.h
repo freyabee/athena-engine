@@ -10,7 +10,6 @@
 /// Manages rendering of GUI elements to screen.
 ///
 /// Holds projections, shaders and meshes and textures for GUI elements.
-
 namespace prometheus
 {
 	class Model;
@@ -22,7 +21,7 @@ namespace prometheus
 	class Gui
 	{
 	public:
-		Gui();
+		Gui(std::shared_ptr<Core> core);
 		~Gui();
 		void OnInit();
 		std::shared_ptr<Core> GetCore();

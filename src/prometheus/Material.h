@@ -18,6 +18,7 @@ namespace prometheus
 
 		void LoadShader(std::string _path);
 		void LoadTexture(std::string _path);
+		void LoadTexture(std::string _path, std::shared_ptr<Core> core);
 
 		void SetModel(std::shared_ptr<Model> _model);
 		void SetUniform(glm::mat4 _modelMat);

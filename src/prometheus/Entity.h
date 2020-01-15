@@ -110,6 +110,7 @@ namespace prometheus
 		void OnTick();
 		void OnDisplay();
 		void OnInit();
+		void OnGUI();
 		
 	};
 

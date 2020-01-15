@@ -74,7 +74,7 @@ namespace prometheus
 		/* Initialize Camera */
 		rtn->camera = std::make_shared<Camera>(rtn->keyboard, rtn->mouse, rtn->timer);
 
-		rtn->gui = std::make_shared<Gui>();
+		rtn->gui = std::make_shared<Gui>(rtn);
 		/*
 				AUDIO
 				TODO
@@ -133,7 +133,7 @@ namespace prometheus
 		running = true;
 		environment->Initialize();
 		camera->Initialize();
-
+		gui->OnInit();
 
 		for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 		{
@@ -164,6 +164,11 @@ namespace prometheus
 				(*it)->OnDisplay();
 			}
 
+			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
+			{
+				//std::cout << "LOG: GAME LOOP" << std::endl;
+				(*it)->OnGUI();
+			}
 			
 			screen->SwapWindow();
 			environment->UpdateDeltaTime();

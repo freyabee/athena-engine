@@ -1,10 +1,15 @@
 #include "Coin.h"
+#include "Player.h"
+#include "Score.h"
+
 #include <iostream>
 #include <prometheus/prometheus.h>
-#include "Player.h"
+
+
 
 int main()
 {
+	/*
 	const char* materialShader =
 		"#ifdef VERTEX                                 \n" \
 		"                                              \n" \
@@ -43,6 +48,8 @@ int main()
 		"}                                             \n" \
 		"                                              \n" \
 		"#endif                                        \n";
+	*/
+	
 
 
 
@@ -71,6 +78,7 @@ int main()
 	std::string parkModel = "../resources/objs/squarelake.obj";
 	std::string parkTexture = "../resources/images/squarelake.png";
 
+	std::string materialShader = "../resources/shaders/matShader.txt";
 
 	//Initialize core
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
@@ -96,6 +104,10 @@ int main()
 	std::shared_ptr<prometheus::BoxCollider> shipCollider = eShip->addComponent<prometheus::BoxCollider>();
 	shipCollider->SetSize(glm::vec3(1.f));
 	eShip->addComponent<Player>();
+
+	std::shared_ptr<prometheus::Entity> eGUI = core->addEntity();
+	//std::shared_ptr<prometheus::MeshRenderer> guiRenderer = eGUI->addComponent<prometheus::MeshRenderer>();
+	eGUI->addComponent<Score>("../resources/images/dab.png");
 
 	/*
 	std::shared_ptr<prometheus::Sound> sound1 = core->GetResources()->load<prometheus::Sound>("../resources/sounds/dixie_horn.ogg");

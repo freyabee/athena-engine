@@ -12,9 +12,9 @@ namespace prometheus
 	/// Allows GUI elements to be displayed on the screen.
 	///
 	///
-	Gui::Gui()
+	Gui::Gui(std::shared_ptr<Core> core)
 	{
-
+		this->core = core;
 	}
 
 	Gui::~Gui()
@@ -23,35 +23,22 @@ namespace prometheus
 	}
 	void Gui::OnInit()
 	{
-		/*
-		std::string shaderData;
-		std::ifstream file(" ../resources/shaders/guiShader.txt");
-		if(!file.is_open())
-		{
-			std::cout << "Problem opening shader file." << std::endl;
-		}
-		while (!file.eof())
-		{
-			std::string line;
-			std::getline(file, line);
-			shaderData += line + "\n";
-		}
-		file.close();
-		
 		shader = core.lock()->GetContext()->createShader();
-		shader->parse(shaderData);
-
+		shader->ParseFromPath("../resources/shaders/guiShader.txt");
+		std::cout << shader << std::endl;
 		std::shared_ptr<rend::Buffer> buffer = core.lock()->GetContext()->createBuffer();
-		buffer->add(glm::vec3(-1.0f, 0.f, 1.f));
-		buffer->add(glm::vec3(1.0f, 0.f, 1.f));
-		buffer->add(glm::vec3(-1.0f, 0.f, -1.f));
-		buffer->add(glm::vec3(1.0f, 0.f, -1.f));
-		
-		mesh = core.lock()->GetContext()->createBuffer();
+
+		buffer->add(glm::vec2(1, 1));
+		buffer->add(glm::vec2(1, 0));
+		buffer->add(glm::vec2(0, 0));
+
+		buffer->add(glm::vec2(0, 0));
+		buffer->add(glm::vec2(0, 1));
+		buffer->add(glm::vec2(1, 1));
+
+		mesh = core.lock()->GetContext()->createMesh();
 		mesh->setBuffer("a_Position", buffer);
 		mesh->setBuffer("a_TexCoord", buffer);
-
-*/
 	}
 	std::shared_ptr<Core> Gui::GetCore()
 	{
@@ -59,7 +46,7 @@ namespace prometheus
 	}
 	void Gui::Texture(glm::vec4 position, std::shared_ptr<rend::Texture> texture)
 	{
-		/*
+		
 		glm::ivec2 screenDimensions = GetCore()->GetScreen()->GetWindowDimensions();
 		float sw = screenDimensions.x;
 		float sh = screenDimensions.y;
@@ -70,6 +57,9 @@ namespace prometheus
 		shader->setUniform("u_Model", model);
 		mesh->setTexture("u_Texture", texture);
 		shader->setMesh(mesh);
-		*/
+		shader->setDepthTest(false);
+		shader->setBackface(false);
+		shader->render();
 	}
+
 }

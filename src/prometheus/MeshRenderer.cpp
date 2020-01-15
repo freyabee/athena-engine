@@ -20,20 +20,12 @@ namespace prometheus
 	{
 		this->model = _model;
 	}
-
-
-
-
-
-
-
-
 	void MeshRenderer::SetMaterial(std::shared_ptr<Material> _mat)
 	{
 		this->material = _mat;
 		model->GetMesh()->setTexture("u_Texture", _mat->GetTexture());
 	}
-	bool MeshRenderer::LoadModel(std::string _modelPath, std::string _texturePath, std::string _shader)
+	bool MeshRenderer::LoadModel(std::string _modelPath, std::string _texturePath, std::string shaderPath)
 	{
 
 		std::shared_ptr<prometheus::Model> _model = GetEntity()->GetCore()->GetResources()->load<prometheus::Model>(_modelPath);
@@ -41,9 +33,11 @@ namespace prometheus
 		std::cout << "Model at '" << _modelPath << "' loaded successfully." << std::endl;
 
 
-		std::shared_ptr<prometheus::Material> _material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(_shader);
+		std::shared_ptr<prometheus::Material> _material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(shaderPath);
 		material = _material;
-		material->LoadShader(_shader);
+		material->LoadShader(shaderPath);
+
+
 		material->LoadTexture(_texturePath);
 		std::cout << "Material at '" << _texturePath << "' loaded successfully." << std::endl;
 

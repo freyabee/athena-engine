@@ -6,6 +6,7 @@
 #include "RenderTexture.h"
 #include "TextureAdapter.h"
 #include "Mesh.h"
+#include <fstream>
 
 #include <sr1/vector>
 
@@ -323,6 +324,32 @@ void Shader::setSource(const std::string& source)
   parse(source);
 }
 
+//MYCODE
+/// Integrates the loading of a shader from a file. 
+///
+/// Uses fstream to load in a file from a provided path, then passes the string to parse.
+/// @param path Shader string.
+void Shader::ParseFromPath(const std::string & path)
+{
+	std::string shaderData;
+	std::ifstream file(path);
+	if (!file.is_open())
+	{
+		std::cout << "Problem opening shader file." << std::endl;
+	}
+	while (!file.eof())
+	{
+		std::string line;
+		std::getline(file, line);
+		shaderData += line + "\n";
+	}
+
+	std::cout << shaderData << std::endl;
+	file.close();
+	pollForError();
+	parse(shaderData);
+}
+
 void Shader::parse(const std::string& source)
 {
   GLuint vertId = 0;
@@ -440,5 +467,6 @@ void Shader::parse(const std::string& source)
   glDeleteShader(fragId);
   pollForError();
 }
+
 
 }
