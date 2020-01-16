@@ -21,19 +21,49 @@ namespace prometheus
 		this->size = size;
 	}
 
+	void BoxCollider::SetUniqueID(std::string uID)
+	{
+		this->uniqueID = uID;
+	}
+
+	bool BoxCollider::GetTriggerCollided()
+	{
+		return triggerCollided;
+	}
+
+	void BoxCollider::SetTrigger(bool b)
+	{
+		trigger = b;
+	}
+
+	bool BoxCollider::IsTrigger()
+	{
+		return trigger;
+	}
+
 	void BoxCollider::OnTick()
 	{
 		//CollideStaticMesh();
+		//triggerCollided = false;
+		//CollideBox();
+	}
+
+	void BoxCollider::OnEarlyUpdate()
+	{
+		//CollideStaticMesh();
+		triggerCollided = false;
 		CollideBox();
 	}
 
 	void BoxCollider::CollideBox()
 	{
+
 		std::vector<std::shared_ptr<Entity> > boxColliderEntities;
 
 		GetCore()->GetEntities<BoxCollider>(boxColliderEntities);
 
 		glm::vec3 newPosition = GetTransform()->GetLocalPosition() + offset;
+
 
 		for (std::vector<std::shared_ptr<Entity> >::iterator it = boxColliderEntities.begin();
 			it != boxColliderEntities.end(); it++)
@@ -42,12 +72,27 @@ namespace prometheus
 			{
 				continue;
 			}
+
 			std::shared_ptr<BoxCollider> otherCollider = (*it)->GetComponent<BoxCollider>();
 			glm::vec3 sp = otherCollider->GetCollisionResponse(newPosition, size);
-			newPosition = sp;
-			newPosition = newPosition - offset;
-			GetTransform()->SetLocalPosition(newPosition);
-			lastPosition = newPosition;
+			if (!trigger && !otherCollider->IsTrigger())
+			{
+				newPosition = sp;
+				newPosition = newPosition - offset;
+				GetTransform()->SetLocalPosition(newPosition);
+				lastPosition = newPosition;
+				continue;
+			}
+			else
+			{
+				if (sp != newPosition)
+				{
+					// if collision has taken place and object is a trigger
+					triggerCollided = true;
+				}
+
+			}
+			
 			
 		}
 	}
@@ -85,6 +130,7 @@ namespace prometheus
 		*/
 		
 	}
+
 
 	bool BoxCollider::IsColliding(glm::vec3 position, glm::vec3 size)
 	{

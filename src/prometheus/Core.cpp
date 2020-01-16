@@ -152,49 +152,6 @@ namespace prometheus
 			std::cout << "failed" << std::endl;
 			std::cout << &e << std::endl;
 		}
-
-		
-
-		
-		/*
-				AUDIO
-				TODO
-				-Abstract out to AudioContext class
-		*/
-		/*
-		//Set device to be new device
-		rtn->device = alcOpenDevice(NULL);
-
-		//If problem creating new device throw exception
-		if (!rtn->device)
-		{
-			throw std::exception();
-		}
-
-		//create context passing in device
-		rtn->audioContext = alcCreateContext(rtn->device, NULL);
-
-		//if context not init throw exception
-		if (!rtn->audioContext)
-		{
-			alcCloseDevice(rtn->device);
-			throw std::exception();
-		}
-
-
-		if (!alcMakeContextCurrent(rtn->audioContext))
-		{
-			alcDestroyContext(rtn->audioContext);
-			alcCloseDevice(rtn->device);
-			throw std::exception();
-		}
-		*/
-		
-		
-
-		
-		
-		
 		std::cout << "Core initalization completed in " << rtn->timer->GetTimeS() << "s." << std::endl;
 
 		return rtn;
@@ -228,9 +185,16 @@ namespace prometheus
 
 			screen->ClearWindow();
 			//On tick
+
+
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
-				//std::cout << "LOG: GAME LOOP" << std::endl;
+				(*it)->OnEarlyUpdate();
+			}
+
+
+			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
+			{
 				(*it)->OnTick();
 			}
 
@@ -238,7 +202,6 @@ namespace prometheus
 
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
-					//std::cout << "LOG: GAME LOOP" << std::endl;
 				try
 				{
 					(*it)->OnDisplay();
@@ -253,26 +216,17 @@ namespace prometheus
 
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
-				//std::cout << "LOG: GAME LOOP" << std::endl;
 				(*it)->OnGUI();
 			}
 			
 			screen->SwapWindow();
 			environment->UpdateDeltaTime();
 
-
-
 			if (keyboard->GetKey(SDLK_ESCAPE))
 			{
 				screen->DestroyScreen();
 				break;
 			}
-
-
-
-			//check for key and store bool in key variable
-			//bool key = ;
-			//std::cout << key << std::endl;
 		}
 	}
 

@@ -4,11 +4,11 @@
 #endif // !_COIN_H_
 #include <prometheus/prometheus.h>
 #include <iostream>
-
+#include <memory>
 class Coin : public prometheus::Component
 {
 public:
-	Coin();
+	Coin(std::shared_ptr<prometheus::Entity> player);
 	~Coin();
 
 	void OnDisplay();
@@ -17,5 +17,6 @@ public:
 
 private:
 	float angleRotation;
+	std::shared_ptr<prometheus::Entity> player;
 
 };

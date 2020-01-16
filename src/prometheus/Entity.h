@@ -111,6 +111,7 @@ namespace prometheus
 		void OnDisplay();
 		void OnInit();
 		void OnGUI();
+		void OnEarlyUpdate();
 		
 	};
 

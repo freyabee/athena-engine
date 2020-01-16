@@ -8,14 +8,19 @@
 class Score : public prometheus::Component
 {
 public:
-	Score();
+	Score(std::shared_ptr<prometheus::Entity> player);
 	Score(std::string texturePath);
 	~Score();
 	void OnInit();
+	void OnTick();
 	void OnGUI();
 private:
-	std::shared_ptr<prometheus::Material> mat;
+	std::shared_ptr<prometheus::Material> scoreGUI;
+	std::vector < std::shared_ptr<prometheus::Material>> numbers;
 	std::shared_ptr<prometheus::Material> logo;
 	std::string texturePath;
+	std::shared_ptr<prometheus::Entity> player;
 
+	int score;
+	int lastScore;
 };

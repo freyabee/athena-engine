@@ -14,6 +14,9 @@ public:
 	void HandleInput();
 	void PlayerRotation();
 	void PlayerMovement();
+
+	void SetRotationalSpeed(float rotationalSpeed);
+	void SetSpeed(float speed);
 private:
 	void OnDisplay();
 	void OnTick();
@@ -24,4 +27,6 @@ private:
 	float yAngle = 0.f;
 	float velocity;
 	float maxVelocity;
+	float rotationalSpeed = 5;
+	float speed = 0.1;
 };

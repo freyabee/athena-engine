@@ -18,20 +18,20 @@ void Player::PlayerRotation()
 	xAngle = 0.f;
 	yAngle = 0.f;
 
+
 	if (keyboard->GetKey(SDLK_a))
 	{
-		xAngle = 5.f;
+		xAngle = rotationalSpeed* 1.f;
 	}
 	else if (keyboard->GetKey(SDLK_d))
 	{
-		xAngle = -5.f;
+		xAngle = rotationalSpeed * -1.f;
 	}
 	GetEntity()->GetTransform()->rotate(xAngle, glm::vec3(0.f, 1.f, 0.f));
-	//GetEntity()->GetTransform()->rotate(yAngle, glm::vec3(1.f, 0.f, 0.f));
 }
 void Player::PlayerMovement()
 {
-	float speed = 0.1f;
+	speed = 0.1f;
 	float dx = 0.f;
 	float dy = 0.f;
 	float dz = 0.f;
@@ -88,6 +88,14 @@ void Player::PlayerMovement()
 	//offset.z = -cos(glm::radians(heading.y))*2.f;
 	//offset.x = -sin(glm::radians(heading.y))*2.f;
 	GetCamera()->Follow(playerPosition, offset, heading);
+}
+void Player::SetRotationalSpeed(float rotationalSpeed)
+{
+	this->rotationalSpeed = rotationalSpeed;
+}
+void Player::SetSpeed(float speed)
+{
+	this->speed = rotationalSpeed;
 }
 void Player::OnDisplay()
 {

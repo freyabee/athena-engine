@@ -62,6 +62,10 @@ namespace prometheus
 		/// Will be overriden in child classes, called after tick and display loop in game loop.
 		virtual void OnGUI() {};
 
+		/// Virtual on early update function.
+		/// Will be overidden in child classes, called before on tick in game loop.
+		virtual void OnEarlyUpdate() {};
+
 	private:
 		/// Set parent entity from input.
 		/// @param entity New parent entity.

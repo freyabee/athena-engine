@@ -69,4 +69,12 @@ namespace prometheus
 			(*it)->OnGUI();
 		}
 	}
+	void Entity::OnEarlyUpdate()
+	{
+		for (std::vector<std::shared_ptr<Component>>::iterator it = components.begin(); it != components.end(); ++it)
+		{
+			(*it)->OnEarlyUpdate();
+		}
+
+	}
 }

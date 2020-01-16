@@ -26,18 +26,14 @@ int main()
 	std::string materialShader = "../resources/shaders/matShader.txt";
 	//std::string waterShader = "../resources/shaders/waterShader.txt";
 
+	//GUI
+
 	//Initialize core
 	std::shared_ptr<prometheus::Core> core = prometheus::Core::initialize();
 
 	
 
-	//Coin
-	std::shared_ptr<prometheus::Entity> eCoin = core->addEntity();
-	std::shared_ptr<prometheus::MeshRenderer> coinRenderer = eCoin->addComponent<prometheus::MeshRenderer>();
-	coinRenderer->LoadModel(coinModel, coinTexture, materialShader);
-	std::shared_ptr<Coin> coin = eCoin->addComponent<Coin>();
-	std::shared_ptr<prometheus::BoxCollider> coinCollider = eCoin->addComponent<prometheus::BoxCollider>();
-	coinCollider->SetSize(glm::vec3(1.f));
+	
 
 	//TERRAIN
 	std::shared_ptr<prometheus::Entity> ePark = core->addEntity();
@@ -50,8 +46,19 @@ int main()
 	std::shared_ptr<prometheus::MeshRenderer> shipRenderer = eShip->addComponent<prometheus::MeshRenderer>();
 	shipRenderer->LoadModel(shipModel, shipTexture, materialShader);
 	std::shared_ptr<prometheus::BoxCollider> shipCollider = eShip->addComponent<prometheus::BoxCollider>();
+	shipCollider->SetTrigger(true);
 	shipCollider->SetSize(glm::vec3(1.f));
 	eShip->addComponent<Player>();
+	eShip->SetPosition(glm::vec3(-1.f, 0.f, 0.f));
+
+	//Coin
+	std::shared_ptr<prometheus::Entity> eCoin = core->addEntity();
+	std::shared_ptr<prometheus::MeshRenderer> coinRenderer = eCoin->addComponent<prometheus::MeshRenderer>();
+	coinRenderer->LoadModel(coinModel, coinTexture, materialShader);
+	std::shared_ptr<Coin> coin = eCoin->addComponent<Coin>(eShip);
+	std::shared_ptr<prometheus::BoxCollider> coinCollider = eCoin->addComponent<prometheus::BoxCollider>();
+	coinCollider->SetSize(glm::vec3(1.f));
+	//coinCollider->SetTrigger(true);
 
 	//Water
 	std::shared_ptr<prometheus::Entity> eWater = core->addEntity();
@@ -61,7 +68,7 @@ int main()
 
 	//GUI
 	std::shared_ptr<prometheus::Entity> eGUI = core->addEntity();
-	eGUI->addComponent<Score>("../resources/images/dab.png");
+	eGUI->addComponent<Score>(eShip);
 
 	
 	std::shared_ptr<prometheus::Sound> sound1 = core->GetResources()->load<prometheus::Sound>("../resources/sounds/dixie_horn.ogg");
