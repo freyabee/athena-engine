@@ -1,0 +1,8 @@
+<map id="prometheus::BoxCollider::CollideBox" name="prometheus::BoxCollider::CollideBox">
+<area shape="rect" id="node1" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="5,89,169,131"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_box_collider.html#a61c042a98905a647f1f6e3b687fedfac" title="Get collision response for box of this position and size." alt="" coords="217,5,381,47"/>
+<area shape="rect" id="node4" href="$classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="641,56,805,97"/>
+<area shape="rect" id="node5" href="$classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="853,115,1017,156"/>
+<area shape="rect" id="node6" href="$classprometheus_1_1_component.html#a10fd3406489fe3bc08219b76e6d34915" title="Get current core instance." alt="" coords="429,173,593,215"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f" title="Is box colliding with box of position and size." alt="" coords="429,5,593,47"/>
+</map>

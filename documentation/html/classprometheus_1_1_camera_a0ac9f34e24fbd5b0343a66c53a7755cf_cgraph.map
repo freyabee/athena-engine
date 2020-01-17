@@ -1,0 +1,4 @@
+<map id="prometheus::Camera::OnTick" name="prometheus::Camera::OnTick">
+<area shape="rect" id="node1" title="Handles mouse input and updates viewing matrix accordingly once per tick." alt="" coords="5,5,148,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_camera.html#a0becaa93b6a3e61c575347629ab8ba91" title="Handles mouse input for rotating camera." alt="" coords="196,5,339,47"/>
+</map>

@@ -111,50 +111,48 @@ $(document).ready(function(){initNavTree('_keyboard_8h_source.html',''); initRes
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classprometheus_1_1_keyboard.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classprometheus_1_1_keyboard.html">Keyboard</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classprometheus_1_1_keyboard.html#a690e90fbbb0e36c3dd630a715d688227">Keyboard</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classprometheus_1_1_keyboard.html#af19855455d3a0b78a747a526eecc59df">~Keyboard</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classprometheus_1_1_keyboard.html#aae9a5658566a959173a88b8aa923a4c6">GetKey</a>(SDL_Keycode _key);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classprometheus_1_1_keyboard.html#a20af243846af8c19657a988e7a98986c">GetKeyDown</a>(<span class="keywordtype">int</span> _key);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classprometheus_1_1_keyboard.html#aedef2ea2574af2d23f49405a4ba13763">GetKeyUp</a>(<span class="keywordtype">int</span> _key);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_keyboard.html#a4db7671320d5422e3f1c2639194bcb28">OnTick</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_keyboard.html#ac40ede9c66c83a7fc14f95860cd6ce36">IsKey</a>(<span class="keywordtype">int</span> _key);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_keyboard.html#ab0ecf3c2481e09fef2aa27fbfe1097a7">IsKeyPressed</a>(<span class="keywordtype">int</span> _key);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_keyboard.html#aa8005659f474aef7785ccc99f032271f">IsKeyReleased</a>(<span class="keywordtype">int</span> _key);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_keyboard.html#a49df53b038e4999988650515c5cca10c">ClearPressedReleasedKeys</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classprometheus_1_1_keyboard.html#ab7a740fa098ef53502b3efe24ed0ff2e">   30</a></span>&#160;        std::vector&lt;int&gt; <a class="code" href="classprometheus_1_1_keyboard.html#ab7a740fa098ef53502b3efe24ed0ff2e">keys</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classprometheus_1_1_keyboard.html#ad45822717eb49282cd61c3bef996293f">   31</a></span>&#160;        std::vector&lt;int&gt; <a class="code" href="classprometheus_1_1_keyboard.html#ad45822717eb49282cd61c3bef996293f">pressedKeys</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classprometheus_1_1_keyboard.html#a6cbf13682db6f503ab426b4dd37dbc3a">   32</a></span>&#160;        std::vector&lt;int&gt; <a class="code" href="classprometheus_1_1_keyboard.html#a6cbf13682db6f503ab426b4dd37dbc3a">releasedKeys</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classprometheus_1_1_keyboard.html#ac4fcc800257b4a17dcc0013d4607529a">   34</a></span>&#160;        <span class="keyword">const</span> Uint8* <a class="code" href="classprometheus_1_1_keyboard.html#ac4fcc800257b4a17dcc0013d4607529a">keystate</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classprometheus_1_1_keyboard.html#a690e90fbbb0e36c3dd630a715d688227">Keyboard</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classprometheus_1_1_keyboard.html#af19855455d3a0b78a747a526eecc59df">~Keyboard</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classprometheus_1_1_keyboard.html#ade4fcb2ac6c034d4f1d9d83fe066d3a6">GetKey</a>(SDL_Keycode key);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">        bool GetKeyDown(int _key);</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        bool GetKeyUp(int _key);</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_keyboard.html#a4db7671320d5422e3f1c2639194bcb28">OnTick</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">        void IsKey(int _key);</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">        void IsKeyPressed(int _key);</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">        void IsKeyReleased(int _key);</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">        void ClearPressedReleasedKeys();</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">        */</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // !_KEYBOARD_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">        std::vector&lt;int&gt; keys;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">        std::vector&lt;int&gt; pressedKeys;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">        std::vector&lt;int&gt; releasedKeys;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classprometheus_1_1_keyboard.html#ac4fcc800257b4a17dcc0013d4607529a">   48</a></span>&#160;        <span class="keyword">const</span> Uint8* <a class="code" href="classprometheus_1_1_keyboard.html#ac4fcc800257b4a17dcc0013d4607529a">keystate</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif // !_KEYBOARD_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_ab7a740fa098ef53502b3efe24ed0ff2e"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#ab7a740fa098ef53502b3efe24ed0ff2e">prometheus::Keyboard::keys</a></div><div class="ttdeci">std::vector&lt; int &gt; keys</div><div class="ttdef"><b>Definition:</b> Keyboard.h:30</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_aae9a5658566a959173a88b8aa923a4c6"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#aae9a5658566a959173a88b8aa923a4c6">prometheus::Keyboard::GetKey</a></div><div class="ttdeci">bool GetKey(SDL_Keycode _key)</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:14</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_aedef2ea2574af2d23f49405a4ba13763"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#aedef2ea2574af2d23f49405a4ba13763">prometheus::Keyboard::GetKeyUp</a></div><div class="ttdeci">bool GetKeyUp(int _key)</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:28</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_a20af243846af8c19657a988e7a98986c"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#a20af243846af8c19657a988e7a98986c">prometheus::Keyboard::GetKeyDown</a></div><div class="ttdeci">bool GetKeyDown(int _key)</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:23</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_ad45822717eb49282cd61c3bef996293f"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#ad45822717eb49282cd61c3bef996293f">prometheus::Keyboard::pressedKeys</a></div><div class="ttdeci">std::vector&lt; int &gt; pressedKeys</div><div class="ttdef"><b>Definition:</b> Keyboard.h:31</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_a690e90fbbb0e36c3dd630a715d688227"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#a690e90fbbb0e36c3dd630a715d688227">prometheus::Keyboard::Keyboard</a></div><div class="ttdeci">Keyboard()</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:5</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_ac4fcc800257b4a17dcc0013d4607529a"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#ac4fcc800257b4a17dcc0013d4607529a">prometheus::Keyboard::keystate</a></div><div class="ttdeci">const Uint8 * keystate</div><div class="ttdef"><b>Definition:</b> Keyboard.h:34</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_ab0ecf3c2481e09fef2aa27fbfe1097a7"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#ab0ecf3c2481e09fef2aa27fbfe1097a7">prometheus::Keyboard::IsKeyPressed</a></div><div class="ttdeci">void IsKeyPressed(int _key)</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:44</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_a6cbf13682db6f503ab426b4dd37dbc3a"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#a6cbf13682db6f503ab426b4dd37dbc3a">prometheus::Keyboard::releasedKeys</a></div><div class="ttdeci">std::vector&lt; int &gt; releasedKeys</div><div class="ttdef"><b>Definition:</b> Keyboard.h:32</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_ac40ede9c66c83a7fc14f95860cd6ce36"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#ac40ede9c66c83a7fc14f95860cd6ce36">prometheus::Keyboard::IsKey</a></div><div class="ttdeci">void IsKey(int _key)</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:40</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_a49df53b038e4999988650515c5cca10c"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#a49df53b038e4999988650515c5cca10c">prometheus::Keyboard::ClearPressedReleasedKeys</a></div><div class="ttdeci">void ClearPressedReleasedKeys()</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:53</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_af19855455d3a0b78a747a526eecc59df"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#af19855455d3a0b78a747a526eecc59df">prometheus::Keyboard::~Keyboard</a></div><div class="ttdeci">~Keyboard()</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:10</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_a4db7671320d5422e3f1c2639194bcb28"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#a4db7671320d5422e3f1c2639194bcb28">prometheus::Keyboard::OnTick</a></div><div class="ttdeci">void OnTick()</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:35</div></div>
-<div class="ttc" id="aclassprometheus_1_1_keyboard_html_aa8005659f474aef7785ccc99f032271f"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#aa8005659f474aef7785ccc99f032271f">prometheus::Keyboard::IsKeyReleased</a></div><div class="ttdeci">void IsKeyReleased(int _key)</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:48</div></div>
-<div class="ttc" id="anamespaceprometheus_html"><div class="ttname"><a href="namespaceprometheus.html">prometheus</a></div><div class="ttdoc">Manages rendering of GUI elements to screen.</div><div class="ttdef"><b>Definition:</b> AudioContext.cpp:5</div></div>
+<div class="ttc" id="aclassprometheus_1_1_keyboard_html_ade4fcb2ac6c034d4f1d9d83fe066d3a6"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#ade4fcb2ac6c034d4f1d9d83fe066d3a6">prometheus::Keyboard::GetKey</a></div><div class="ttdeci">bool GetKey(SDL_Keycode key)</div><div class="ttdoc">Returns bool if key matches input parameter key.</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:16</div></div>
+<div class="ttc" id="aclassprometheus_1_1_keyboard_html_a690e90fbbb0e36c3dd630a715d688227"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#a690e90fbbb0e36c3dd630a715d688227">prometheus::Keyboard::Keyboard</a></div><div class="ttdeci">Keyboard()</div><div class="ttdoc">Constructor initialises keyboard instance.</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:7</div></div>
+<div class="ttc" id="aclassprometheus_1_1_keyboard_html_ac4fcc800257b4a17dcc0013d4607529a"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#ac4fcc800257b4a17dcc0013d4607529a">prometheus::Keyboard::keystate</a></div><div class="ttdeci">const Uint8 * keystate</div><div class="ttdoc">Keystate holding array of keys pressed since last check.</div><div class="ttdef"><b>Definition:</b> Keyboard.h:48</div></div>
+<div class="ttc" id="aclassprometheus_1_1_keyboard_html_af19855455d3a0b78a747a526eecc59df"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#af19855455d3a0b78a747a526eecc59df">prometheus::Keyboard::~Keyboard</a></div><div class="ttdeci">~Keyboard()</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:12</div></div>
+<div class="ttc" id="aclassprometheus_1_1_keyboard_html_a4db7671320d5422e3f1c2639194bcb28"><div class="ttname"><a href="classprometheus_1_1_keyboard.html#a4db7671320d5422e3f1c2639194bcb28">prometheus::Keyboard::OnTick</a></div><div class="ttdeci">void OnTick()</div><div class="ttdoc">Pumps SDL events updating the keystate variable.</div><div class="ttdef"><b>Definition:</b> Keyboard.cpp:37</div></div>
+<div class="ttc" id="a_keyboard_8h_html"><div class="ttname"><a href="_keyboard_8h.html">Keyboard.h</a></div></div>
+<div class="ttc" id="anamespaceprometheus_html"><div class="ttname"><a href="namespaceprometheus.html">prometheus</a></div><div class="ttdef"><b>Definition:</b> AudioContext.cpp:5</div></div>
 <div class="ttc" id="aclassprometheus_1_1_keyboard_html"><div class="ttname"><a href="classprometheus_1_1_keyboard.html">prometheus::Keyboard</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:11</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

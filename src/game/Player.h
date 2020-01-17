@@ -28,5 +28,9 @@ private:
 	float velocity;
 	float maxVelocity;
 	float rotationalSpeed = 5;
-	float speed = 0.1;
+	float speed = 0.f;
+	float decel = 0.5f;
+	float accel = 0.5f;
+	float speedcap = 50.f;
+	float factor= 0.1f;
 };

@@ -1,0 +1,4 @@
+<map id="prometheus::Gui::Texture" name="prometheus::Gui::Texture">
+<area shape="rect" id="node1" title="Assigns texture to mesh, finishes shader and renders GUI element." alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7" title="Returns a pointer to the current instance of core." alt="" coords="223,5,397,32"/>
+</map>

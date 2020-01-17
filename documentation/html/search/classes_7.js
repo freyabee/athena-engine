@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['noncopyable_306',['NonCopyable',['../classprometheus_1_1_non_copyable.html',1,'prometheus']]]
+  ['noncopyable_305',['NonCopyable',['../classprometheus_1_1_non_copyable.html',1,'prometheus']]]
 ];

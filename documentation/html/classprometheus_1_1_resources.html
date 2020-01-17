@@ -104,19 +104,25 @@ $(document).ready(function(){initNavTree('classprometheus_1_1_resources.html',''
 </div><!--header-->
 <div class="contents">
 
+<p>Class that stores a pointer to all resources active in scene.  
+ <a href="classprometheus_1_1_resources.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_resources_8h_source.html">Resources.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a62647e16e7d49c774b52fae044a83a76"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a62647e16e7d49c774b52fae044a83a76"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_resources.html#a62647e16e7d49c774b52fae044a83a76">load</a> (std::string path)</td></tr>
+<tr class="memdesc:a62647e16e7d49c774b52fae044a83a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template to load resources into resource vector.  <a href="classprometheus_1_1_resources.html#a62647e16e7d49c774b52fae044a83a76">More...</a><br /></td></tr>
 <tr class="separator:a62647e16e7d49c774b52fae044a83a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a15d1cb8d4b82fa476b30d240d84f7d98"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_resources.html#a15d1cb8d4b82fa476b30d240d84f7d98">core</a></td></tr>
+<tr class="memdesc:a15d1cb8d4b82fa476b30d240d84f7d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to current active instance of core.  <a href="classprometheus_1_1_resources.html#a15d1cb8d4b82fa476b30d240d84f7d98">More...</a><br /></td></tr>
 <tr class="separator:a15d1cb8d4b82fa476b30d240d84f7d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d772f10fd2dae32f191897f2251be1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_resource.html">Resource</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_resources.html#ae3d772f10fd2dae32f191897f2251be1">resources</a></td></tr>
+<tr class="memdesc:ae3d772f10fd2dae32f191897f2251be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of pointers to all resources loaded in scene.  <a href="classprometheus_1_1_resources.html#ae3d772f10fd2dae32f191897f2251be1">More...</a><br /></td></tr>
 <tr class="separator:ae3d772f10fd2dae32f191897f2251be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -124,7 +130,10 @@ Friends</h2></td></tr>
 <tr class="memitem:a4107254ac74f90d4f91e810d755b98c2"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_resources.html#a4107254ac74f90d4f91e810d755b98c2">Core</a></td></tr>
 <tr class="separator:a4107254ac74f90d4f91e810d755b98c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that stores a pointer to all resources active in scene. </p>
+<p><a class="el" href="classprometheus_1_1_resources.html" title="Class that stores a pointer to all resources active in scene.">Resources</a> vector keeps a shared pointer to every active resource in scene. Keeping a copy in resources ensures there will always be one active reference to the shared pointer, keeping it alive. The resources vector is a convenient way to store them in memory and have them deleted when going out of scope. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a62647e16e7d49c774b52fae044a83a76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62647e16e7d49c774b52fae044a83a76">&#9670;&nbsp;</a></span>load()</h2>
 
@@ -150,6 +159,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Template to load resources into resource vector. </p>
+<p>Loads resource of type T to resources vector and return the created object with core reference set. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path of resource to be loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to resource instance. </dd></dl>
 
 </div>
 </div>
@@ -197,6 +215,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Pointer to current active instance of core. </p>
+
 </div>
 </div>
 <a id="ae3d772f10fd2dae32f191897f2251be1"></a>
@@ -218,6 +238,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vector of pointers to all resources loaded in scene. </p>
 
 </div>
 </div>

@@ -13,51 +13,54 @@ namespace prometheus
 	{
 	}
 
-	void Transform::translate(glm::vec3 _amount)
+	void Transform::Translate(glm::vec3 amount)
 	{
-		glm::mat4 translationMatrix = glm::translate(glm::mat4(1.f), _amount);
+		glm::mat4 translationMatrix = glm::translate(glm::mat4(1.f), amount);
 		glm::vec4 pos = { localPosition.x, localPosition.y, localPosition.z, 1.0f };
 		glm::vec4 transformedPos = translationMatrix * pos;
 		localPosition = { transformedPos.x, transformedPos.y, transformedPos.z };
-
-
+		ApplyTransformations();
 	}
-	void Transform::scale(glm::vec3 _amount)
+	void Transform::Scale(glm::vec3 amount)
 	{
-		glm::mat4 scalingMatrix = glm::scale(_amount);
+		glm::mat4 scalingMatrix = glm::scale(amount);
 		glm::vec4 scale = { localScale.x, localScale.y, localScale.z, 1.0f };
 		glm::vec4 transformedScale = scalingMatrix * scale;
 		localScale = { transformedScale.x, transformedScale.y, transformedScale.z };
+		ApplyTransformations();
 	}
-	void Transform::rotate(float _angle, glm::vec3 _axis)
+	void Transform::Rotate(float angle, glm::vec3 axis)
 	{		
-		glm::mat4 rotationMatrix = glm::rotate(glm::radians(_angle), _axis);
+		glm::mat4 rotationMatrix = glm::rotate(glm::radians(angle), axis);
 
 		glm::mat4 translationMatrix = glm::translate(glm::mat4(1.f), localPosition);
 		modelMatrix = translationMatrix * rotationMatrix;
 	}
 
-	void Transform::SetLocalPosition(glm::vec3 _position)
+	void Transform::SetLocalPosition(glm::vec3 position)
 	{
-		localPosition = _position;
+		localPosition = position;
 		ApplyTransformations();
 	}
-	void Transform::SetLocalPosition(float _x, float _y, float _z)
+	void Transform::SetLocalPosition(float x, float y, float z)
 	{
-		SetLocalPosition(glm::vec3(_x, _y, _z));
-	}
-	void Transform::SetLocalRotation(glm::vec3 _rotation)
-	{
-		localRotation = _rotation;
+		SetLocalPosition(glm::vec3(x, y, z));
 		ApplyTransformations();
 	}
-	void Transform::SetLocalRotation(float _x, float _y, float _z)
+	void Transform::SetLocalRotation(glm::vec3 rotation)
 	{
-		SetLocalRotation(glm::vec3(_x, _y, _z));
+		localRotation = rotation;
+		ApplyTransformations();
 	}
-	void Transform::SetLocalScale(glm::vec3 _scale)
+	void Transform::SetLocalRotation(float x, float y, float z)
 	{
-		localScale = _scale;
+		SetLocalRotation(glm::vec3(x, y, z));
+		ApplyTransformations();
+	}
+	void Transform::SetLocalScale(glm::vec3 scale)
+	{
+		localScale = scale;
+		ApplyTransformations();
 	}
 	void Transform::ApplyTransformations()
 	{
@@ -71,15 +74,14 @@ namespace prometheus
 
 		modelMatrix = translationMatrix * rotationMatrix;
 	}
-	void Transform::Move(glm::vec3 _difference)
+	void Transform::Move(glm::vec3 difference)
 	{
-		localPosition = { localPosition.x + _difference.x, localPosition.y + _difference.y, localPosition.z + _difference.z };
+		localPosition = { localPosition.x + difference.x, localPosition.y + difference.y, localPosition.z + difference.z };
 		ApplyTransformations();
 	}
-	void Transform::AddRotation(glm::vec3 _amount)
+	void Transform::AddRotation(glm::vec3 amount)
 	{
-		
-		localRotation = { localRotation.x + _amount.x, localRotation.y + _amount.y, localRotation.z + _amount.z };
+		localRotation = { localRotation.x + amount.x, localRotation.y + amount.y, localRotation.z + amount.z };
 		ApplyTransformations();
 	}
 	glm::mat4 Transform::GetModelMatrix()

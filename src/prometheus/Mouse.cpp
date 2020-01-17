@@ -5,12 +5,12 @@ namespace prometheus
 {
 	Mouse::Mouse()
 	{
-		//Set mouse to relative mode
 	}
-	Mouse::Mouse(int _screenWidth, int _screenHeight)
+	Mouse::Mouse(int screenWidth, int screenHeight)
 	{
-		screenWidth = _screenWidth;
-		screenHeight = _screenHeight;
+
+		this->screenWidth = screenWidth;
+		this->screenHeight = screenHeight;
 		HideCursor();
 	}
 	Mouse::~Mouse()
@@ -22,17 +22,44 @@ namespace prometheus
 	}
 	void Mouse::ShowCursor()
 	{
-		SDL_ShowCursor(1);
-		SDL_SetRelativeMouseMode(SDL_FALSE);
+		try
+		{
+			SDL_ShowCursor(1);
+			SDL_SetRelativeMouseMode(SDL_FALSE);
+		}
+		catch (std::exception& e)
+		{
+
+			throw std::exception(e);
+		}
+		
 	}
 	void Mouse::HideCursor()
 	{
-		SDL_ShowCursor(0);
-		SDL_SetRelativeMouseMode(SDL_TRUE);
+		try
+		{
+			SDL_ShowCursor(0);
+			SDL_SetRelativeMouseMode(SDL_TRUE);
+		}
+		catch (std::exception& e)
+		{
+
+			throw std::exception(e);
+		}
+		
 	}
 	glm::ivec2 Mouse::GetRelativeMousePosition()
 	{
-		SDL_GetRelativeMouseState(&xPos, &yPos);
-		return glm::ivec2(xPos, yPos);
+		try
+		{
+			SDL_GetRelativeMouseState(&xPos, &yPos);
+			return glm::ivec2(xPos, yPos);
+		}
+		catch (std::exception& e)
+		{
+
+			throw std::exception(e);
+		}
+
 	}
 }

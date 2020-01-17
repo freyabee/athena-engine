@@ -1,4 +1,4 @@
 <map id="prometheus::MeshRenderer" name="prometheus::MeshRenderer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,188,107"/>
+<area shape="rect" id="node1" title="Mesh renderer class loads meshes, textures and shaders and renders the model." alt="" coords="5,80,188,107"/>
 <area shape="rect" id="node2" href="$classprometheus_1_1_component.html" title="Class defining component instance." alt="" coords="15,5,179,32"/>
 </map>

@@ -17,7 +17,6 @@ public:
 private:
 	std::shared_ptr<prometheus::Material> scoreGUI;
 	std::vector < std::shared_ptr<prometheus::Material>> numbers;
-	std::shared_ptr<prometheus::Material> logo;
 	std::string texturePath;
 	std::shared_ptr<prometheus::Entity> player;
 

@@ -1,0 +1,5 @@
+<map id="prometheus::Environment::SleepOffTime" name="prometheus::Environment::SleepOffTime">
+<area shape="rect" id="node1" title="Sleeps off remaining time if deltatime is less than idealTime." alt="" coords="440,5,609,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_environment.html#a5e5e79359f59a51f044626c956b8abc0" title="Updates the current delta time." alt="" coords="223,5,392,47"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_environment.html#a5f90790399dacceca708fc4e99d9633c" title="Initializes environment instance, called at beginning of game loop." alt="" coords="5,5,175,47"/>
+</map>

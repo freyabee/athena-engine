@@ -1,0 +1,5 @@
+<map id="prometheus::Entity::GetTransform" name="prometheus::Entity::GetTransform">
+<area shape="rect" id="node1" title="Gets pointer to entity&#39;s transform." alt="" coords="185,39,317,80"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_entity.html#aa40fe6dbc2c9ad4d851d58ebecef7447" title="Sets position of entity transform to input." alt="" coords="5,5,137,47"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_entity.html#a8dcf8a89adcef5ea58ca9ad1919cc258" title="Sets rotation of entity transform to input." alt="" coords="5,71,137,112"/>
+</map>

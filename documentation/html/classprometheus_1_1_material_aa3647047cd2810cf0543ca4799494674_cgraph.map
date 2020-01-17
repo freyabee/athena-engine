@@ -1,0 +1,4 @@
+<map id="prometheus::Material::SetUniform" name="prometheus::Material::SetUniform">
+<area shape="rect" id="node1" title="Sets projection, view and model uniforms in shader." alt="" coords="5,5,149,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_material.html#a26b12e7eff88d3b705c1eb6dfcc34ef5" title="Returns pointer to camera." alt="" coords="197,5,341,47"/>
+</map>

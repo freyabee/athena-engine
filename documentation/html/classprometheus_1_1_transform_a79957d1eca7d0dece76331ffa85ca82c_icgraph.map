@@ -1,0 +1,12 @@
+<map id="prometheus::Transform::ApplyTransformations" name="prometheus::Transform::ApplyTransformations">
+<area shape="rect" id="node1" title="Recalculates model matrix." alt="" coords="411,201,565,243"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_transform.html#a3b5545b3c446c1f34436d5bcca7a5548" title="Adds rotation to localRotation." alt="" coords="208,5,363,47"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_transform.html#a20029f3353d236cd0db47bb38bf44cde" title="Adds difference to localPosition." alt="" coords="208,71,363,112"/>
+<area shape="rect" id="node4" href="$classprometheus_1_1_transform.html#aabe03d86d19ecaee3aad16ce23677a9e" title="Scales model coordinates by given amounts in parameter." alt="" coords="208,136,363,177"/>
+<area shape="rect" id="node5" href="$classprometheus_1_1_transform.html#aae598841fef7fd44accbd2603d224981" title="Sets local from vec3 input." alt="" coords="208,201,363,243"/>
+<area shape="rect" id="node7" href="$classprometheus_1_1_transform.html#a8ef381729b85e465d28d2fa2d3e92977" title="Sets local rotation from vec3 input." alt="" coords="208,267,363,308"/>
+<area shape="rect" id="node9" href="$classprometheus_1_1_transform.html#ac98db3e2b28665d6f53ff0eaa5e08313" title="Sets local scale from vec3 input." alt="" coords="208,332,363,373"/>
+<area shape="rect" id="node10" href="$classprometheus_1_1_transform.html#a37640da8f2c4bf039a632b2980ed5368" title="Translates local position by given amount in parameter." alt="" coords="208,397,363,439"/>
+<area shape="rect" id="node6" href="$classprometheus_1_1_transform.html#a3a03b4f53f9d3282cf6aede5350e878f" title="Sets local position from three floats." alt="" coords="5,201,160,243"/>
+<area shape="rect" id="node8" href="$classprometheus_1_1_transform.html#a0991d06b3f4321491fd149a3dccd690f" title="Sets local rotation from three floats." alt="" coords="5,267,160,308"/>
+</map>

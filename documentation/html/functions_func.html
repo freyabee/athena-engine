@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classprometheus_1_1_static_model_collider.html#a2e99d1797cb10cbd061c731d0a1400aa">prometheus::StaticModelCollider</a>
 </li>
 <li>AddRotation()
-: <a class="el" href="classprometheus_1_1_transform.html#a02faf4953aecaaee58c59a65796e1053">prometheus::Transform</a>
+: <a class="el" href="classprometheus_1_1_transform.html#a3b5545b3c446c1f34436d5bcca7a5548">prometheus::Transform</a>
 </li>
 <li>ApplyTransformations()
 : <a class="el" href="classprometheus_1_1_transform.html#a79957d1eca7d0dece76331ffa85ca82c">prometheus::Transform</a>
@@ -124,9 +124,6 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>Camera::Camera()
 : <a class="el" href="classprometheus_1_1_camera.html#a94a4606aedca2c8d87b1a50e5aa10c41">prometheus::Camera</a>
-</li>
-<li>ClearPressedReleasedKeys()
-: <a class="el" href="classprometheus_1_1_keyboard.html#a49df53b038e4999988650515c5cca10c">prometheus::Keyboard</a>
 </li>
 <li>ClearWindow()
 : <a class="el" href="classprometheus_1_1_screen.html#aefd15b9aeeb1c69f9e63e2dcdba49eca">prometheus::Screen</a>
@@ -236,17 +233,11 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classprometheus_1_1_environment.html#a2d547808ec8ad83e5d710bef28dcef9a">prometheus::Environment</a>
 </li>
 <li>GetKey()
-: <a class="el" href="classprometheus_1_1_keyboard.html#aae9a5658566a959173a88b8aa923a4c6">prometheus::Keyboard</a>
+: <a class="el" href="classprometheus_1_1_keyboard.html#ade4fcb2ac6c034d4f1d9d83fe066d3a6">prometheus::Keyboard</a>
 </li>
 <li>GetKeyboard()
 : <a class="el" href="classprometheus_1_1_component.html#a815c96fddc2fb153e2eae10593b27b8b">prometheus::Component</a>
 , <a class="el" href="classprometheus_1_1_core.html#a483258d120cd5a518f1a6b26c33b9fda">prometheus::Core</a>
-</li>
-<li>GetKeyDown()
-: <a class="el" href="classprometheus_1_1_keyboard.html#a20af243846af8c19657a988e7a98986c">prometheus::Keyboard</a>
-</li>
-<li>GetKeyUp()
-: <a class="el" href="classprometheus_1_1_keyboard.html#aedef2ea2574af2d23f49405a4ba13763">prometheus::Keyboard</a>
 </li>
 <li>GetLocalPosition()
 : <a class="el" href="classprometheus_1_1_transform.html#a490203a57fee9e457af3509bb16d04d5">prometheus::Transform</a>
@@ -292,6 +283,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521">prometheus::Component</a>
 , <a class="el" href="classprometheus_1_1_entity.html#a2693c5db2d48a02a320cf5a75fd49c0a">prometheus::Entity</a>
 </li>
+<li>GetTriggerCollided()
+: <a class="el" href="classprometheus_1_1_box_collider.html#a91bfe393c7c41913962369a564d568a7">prometheus::BoxCollider</a>
+</li>
 <li>GetView()
 : <a class="el" href="classprometheus_1_1_camera.html#af6ffd8cc8316bab55bf7bf1688a72001">prometheus::Camera</a>
 </li>
@@ -327,22 +321,13 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>initialize()
 : <a class="el" href="classprometheus_1_1_core.html#a16c750e93db75b68d93d23b4fba7c06c">prometheus::Core</a>
 </li>
-<li>Initialize()
-: <a class="el" href="classprometheus_1_1_environment.html#a10f0fac852e02af4801d7154b89f41f2">prometheus::Environment</a>
-</li>
 <li>IsColliding()
 : <a class="el" href="classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f">prometheus::BoxCollider</a>
 , <a class="el" href="structprometheus_1_1_collider_column.html#aea323a5bf35a4ad72fbcda4d8a8850f5">prometheus::ColliderColumn</a>
-, <a class="el" href="classprometheus_1_1_static_model_collider.html#a0ab9f1fb7e11515fc5b0dcbd1755c657">prometheus::StaticModelCollider</a>
+, <a class="el" href="classprometheus_1_1_static_model_collider.html#aa67b66744e51111c7888195d054f11ba">prometheus::StaticModelCollider</a>
 </li>
-<li>IsKey()
-: <a class="el" href="classprometheus_1_1_keyboard.html#ac40ede9c66c83a7fc14f95860cd6ce36">prometheus::Keyboard</a>
-</li>
-<li>IsKeyPressed()
-: <a class="el" href="classprometheus_1_1_keyboard.html#ab0ecf3c2481e09fef2aa27fbfe1097a7">prometheus::Keyboard</a>
-</li>
-<li>IsKeyReleased()
-: <a class="el" href="classprometheus_1_1_keyboard.html#aa8005659f474aef7785ccc99f032271f">prometheus::Keyboard</a>
+<li>IsTrigger()
+: <a class="el" href="classprometheus_1_1_box_collider.html#a5a45cc390f698a547a71394bd38bd02d">prometheus::BoxCollider</a>
 </li>
 </ul>
 
@@ -369,14 +354,17 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classprometheus_1_1_cubemap.html#a367a47edf148ff7aba2f9a4a5e738a4d">prometheus::Cubemap</a>
 </li>
 <li>LoadModel()
-: <a class="el" href="classprometheus_1_1_mesh_renderer.html#a9ee3c7f43564bc85c4b35bcafd9adffc">prometheus::MeshRenderer</a>
+: <a class="el" href="classprometheus_1_1_mesh_renderer.html#aa5a659db15d957c820fc511a9887d4f2">prometheus::MeshRenderer</a>
+</li>
+<li>LoadOgg()
+: <a class="el" href="classprometheus_1_1_sound.html#ab1249c3efff7140fe4c6ad34fda498f4">prometheus::Sound</a>
 </li>
 <li>LoadShader()
 : <a class="el" href="classprometheus_1_1_cubemap.html#afebbd6282f86fa9e825e13533d5aff80">prometheus::Cubemap</a>
 , <a class="el" href="classprometheus_1_1_material.html#ab71af072087d7593c57e3ce7f3d432a0">prometheus::Material</a>
 </li>
 <li>LoadSkybox()
-: <a class="el" href="classprometheus_1_1_mesh_renderer.html#a178081709fb5e65f676465964a707b5b">prometheus::MeshRenderer</a>
+: <a class="el" href="classprometheus_1_1_mesh_renderer.html#ab759423a32f91846481515c543e10041">prometheus::MeshRenderer</a>
 </li>
 <li>LoadTexture()
 : <a class="el" href="classprometheus_1_1_material.html#ae01ba92279830f30a70255be8018111d">prometheus::Material</a>
@@ -392,10 +380,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classprometheus_1_1_mesh_renderer.html#a319ef4643fcdede00342aaf898329c39">prometheus::MeshRenderer</a>
 </li>
 <li>Mouse()
-: <a class="el" href="classprometheus_1_1_mouse.html#a0033e717f4371b0a6fad999e8d219ca7">prometheus::Mouse</a>
+: <a class="el" href="classprometheus_1_1_mouse.html#a77d4fc2474e81aa3e3bfad5171258b9a">prometheus::Mouse</a>
 </li>
 <li>Move()
-: <a class="el" href="classprometheus_1_1_transform.html#a47ac7d78ef944fd67915f6ef9916fbfb">prometheus::Transform</a>
+: <a class="el" href="classprometheus_1_1_transform.html#a20029f3353d236cd0db47bb38bf44cde">prometheus::Transform</a>
 </li>
 </ul>
 
@@ -413,6 +401,11 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 , <a class="el" href="classprometheus_1_1_entity.html#ae7719f055ab9b9d2f91846eb7b2ceecd">prometheus::Entity</a>
 , <a class="el" href="classprometheus_1_1_mesh_renderer.html#a34ea0a031e6999efaaf3120f1009208b">prometheus::MeshRenderer</a>
 </li>
+<li>OnEarlyUpdate()
+: <a class="el" href="classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455">prometheus::BoxCollider</a>
+, <a class="el" href="classprometheus_1_1_component.html#acffb71584b5a1b4df7cad1d116123a17">prometheus::Component</a>
+, <a class="el" href="classprometheus_1_1_entity.html#a7e04dc7f1b41605192d23d80a1da7299">prometheus::Entity</a>
+</li>
 <li>OnGUI()
 : <a class="el" href="classprometheus_1_1_component.html#a80b5162ba51ebde45376d13b2f0a7fe6">prometheus::Component</a>
 , <a class="el" href="classprometheus_1_1_entity.html#aacc58d252c186a3d8e9922f5e9f7613f">prometheus::Entity</a>
@@ -421,9 +414,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classprometheus_1_1_box_collider.html#a1f124f914aad1316c35c2e1d922d8968">prometheus::BoxCollider</a>
 , <a class="el" href="classprometheus_1_1_component.html#ad01696160bf83dfc8af2b20a07118af0">prometheus::Component</a>
 , <a class="el" href="classprometheus_1_1_entity.html#a3665209d544e0d736c5f1de3ffce2e89">prometheus::Entity</a>
+, <a class="el" href="classprometheus_1_1_environment.html#a5f90790399dacceca708fc4e99d9633c">prometheus::Environment</a>
 , <a class="el" href="classprometheus_1_1_gui.html#a7cb0a2364b162b65efc7a80043c85668">prometheus::Gui</a>
 , <a class="el" href="classprometheus_1_1_mesh_renderer.html#a58831ffe82fdd5a841e470d7e165245b">prometheus::MeshRenderer</a>
-, <a class="el" href="classprometheus_1_1_sound_source.html#ad6022e28202878f70fad4142fe0aba8e">prometheus::SoundSource</a>
+, <a class="el" href="classprometheus_1_1_sound_source.html#a477f3efabb9f8e8c851ae1748bfcafab">prometheus::SoundSource</a>
 </li>
 <li>onInit()
 : <a class="el" href="classprometheus_1_1_static_model_collider.html#a10e55c07336471b1296fe08ffb420012">prometheus::StaticModelCollider</a>
@@ -448,72 +442,79 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>Play()
 : <a class="el" href="classprometheus_1_1_sound.html#a412c470d47a5ce9df1f07acd552d898b">prometheus::Sound</a>
+, <a class="el" href="classprometheus_1_1_sound_source.html#add0232520b92257b83dae5a6e18831bf">prometheus::SoundSource</a>
 </li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
-<li>rotate()
-: <a class="el" href="classprometheus_1_1_transform.html#a90500930fa68f07438056b9b1ba4cea0">prometheus::Transform</a>
+<li>Rotate()
+: <a class="el" href="classprometheus_1_1_transform.html#a1032935aeb7b6d42c9e25fca5760e922">prometheus::Transform</a>
 </li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
-<li>scale()
-: <a class="el" href="classprometheus_1_1_transform.html#a52d199d91f873a1f1a3610e976aef420">prometheus::Transform</a>
+<li>Scale()
+: <a class="el" href="classprometheus_1_1_transform.html#aabe03d86d19ecaee3aad16ce23677a9e">prometheus::Transform</a>
 </li>
 <li>Screen()
-: <a class="el" href="classprometheus_1_1_screen.html#a189e717b0196cc1d9e784f2bebf9e55d">prometheus::Screen</a>
+: <a class="el" href="classprometheus_1_1_screen.html#a7f87eac2b9a7bab8f1de73b883c02551">prometheus::Screen</a>
 </li>
-<li>setAudio()
-: <a class="el" href="classprometheus_1_1_sound_source.html#a62da6d1aab66fec9d398cfee1449c77b">prometheus::SoundSource</a>
+<li>SetAudio()
+: <a class="el" href="classprometheus_1_1_sound_source.html#afd54d73333c8ac48a6eb4b942245f266">prometheus::SoundSource</a>
 </li>
-<li>setAutoRemove()
-: <a class="el" href="classprometheus_1_1_sound_source.html#aef0bc8e39bf5664b52d0cb45b6ca5268">prometheus::SoundSource</a>
+<li>SetAutoRemove()
+: <a class="el" href="classprometheus_1_1_sound_source.html#a8816f581bf9e0c8130e20cd3b20dac94">prometheus::SoundSource</a>
 </li>
 <li>SetCameraPos()
 : <a class="el" href="classprometheus_1_1_camera.html#a1c1850309d42e7d95de51757ac8ac66b">prometheus::Camera</a>
 </li>
 <li>SetDeltaTime()
-: <a class="el" href="classprometheus_1_1_environment.html#a2f07ccfa4fe9d1551295529db5c2eaad">prometheus::Environment</a>
+: <a class="el" href="classprometheus_1_1_environment.html#a82ff49029f3c4274788e75d3778828b4">prometheus::Environment</a>
 </li>
 <li>SetEntity()
 : <a class="el" href="classprometheus_1_1_component.html#a40ce361a41653f6ac774d300acedf41f">prometheus::Component</a>
 </li>
 <li>SetLocalPosition()
-: <a class="el" href="classprometheus_1_1_transform.html#ac0da20c6e3a96a6b31370ad35fa9b6d5">prometheus::Transform</a>
+: <a class="el" href="classprometheus_1_1_transform.html#aae598841fef7fd44accbd2603d224981">prometheus::Transform</a>
 </li>
 <li>SetLocalRotation()
-: <a class="el" href="classprometheus_1_1_transform.html#a6d563d46be79d1ec25bede6c604a2584">prometheus::Transform</a>
+: <a class="el" href="classprometheus_1_1_transform.html#a8ef381729b85e465d28d2fa2d3e92977">prometheus::Transform</a>
 </li>
 <li>SetLocalScale()
-: <a class="el" href="classprometheus_1_1_transform.html#abedbe3d509730eeedb822f20dd162b64">prometheus::Transform</a>
+: <a class="el" href="classprometheus_1_1_transform.html#ac98db3e2b28665d6f53ff0eaa5e08313">prometheus::Transform</a>
 </li>
 <li>SetMaterial()
-: <a class="el" href="classprometheus_1_1_mesh_renderer.html#acf076c3f4c4fd6db148ad4813f463fff">prometheus::MeshRenderer</a>
+: <a class="el" href="classprometheus_1_1_mesh_renderer.html#a5516d7cef97a24f1f56570c1165d82f4">prometheus::MeshRenderer</a>
 </li>
 <li>SetModel()
 : <a class="el" href="classprometheus_1_1_material.html#a4cd6a2065e67a785b5929eecd6a944c7">prometheus::Material</a>
-, <a class="el" href="classprometheus_1_1_mesh_renderer.html#a0b58ca29f7b6663ef318ba9a66f7b409">prometheus::MeshRenderer</a>
+, <a class="el" href="classprometheus_1_1_mesh_renderer.html#a66535fa0bd9137d8ffd8caf85b7d560f">prometheus::MeshRenderer</a>
 </li>
 <li>SetOffset()
 : <a class="el" href="classprometheus_1_1_box_collider.html#a6bca8139253a9dbd32b8ccdccb6eff9a">prometheus::BoxCollider</a>
 </li>
 <li>SetPosition()
-: <a class="el" href="classprometheus_1_1_entity.html#abd7e8f25475f0bb1708b51eb4897962d">prometheus::Entity</a>
+: <a class="el" href="classprometheus_1_1_entity.html#aa40fe6dbc2c9ad4d851d58ebecef7447">prometheus::Entity</a>
 </li>
 <li>SetProjection()
 : <a class="el" href="classprometheus_1_1_camera.html#a9659dab91e00d04f7058644b01397218">prometheus::Camera</a>
 </li>
 <li>SetRotation()
-: <a class="el" href="classprometheus_1_1_entity.html#a1727fc45f63190e360b332e10fe90ba0">prometheus::Entity</a>
+: <a class="el" href="classprometheus_1_1_entity.html#a8dcf8a89adcef5ea58ca9ad1919cc258">prometheus::Entity</a>
 </li>
 <li>SetSize()
 : <a class="el" href="classprometheus_1_1_box_collider.html#a20d84c62c07c77f865f8cdf045a325d3">prometheus::BoxCollider</a>
 </li>
+<li>SetTrigger()
+: <a class="el" href="classprometheus_1_1_box_collider.html#a5a802f37d70e00e0375e3ace1ebcac96">prometheus::BoxCollider</a>
+</li>
 <li>SetUniform()
 : <a class="el" href="classprometheus_1_1_material.html#aa3647047cd2810cf0543ca4799494674">prometheus::Material</a>
+</li>
+<li>SetUniqueID()
+: <a class="el" href="classprometheus_1_1_box_collider.html#a22dfbb63c7c729cb1362b175f44c40c4">prometheus::BoxCollider</a>
 </li>
 <li>SetView()
 : <a class="el" href="classprometheus_1_1_camera.html#a33d258250d7c31a3a32d856942856523">prometheus::Camera</a>
@@ -546,8 +547,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>Transform()
 : <a class="el" href="classprometheus_1_1_transform.html#a4c006f2b65eb4deae3470bbdbc466fb8">prometheus::Transform</a>
 </li>
-<li>translate()
-: <a class="el" href="classprometheus_1_1_transform.html#a27c2dcc5a8736eda87d5fe3818001c5a">prometheus::Transform</a>
+<li>Translate()
+: <a class="el" href="classprometheus_1_1_transform.html#a37640da8f2c4bf039a632b2980ed5368">prometheus::Transform</a>
 </li>
 </ul>
 

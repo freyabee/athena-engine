@@ -1,0 +1,17 @@
+<map id="prometheus::Component::GetEntity" name="prometheus::Component::GetEntity">
+<area shape="rect" id="node1" title="Get entity that this component is parented to." alt="" coords="1103,286,1267,327"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_box_collider.html#a145cb04deb34bfa3a56f6f213ddcadbe" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="217,198,381,239"/>
+<area shape="rect" id="node4" href="$classprometheus_1_1_component.html#a7e3ff0d40e5866d7badbd6115560219c" title="Get camera instance in core." alt="" coords="881,70,1045,111"/>
+<area shape="rect" id="node5" href="$classprometheus_1_1_component.html#a10fd3406489fe3bc08219b76e6d34915" title="Get current core instance." alt="" coords="429,161,593,202"/>
+<area shape="rect" id="node6" href="$classprometheus_1_1_component.html#ac8223cbc133ef7709245f9db50d9d950" title="Get environment instance in core." alt="" coords="881,187,1045,229"/>
+<area shape="rect" id="node7" href="$classprometheus_1_1_component.html#a815c96fddc2fb153e2eae10593b27b8b" title="Get keyboard instance in core." alt="" coords="881,253,1045,294"/>
+<area shape="rect" id="node8" href="$classprometheus_1_1_component.html#a3b801a7120f4a4606f0fcfa2c5fda334" title="Get screen instance in core." alt="" coords="881,318,1045,359"/>
+<area shape="rect" id="node9" href="$classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="881,383,1045,425"/>
+<area shape="rect" id="node12" href="$classprometheus_1_1_mesh_renderer.html#a34ea0a031e6999efaaf3120f1009208b" title="Mesh renderer OnDisplay function, overloads Component::OnDisplay() Material uniforms and model are se..." alt="" coords="641,442,824,483"/>
+<area shape="rect" id="node14" href="$classprometheus_1_1_mesh_renderer.html#aa5a659db15d957c820fc511a9887d4f2" title="Loads creates model and material instance in class and loads textures, meshes and shaders." alt="" coords="872,501,1055,542"/>
+<area shape="rect" id="node15" href="$classprometheus_1_1_mesh_renderer.html#ab759423a32f91846481515c543e10041" title="Loads skybox specific model and material." alt="" coords="872,566,1055,607"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455" title="Handles functions called every tick, called before on tick." alt="" coords="5,198,169,239"/>
+<area shape="rect" id="node10" href="$classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f" title="Is box colliding with box of position and size." alt="" coords="651,306,815,347"/>
+<area shape="rect" id="node13" href="$classprometheus_1_1_box_collider.html#a1f124f914aad1316c35c2e1d922d8968" title="Initializes box collider component." alt="" coords="651,377,815,418"/>
+<area shape="rect" id="node11" href="$classprometheus_1_1_box_collider.html#a61c042a98905a647f1f6e3b687fedfac" title="Get collision response for box of this position and size." alt="" coords="429,302,593,343"/>
+</map>

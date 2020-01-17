@@ -1,0 +1,5 @@
+<map id="prometheus::BoxCollider::OnInit" name="prometheus::BoxCollider::OnInit">
+<area shape="rect" id="node1" title="Initializes box collider component." alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="217,5,381,47"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="429,5,593,47"/>
+</map>

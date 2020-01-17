@@ -113,7 +113,7 @@ Inheritance diagram for prometheus::Material:</div>
 <div class="center"><img src="classprometheus_1_1_material__inherit__graph.png" border="0" usemap="#prometheus_1_1_material_inherit__map" alt="Inheritance graph"/></div>
 <map name="prometheus_1_1_material_inherit__map" id="prometheus_1_1_material_inherit__map">
 <area shape="rect" title="Class to load the texture and shader for an object." alt="" coords="10,80,154,107"/>
-<area shape="rect" href="classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" href="classprometheus_1_1_resource.html" title="Parent class for all types of resources in the engine management." alt="" coords="5,5,159,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -122,7 +122,7 @@ Collaboration diagram for prometheus::Material:</div>
 <div class="center"><img src="classprometheus_1_1_material__coll__graph.png" border="0" usemap="#prometheus_1_1_material_coll__map" alt="Collaboration graph"/></div>
 <map name="prometheus_1_1_material_coll__map" id="prometheus_1_1_material_coll__map">
 <area shape="rect" title="Class to load the texture and shader for an object." alt="" coords="10,80,154,107"/>
-<area shape="rect" href="classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" href="classprometheus_1_1_resource.html" title="Parent class for all types of resources in the engine management." alt="" coords="5,5,159,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -169,6 +169,7 @@ Private Attributes</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classprometheus_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classprometheus_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classprometheus_1_1_resource.html">prometheus::Resource</a></td></tr>
 <tr class="memitem:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_resource.html#a216e07b6b83ccb81dfaa71949ac5db17">core</a></td></tr>
+<tr class="memdesc:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the active core.  <a href="classprometheus_1_1_resource.html#a216e07b6b83ccb81dfaa71949ac5db17">More...</a><br /></td></tr>
 <tr class="separator:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -193,6 +194,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns pointer to camera. </p>
 <p>Calls the <a class="el" href="classprometheus_1_1_material.html#a26b12e7eff88d3b705c1eb6dfcc34ef5" title="Returns pointer to camera.">GetCamera()</a> function in core. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to instance of camera from core. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>"Core.h" </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_material_a26b12e7eff88d3b705c1eb6dfcc34ef5_icgraph.png" border="0" usemap="#classprometheus_1_1_material_a26b12e7eff88d3b705c1eb6dfcc34ef5_icgraph" alt=""/></div>
+<map name="classprometheus_1_1_material_a26b12e7eff88d3b705c1eb6dfcc34ef5_icgraph" id="classprometheus_1_1_material_a26b12e7eff88d3b705c1eb6dfcc34ef5_icgraph">
+<area shape="rect" title="Returns pointer to camera." alt="" coords="197,5,341,47"/>
+<area shape="rect" href="classprometheus_1_1_material.html#aa3647047cd2810cf0543ca4799494674" title="Sets projection, view and model uniforms in shader." alt="" coords="5,5,149,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -391,10 +401,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets projection, view and model uniforms in shader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="classprometheus_1_1_model.html">Model</a></td><td>matrix </td></tr>
+    <tr><td class="paramname"><a class="el" href="classprometheus_1_1_model.html" title="Model class loads in model information and stores it in local mesh object.">Model</a></td><td>matrix </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_material_aa3647047cd2810cf0543ca4799494674_cgraph.png" border="0" usemap="#classprometheus_1_1_material_aa3647047cd2810cf0543ca4799494674_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_material_aa3647047cd2810cf0543ca4799494674_cgraph" id="classprometheus_1_1_material_aa3647047cd2810cf0543ca4799494674_cgraph">
+<area shape="rect" title="Sets projection, view and model uniforms in shader." alt="" coords="5,5,149,47"/>
+<area shape="rect" href="classprometheus_1_1_material.html#a26b12e7eff88d3b705c1eb6dfcc34ef5" title="Returns pointer to camera." alt="" coords="197,5,341,47"/>
+</map>
+</div>
 
 </div>
 </div>

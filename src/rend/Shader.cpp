@@ -350,12 +350,11 @@ void Shader::ParseFromPath(const std::string & path)
 			shaderData += line + "\n";
 		}
 		pollForError();
-		std::cout << "Successfully loaded shader from " << path << "."<< std::endl;
+		parse(shaderData);
 	}
-	//std::cout << shaderData << std::endl;
 	file.close();
 	pollForError();
-	parse(shaderData);
+	
 }
 
 void Shader::parse(const std::string& source)

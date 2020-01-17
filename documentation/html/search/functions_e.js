@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rotate_452',['rotate',['../classprometheus_1_1_transform.html#a90500930fa68f07438056b9b1ba4cea0',1,'prometheus::Transform']]]
+  ['rotate_448',['Rotate',['../classprometheus_1_1_transform.html#a1032935aeb7b6d42c9e25fca5760e922',1,'prometheus::Transform']]]
 ];

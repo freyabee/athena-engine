@@ -1,0 +1,4 @@
+<map id="prometheus::Transform::Scale" name="prometheus::Transform::Scale">
+<area shape="rect" id="node1" title="Scales model coordinates by given amounts in parameter." alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_transform.html#a79957d1eca7d0dece76331ffa85ca82c" title="Recalculates model matrix." alt="" coords="208,5,363,47"/>
+</map>

@@ -1,6 +1,6 @@
 var classprometheus_1_1_screen =
 [
-    [ "Screen", "classprometheus_1_1_screen.html#a189e717b0196cc1d9e784f2bebf9e55d", null ],
+    [ "Screen", "classprometheus_1_1_screen.html#a7f87eac2b9a7bab8f1de73b883c02551", null ],
     [ "~Screen", "classprometheus_1_1_screen.html#aec6cd4197d819ffd10488165f647b692", null ],
     [ "ClearWindow", "classprometheus_1_1_screen.html#aefd15b9aeeb1c69f9e63e2dcdba49eca", null ],
     [ "DestroyScreen", "classprometheus_1_1_screen.html#a2ea189d312e7154b1efa82c577073604", null ],

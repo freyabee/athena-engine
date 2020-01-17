@@ -42,16 +42,24 @@ namespace prometheus
 		void OnEarlyUpdate();
 		/// Handles collisions between current box collider and static meshes in scene.
 		void CollideStaticMesh();
-
+		/// Handles collisions between current box colliders in scene and this box collider.
 		void CollideBox();
 
+		/// Size of box collider
 		glm::vec3 size;
+		/// Offset from entity transform
 		glm::vec3 offset;
+		/// Last position of transform
 		glm::vec3 lastPosition;
+		/// Is this collider a trigger
 		bool trigger = false;
+		/// Has trigger collided
 		bool triggerCollided = false;
+		/// Unique identifier for trigger
 		std::string uniqueID;
+		/// Is box colliding with box of position and size.
 		bool IsColliding(glm::vec3 position, glm::vec3 size);
+		/// Get collision response for box of this position and size.
 		glm::vec3 GetCollisionResponse(glm::vec3 position, glm::vec3 size);
 	};
 }

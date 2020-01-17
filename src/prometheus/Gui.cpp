@@ -25,7 +25,6 @@ namespace prometheus
 	{
 		shader = core.lock()->GetContext()->createShader();
 		shader->ParseFromPath("../resources/shaders/guiShader.txt");
-		std::cout << shader << std::endl;
 		std::shared_ptr<rend::Buffer> buffer = core.lock()->GetContext()->createBuffer();
 
 		buffer->add(glm::vec2(1, 1));
@@ -50,16 +49,32 @@ namespace prometheus
 		glm::ivec2 screenDimensions = GetCore()->GetScreen()->GetWindowDimensions();
 		float sw = screenDimensions.x;
 		float sh = screenDimensions.y;
-		shader->setUniform("u_Projection", glm::ortho(0.f, sw, sh, 0.f));
+		try
+		{
+			shader->setUniform("u_Projection", glm::ortho(0.f, sw, sh, 0.f));
+		}
+		catch (std::exception&e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+		
 		glm::mat4 model(1.f);
 		model = glm::translate(model, glm::vec3(position.x, position.y, 0));
 		model = glm::scale(model, glm::vec3(position.z, position.w, 1.f));
-		shader->setUniform("u_Model", model);
-		mesh->setTexture("u_Texture", texture);
-		shader->setMesh(mesh);
-		shader->setDepthTest(false);
-		shader->setBackface(false);
-		shader->render();
+		try
+		{
+			shader->setUniform("u_Model", model);
+			mesh->setTexture("u_Texture", texture);
+			shader->setMesh(mesh);
+			shader->setDepthTest(false);
+			shader->setBackface(false);
+			shader->render();
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+		
 	}
 
 }

@@ -1,0 +1,4 @@
+<map id="prometheus::MeshRenderer::LoadModel" name="prometheus::MeshRenderer::LoadModel">
+<area shape="rect" id="node1" title="Loads creates model and material instance in class and loads textures, meshes and shaders." alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="236,5,400,47"/>
+</map>

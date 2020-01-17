@@ -10,19 +10,34 @@ namespace prometheus
 {
 	void Model::Load(std::string path)
 	{
-		std::shared_ptr<rend::Context> context = core.lock()->GetContext();
-		mesh = context->createMesh();
-
-		std::ifstream f(path);
-		std::string line;
-
-		while (!f.eof())
+		try
 		{
-			std::getline(f, line);
-			obj += line + "\n";
-		}
+			std::shared_ptr<rend::Context> context = core.lock()->GetContext();
+			mesh = context->createMesh();
 
-		mesh->parse(obj);
+			std::ifstream file(path);
+			std::string line;
+
+			if (!file.is_open())
+			{
+				throw (rend::Exception("Failed to open model at : " + path));
+			}
+			else
+			{
+				while (!file.eof())
+				{
+					std::getline(file, line);
+					obj += line + "\n";
+				
+				}
+				mesh->parse(obj);
+			}
+		}
+		catch (std::exception & e)
+		{
+			std::cout << "Problem parsing model " << path << " : " << e.what() << std::endl;
+		}
+		
 	}
 	std::shared_ptr<rend::Mesh> Model::GetMesh()
 	{

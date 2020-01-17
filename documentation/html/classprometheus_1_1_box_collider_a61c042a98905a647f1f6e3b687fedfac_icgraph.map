@@ -1,0 +1,5 @@
+<map id="prometheus::BoxCollider::GetCollisionResponse" name="prometheus::BoxCollider::GetCollisionResponse">
+<area shape="rect" id="node1" title="Get collision response for box of this position and size." alt="" coords="429,5,593,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_box_collider.html#a145cb04deb34bfa3a56f6f213ddcadbe" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="217,5,381,47"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455" title="Handles functions called every tick, called before on tick." alt="" coords="5,5,169,47"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="prometheus::MeshRenderer::OnDisplay" name="prometheus::MeshRenderer::OnDisplay">
+<area shape="rect" id="node1" title="Mesh renderer OnDisplay function, overloads Component::OnDisplay() Material uniforms and model are se..." alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="448,5,612,47"/>
+<area shape="rect" id="node3" href="$classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="236,35,400,76"/>
+</map>

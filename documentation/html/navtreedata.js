@@ -55,7 +55,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_audio_context_8cpp.html",
-"classprometheus_1_1_keyboard.html"
+"classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

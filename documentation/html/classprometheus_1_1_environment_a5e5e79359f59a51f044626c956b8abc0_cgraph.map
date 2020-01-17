@@ -1,0 +1,4 @@
+<map id="prometheus::Environment::UpdateDeltaTime" name="prometheus::Environment::UpdateDeltaTime">
+<area shape="rect" id="node1" title="Updates the current delta time." alt="" coords="5,5,175,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_environment.html#a3f36b4f178f03533aa66288d53d48a91" title="Sleeps off remaining time if deltatime is less than idealTime." alt="" coords="223,5,392,47"/>
+</map>

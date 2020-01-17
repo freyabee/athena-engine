@@ -71,24 +71,35 @@ namespace prometheus
 			throw rend::Exception("Failed to open image");
 		}
 
-		texture->setSize(w, h);
-
-		for (int y = 0; y < h; y++)
+		try
 		{
-			for (int x = 0; x < w; x++)
+			texture->setSize(w, h);
+			for (int y = 0; y < h; y++)
 			{
-				int r = y * w * 4 + x * 4;
+				for (int x = 0; x < w; x++)
+				{
+					int r = y * w * 4 + x * 4;
 
-				texture->setPixel(x, y, glm::vec4(
-					data[r] / 255.0f,
-					data[r + 1] / 255.0f,
-					data[r + 2] / 255.0f,
-					data[r + 3] / 255.0f));
+					texture->setPixel(x, y, glm::vec4(
+						data[r] / 255.0f,
+						data[r + 1] / 255.0f,
+						data[r + 2] / 255.0f,
+						data[r + 3] / 255.0f));
+				}
 			}
+			
 		}
+		catch (std::exception&e)
+		{
+			std::cout << "Problem writing pixels to texture: " << e.what() << std::endl;
+		}
+		
 
-
-		stbi_image_free(data);
+		if (data)
+		{
+			stbi_image_free(data);
+		}
+		
 	}
 
 

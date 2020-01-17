@@ -11,8 +11,16 @@ Score::~Score()
 }
 void Score::OnInit()
 {
-	scoreGUI = std::make_shared<prometheus::Material>();
-	scoreGUI->LoadTexture("../resources/images/ui/score.png", GetCore());
+	try
+	{
+		scoreGUI = std::make_shared<prometheus::Material>();
+		scoreGUI->LoadTexture("../resources/images/ui/score.png", GetCore());
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "Error loading UI element" << e.what() << std::endl;
+	}
+	
 
 	for (int i = 0; i <= 9; i++)
 	{
@@ -28,11 +36,10 @@ void Score::OnInit()
 		}
 		catch (std::exception&e)
 		{
-			std::cout << "failure" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed with error " << e.what() << std::endl;
 		}
 	}
-	score = 9;
+	score = 0;
 	lastScore = score;
 
 }
@@ -43,7 +50,7 @@ void Score::OnTick()
 	if (coinGet)
 	{
 
-		std::cout << "Coin touched" << std::endl;
+		//std::cout << "Coin touched" << std::endl;
 		score += 1;
 	}
 }
@@ -67,13 +74,12 @@ void Score::OnGUI()
 		try
 		{
 			int digit = (int)scoreStr.at(i) - 48;
-			std::cout << digit << std::endl;
 			GetCore()->GetGUI()->Texture(glm::vec4((scoreWidth + (buffer * 2) + (numberWidth*i)), 10, numberWidth, numberHeight), numbers.at(digit)->GetTexture());
 		}
 		catch (std::exception& e)
 		{
-			std::cout << "Problem rendering score: " << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "Problem rendering score: ";
+			std::cout << e.what() << std::endl;
 		}
 	}
 	

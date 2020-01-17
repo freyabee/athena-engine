@@ -110,32 +110,35 @@ $(document).ready(function(){initNavTree('_sound_8h_source.html',''); initResiza
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">class </span>SoundSource;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classprometheus_1_1_sound.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classprometheus_1_1_sound.html">Sound</a> : <span class="keyword">public</span> <a class="code" href="classprometheus_1_1_resource.html">Resource</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_sound.html#a8c6cf2fb807cb716eca8a514aa7a79e7">Load</a>(std::string path);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_sound.html#ac544541cf6aeaac0f72f66da9815ec3f">Play</a>(<span class="keywordtype">float</span> volume, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_sound.html#ac544541cf6aeaac0f72f66da9815ec3f">Play</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classprometheus_1_1_sound.html#ac3c1855ffb28082902708af2a25f934d">   22</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classprometheus_1_1_sound_source.html">SoundSource</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classprometheus_1_1_sound.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classprometheus_1_1_sound.html">Sound</a> : <span class="keyword">public</span> <a class="code" href="classprometheus_1_1_resource.html">Resource</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_sound.html#a8c6cf2fb807cb716eca8a514aa7a79e7">Load</a>(std::string path);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">   24</a></span>&#160;        ALuint <a class="code" href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">bufferId</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // !_SOUND_H_</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_sound.html#ac544541cf6aeaac0f72f66da9815ec3f">Play</a>(<span class="keywordtype">float</span> volume, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_sound.html#ac544541cf6aeaac0f72f66da9815ec3f">Play</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_sound.html#ab1249c3efff7140fe4c6ad34fda498f4">LoadOgg</a>(<span class="keyword">const</span> std::string&amp; fileName, std::vector&lt;char&gt;&amp; buffer,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            ALenum &amp;format, ALsizei &amp;freq);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classprometheus_1_1_sound.html#ac3c1855ffb28082902708af2a25f934d">   35</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classprometheus_1_1_sound_source.html">SoundSource</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">   37</a></span>&#160;        ALuint <a class="code" href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">bufferId</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif // !_SOUND_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassprometheus_1_1_sound_html"><div class="ttname"><a href="classprometheus_1_1_sound.html">prometheus::Sound</a></div><div class="ttdef"><b>Definition:</b> Sound.h:14</div></div>
-<div class="ttc" id="aclassprometheus_1_1_resource_html"><div class="ttname"><a href="classprometheus_1_1_resource.html">prometheus::Resource</a></div><div class="ttdef"><b>Definition:</b> Resource.h:14</div></div>
-<div class="ttc" id="aclassprometheus_1_1_sound_html_ac544541cf6aeaac0f72f66da9815ec3f"><div class="ttname"><a href="classprometheus_1_1_sound.html#ac544541cf6aeaac0f72f66da9815ec3f">prometheus::Sound::Play</a></div><div class="ttdeci">void Play()</div><div class="ttdef"><b>Definition:</b> Sound.cpp:31</div></div>
-<div class="ttc" id="aclassprometheus_1_1_sound_html_a8c6cf2fb807cb716eca8a514aa7a79e7"><div class="ttname"><a href="classprometheus_1_1_sound.html#a8c6cf2fb807cb716eca8a514aa7a79e7">prometheus::Sound::Load</a></div><div class="ttdeci">void Load(std::string path)</div><div class="ttdef"><b>Definition:</b> Sound.cpp:12</div></div>
+<div class="ttc" id="aclassprometheus_1_1_sound_html_ab1249c3efff7140fe4c6ad34fda498f4"><div class="ttname"><a href="classprometheus_1_1_sound.html#ab1249c3efff7140fe4c6ad34fda498f4">prometheus::Sound::LoadOgg</a></div><div class="ttdeci">void LoadOgg(const std::string &amp;fileName, std::vector&lt; char &gt; &amp;buffer, ALenum &amp;format, ALsizei &amp;freq)</div><div class="ttdoc">Loading of .ogg file to buffer.</div><div class="ttdef"><b>Definition:</b> Sound.cpp:44</div></div>
+<div class="ttc" id="aclassprometheus_1_1_sound_html"><div class="ttname"><a href="classprometheus_1_1_sound.html">prometheus::Sound</a></div><div class="ttdoc">Encapsulates the loading of sound resources and handling of sound playing.</div><div class="ttdef"><b>Definition:</b> Sound.h:16</div></div>
+<div class="ttc" id="a_sound_8h_html"><div class="ttname"><a href="_sound_8h.html">Sound.h</a></div></div>
+<div class="ttc" id="aclassprometheus_1_1_resource_html"><div class="ttname"><a href="classprometheus_1_1_resource.html">prometheus::Resource</a></div><div class="ttdoc">Parent class for all types of resources in the engine management.</div><div class="ttdef"><b>Definition:</b> Resource.h:17</div></div>
+<div class="ttc" id="aclassprometheus_1_1_sound_html_ac544541cf6aeaac0f72f66da9815ec3f"><div class="ttname"><a href="classprometheus_1_1_sound.html#ac544541cf6aeaac0f72f66da9815ec3f">prometheus::Sound::Play</a></div><div class="ttdeci">void Play()</div><div class="ttdef"><b>Definition:</b> Sound.cpp:39</div></div>
+<div class="ttc" id="aclassprometheus_1_1_sound_html_a8c6cf2fb807cb716eca8a514aa7a79e7"><div class="ttname"><a href="classprometheus_1_1_sound.html#a8c6cf2fb807cb716eca8a514aa7a79e7">prometheus::Sound::Load</a></div><div class="ttdeci">void Load(std::string path)</div><div class="ttdoc">Function to load .ogg file into sound buffer.</div><div class="ttdef"><b>Definition:</b> Sound.cpp:11</div></div>
 <div class="ttc" id="a_resource_8h_html"><div class="ttname"><a href="_resource_8h.html">Resource.h</a></div></div>
-<div class="ttc" id="aclassprometheus_1_1_sound_html_a74d695c71af2d1baa8080a784ff763d4"><div class="ttname"><a href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">prometheus::Sound::bufferId</a></div><div class="ttdeci">ALuint bufferId</div><div class="ttdef"><b>Definition:</b> Sound.h:24</div></div>
-<div class="ttc" id="aclassprometheus_1_1_sound_source_html"><div class="ttname"><a href="classprometheus_1_1_sound_source.html">prometheus::SoundSource</a></div><div class="ttdef"><b>Definition:</b> SoundSource.h:14</div></div>
-<div class="ttc" id="anamespaceprometheus_html"><div class="ttname"><a href="namespaceprometheus.html">prometheus</a></div><div class="ttdoc">Manages rendering of GUI elements to screen.</div><div class="ttdef"><b>Definition:</b> AudioContext.cpp:5</div></div>
+<div class="ttc" id="aclassprometheus_1_1_sound_html_a74d695c71af2d1baa8080a784ff763d4"><div class="ttname"><a href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">prometheus::Sound::bufferId</a></div><div class="ttdeci">ALuint bufferId</div><div class="ttdoc">Buffer ID.</div><div class="ttdef"><b>Definition:</b> Sound.h:37</div></div>
+<div class="ttc" id="aclassprometheus_1_1_sound_source_html"><div class="ttname"><a href="classprometheus_1_1_sound_source.html">prometheus::SoundSource</a></div><div class="ttdoc">Sound component that allows sounds to be attached to entities.</div><div class="ttdef"><b>Definition:</b> SoundSource.h:14</div></div>
+<div class="ttc" id="anamespaceprometheus_html"><div class="ttname"><a href="namespaceprometheus.html">prometheus</a></div><div class="ttdef"><b>Definition:</b> AudioContext.cpp:5</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

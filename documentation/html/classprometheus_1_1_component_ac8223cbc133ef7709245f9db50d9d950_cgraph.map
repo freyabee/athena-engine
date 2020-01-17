@@ -1,0 +1,4 @@
+<map id="prometheus::Component::GetEnvironment" name="prometheus::Component::GetEnvironment">
+<area shape="rect" id="node1" title="Get environment instance in core." alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="217,5,381,47"/>
+</map>

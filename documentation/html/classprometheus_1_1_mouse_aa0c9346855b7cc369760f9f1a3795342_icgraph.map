@@ -1,0 +1,4 @@
+<map id="prometheus::Mouse::HideCursor" name="prometheus::Mouse::HideCursor">
+<area shape="rect" id="node1" title="Calls SDL to hide cursor and turns on relative mouse mode." alt="" coords="199,5,344,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_mouse.html#a77d4fc2474e81aa3e3bfad5171258b9a" title="Constructor for mouse, passing in screen dimensions." alt="" coords="5,5,151,47"/>
+</map>

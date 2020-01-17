@@ -1,4 +1,4 @@
 <map id="prometheus::Material" name="prometheus::Material">
 <area shape="rect" id="node1" title="Class to load the texture and shader for an object." alt="" coords="10,80,154,107"/>
-<area shape="rect" id="node2" href="$classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_resource.html" title="Parent class for all types of resources in the engine management." alt="" coords="5,5,159,32"/>
 </map>

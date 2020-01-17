@@ -5,23 +5,23 @@ namespace prometheus
 {
 	Environment::Environment()
 	{
+
 	}
 
 	Environment::~Environment()
 	{
 	}
-
-
-	void Environment::Initialize()
+	void Environment::OnInit()
 	{
 		lastTime = SDL_GetTicks();
 		idealFPS = 60.f;
 		idealTime = 1.0f / idealFPS;
+		UpdateDeltaTime();
 	}
 
 	float Environment::GetDeltaTime()
 	{
-		std::cout << deltaTime << std::endl;
+		//std::cout << deltaTime << std::endl;
 		return deltaTime;
 	}
 
@@ -32,9 +32,9 @@ namespace prometheus
 
 
 
-	void Environment::SetDeltaTime(float _deltaTime)
+	void Environment::SetDeltaTime(float deltaTime)
 	{
-		deltaTime = _deltaTime;
+		this->deltaTime = deltaTime;
 	}
 
 

@@ -16,46 +16,75 @@ namespace prometheus
 	MeshRenderer::~MeshRenderer()
 	{
 	}
-	void MeshRenderer::SetModel(std::shared_ptr<Model> _model)
+	void MeshRenderer::SetModel(std::shared_ptr<Model> model)
 	{
-		this->model = _model;
+		this->model = model;
 	}
-	void MeshRenderer::SetMaterial(std::shared_ptr<Material> _mat)
+	void MeshRenderer::SetMaterial(std::shared_ptr<Material> mat)
 	{
-		this->material = _mat;
-		model->GetMesh()->setTexture("u_Texture", _mat->GetTexture());
+		try
+		{
+			std::cout << "Loading material to mesh renderer: ";
+			this->material = mat;
+			model->GetMesh()->setTexture("u_Texture", mat->GetTexture());
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << "failed with error " << e.what() << std::endl;
+		}
+		
 	}
-	bool MeshRenderer::LoadModel(std::string _modelPath, std::string _texturePath, std::string shaderPath)
+	bool MeshRenderer::LoadModel(std::string modelPath, std::string texturePath, std::string shaderPath)
 	{
+		try
+		{
+			std::cout << "Loading model at " << modelPath << ": ";
+			std::shared_ptr<prometheus::Model> model = GetEntity()->GetCore()->GetResources()->load<prometheus::Model>(modelPath);
+			this->model = model;
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << "failed with error " << e.what() << std::endl;
+		}
 
-		std::shared_ptr<prometheus::Model> _model = GetEntity()->GetCore()->GetResources()->load<prometheus::Model>(_modelPath);
-		this->model = _model;
-		std::cout << "Model at '" << _modelPath << "' loaded successfully." << std::endl;
-
-
-		std::shared_ptr<prometheus::Material> _material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(shaderPath);
-		material = _material;
-		material->LoadShader(shaderPath);
-
-
-		material->LoadTexture(_texturePath);
-		std::cout << "Material at '" << _texturePath << "' loaded successfully." << std::endl;
-
-		model->GetMesh()->setTexture("u_Texture", material->GetTexture());
-	
-
-		std::cout << "End of constructor reached" << std::endl;
+		try
+		{
+			std::cout << "Loading shader at " << shaderPath << ": ";
+			std::shared_ptr<prometheus::Material> material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(shaderPath);
+			this->material = material;
+			material->LoadShader(shaderPath);
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << "failed with error " << e.what() << std::endl;
+		}
+		
+		try
+		{
+			std::cout << "Loading texture at " << texturePath << ": ";
+			material->LoadTexture(texturePath);
+			model->GetMesh()->setTexture("u_Texture", material->GetTexture());
+			std::cout << "success" << std::endl;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << "failed with error " << e.what() << std::endl;
+		}
 		return true;
-	}
-	bool MeshRenderer::LoadSkybox(std::string _modelPath, std::string _shader, std::vector<std::string> _texturepaths)
-	{
-		std::shared_ptr<prometheus::Model> _model = GetEntity()->GetCore()->GetResources()->load<prometheus::Model>(_modelPath);
-		this->model = _model;
-		std::cout << "Model at '" << _modelPath << "' loaded successfully." << std::endl;
 
-		std::shared_ptr<prometheus::Material> _material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(_shader);
-		material = _material;
-		material->LoadShader(_shader);
+	}
+	bool MeshRenderer::LoadSkybox(std::string modelPath, std::string shader, std::vector<std::string> texturepaths)
+	{
+		std::shared_ptr<prometheus::Model> model = GetEntity()->GetCore()->GetResources()->load<prometheus::Model>(modelPath);
+		this->model = model;
+		std::cout << "Model at '" << modelPath << "' loaded successfully." << std::endl;
+
+		std::shared_ptr<prometheus::Material> _material = GetEntity()->GetCore()->GetResources()->load<prometheus::Material>(shader);
+		material = material;
+		material->LoadShader(shader);
 		return true;
 	}
 

@@ -1,4 +1,4 @@
 <map id="prometheus::Model" name="prometheus::Model">
-<area shape="rect" id="node1" title=" " alt="" coords="15,80,149,107"/>
-<area shape="rect" id="node2" href="$classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node1" title="Model class loads in model information and stores it in local mesh object." alt="" coords="15,80,149,107"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_resource.html" title="Parent class for all types of resources in the engine management." alt="" coords="5,5,159,32"/>
 </map>

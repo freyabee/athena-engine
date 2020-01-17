@@ -1,10 +1,10 @@
 #include "Screen.h"
 namespace prometheus
 {
-	Screen::Screen(int _w, int _h)
+	Screen::Screen(int w, int h)
 	{
-		windowWidth = _w;
-		windowHeight = _h;
+		windowWidth = w;
+		windowHeight = h;
 
 
 		if (SDL_Init(SDL_INIT_VIDEO) < 0)

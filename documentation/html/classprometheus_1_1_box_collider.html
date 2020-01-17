@@ -138,6 +138,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a20d84c62c07c77f865f8cdf045a325d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a20d84c62c07c77f865f8cdf045a325d3">SetSize</a> (const glm::vec3 &amp;<a class="el" href="classprometheus_1_1_box_collider.html#a2829700852da492d620174cff58035d4">size</a>)</td></tr>
 <tr class="memdesc:a20d84c62c07c77f865f8cdf045a325d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set size.  <a href="classprometheus_1_1_box_collider.html#a20d84c62c07c77f865f8cdf045a325d3">More...</a><br /></td></tr>
 <tr class="separator:a20d84c62c07c77f865f8cdf045a325d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22dfbb63c7c729cb1362b175f44c40c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a22dfbb63c7c729cb1362b175f44c40c4">SetUniqueID</a> (std::string uID)</td></tr>
+<tr class="memdesc:a22dfbb63c7c729cb1362b175f44c40c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set unique ID for collider.  <a href="classprometheus_1_1_box_collider.html#a22dfbb63c7c729cb1362b175f44c40c4">More...</a><br /></td></tr>
+<tr class="separator:a22dfbb63c7c729cb1362b175f44c40c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bfe393c7c41913962369a564d568a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a91bfe393c7c41913962369a564d568a7">GetTriggerCollided</a> ()</td></tr>
+<tr class="memdesc:a91bfe393c7c41913962369a564d568a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if trigger has been collided in this update.  <a href="classprometheus_1_1_box_collider.html#a91bfe393c7c41913962369a564d568a7">More...</a><br /></td></tr>
+<tr class="separator:a91bfe393c7c41913962369a564d568a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a802f37d70e00e0375e3ace1ebcac96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a5a802f37d70e00e0375e3ace1ebcac96">SetTrigger</a> (bool b)</td></tr>
+<tr class="memdesc:a5a802f37d70e00e0375e3ace1ebcac96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set box collider to type trigger, changes trigger variable.  <a href="classprometheus_1_1_box_collider.html#a5a802f37d70e00e0375e3ace1ebcac96">More...</a><br /></td></tr>
+<tr class="separator:a5a802f37d70e00e0375e3ace1ebcac96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a45cc390f698a547a71394bd38bd02d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a5a45cc390f698a547a71394bd38bd02d">IsTrigger</a> ()</td></tr>
+<tr class="memdesc:a5a45cc390f698a547a71394bd38bd02d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if collider is trigger.  <a href="classprometheus_1_1_box_collider.html#a5a45cc390f698a547a71394bd38bd02d">More...</a><br /></td></tr>
+<tr class="separator:a5a45cc390f698a547a71394bd38bd02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classprometheus_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classprometheus_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classprometheus_1_1_component.html">prometheus::Component</a></td></tr>
 <tr class="memitem:a5a6a439a3ddd93c099b7a285654e0f37 inherit pub_methods_classprometheus_1_1_component"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_component.html#a5a6a439a3ddd93c099b7a285654e0f37">~Component</a> ()</td></tr>
 <tr class="separator:a5a6a439a3ddd93c099b7a285654e0f37 inherit pub_methods_classprometheus_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,24 +180,42 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a2b912ecc9a5541ea8dee7213db3127df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a2b912ecc9a5541ea8dee7213db3127df">OnTick</a> ()</td></tr>
 <tr class="memdesc:a2b912ecc9a5541ea8dee7213db3127df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles functions called every tick.  <a href="classprometheus_1_1_box_collider.html#a2b912ecc9a5541ea8dee7213db3127df">More...</a><br /></td></tr>
 <tr class="separator:a2b912ecc9a5541ea8dee7213db3127df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62010e889b87bfa97b180f9b9a38a455"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455">OnEarlyUpdate</a> ()</td></tr>
+<tr class="memdesc:a62010e889b87bfa97b180f9b9a38a455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles functions called every tick, called before on tick.  <a href="classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455">More...</a><br /></td></tr>
+<tr class="separator:a62010e889b87bfa97b180f9b9a38a455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06adc0ce77d1390058ee17bb906d30dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a06adc0ce77d1390058ee17bb906d30dc">CollideStaticMesh</a> ()</td></tr>
 <tr class="memdesc:a06adc0ce77d1390058ee17bb906d30dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles collisions between current box collider and static meshes in scene.  <a href="classprometheus_1_1_box_collider.html#a06adc0ce77d1390058ee17bb906d30dc">More...</a><br /></td></tr>
 <tr class="separator:a06adc0ce77d1390058ee17bb906d30dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a145cb04deb34bfa3a56f6f213ddcadbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a145cb04deb34bfa3a56f6f213ddcadbe">CollideBox</a> ()</td></tr>
+<tr class="memdesc:a145cb04deb34bfa3a56f6f213ddcadbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles collisions between current box colliders in scene and this box collider.  <a href="classprometheus_1_1_box_collider.html#a145cb04deb34bfa3a56f6f213ddcadbe">More...</a><br /></td></tr>
 <tr class="separator:a145cb04deb34bfa3a56f6f213ddcadbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a174da21b0a97ef177b4e6531e735f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f">IsColliding</a> (glm::vec3 position, glm::vec3 <a class="el" href="classprometheus_1_1_box_collider.html#a2829700852da492d620174cff58035d4">size</a>)</td></tr>
+<tr class="memdesc:a34a174da21b0a97ef177b4e6531e735f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is box colliding with box of position and size.  <a href="classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f">More...</a><br /></td></tr>
 <tr class="separator:a34a174da21b0a97ef177b4e6531e735f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61c042a98905a647f1f6e3b687fedfac"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a61c042a98905a647f1f6e3b687fedfac">GetCollisionResponse</a> (glm::vec3 position, glm::vec3 <a class="el" href="classprometheus_1_1_box_collider.html#a2829700852da492d620174cff58035d4">size</a>)</td></tr>
+<tr class="memdesc:a61c042a98905a647f1f6e3b687fedfac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get collision response for box of this position and size.  <a href="classprometheus_1_1_box_collider.html#a61c042a98905a647f1f6e3b687fedfac">More...</a><br /></td></tr>
 <tr class="separator:a61c042a98905a647f1f6e3b687fedfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a2829700852da492d620174cff58035d4"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a2829700852da492d620174cff58035d4">size</a></td></tr>
+<tr class="memdesc:a2829700852da492d620174cff58035d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of box collider.  <a href="classprometheus_1_1_box_collider.html#a2829700852da492d620174cff58035d4">More...</a><br /></td></tr>
 <tr class="separator:a2829700852da492d620174cff58035d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af417b5bf695d760d718ccc084a0b2ab3"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#af417b5bf695d760d718ccc084a0b2ab3">offset</a></td></tr>
+<tr class="memdesc:af417b5bf695d760d718ccc084a0b2ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset from entity transform.  <a href="classprometheus_1_1_box_collider.html#af417b5bf695d760d718ccc084a0b2ab3">More...</a><br /></td></tr>
 <tr class="separator:af417b5bf695d760d718ccc084a0b2ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a470118e2bab426eec01e8e4fafe81e24"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a470118e2bab426eec01e8e4fafe81e24">lastPosition</a></td></tr>
+<tr class="memdesc:a470118e2bab426eec01e8e4fafe81e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last position of transform.  <a href="classprometheus_1_1_box_collider.html#a470118e2bab426eec01e8e4fafe81e24">More...</a><br /></td></tr>
 <tr class="separator:a470118e2bab426eec01e8e4fafe81e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49694c05c9120bf0e7207a8bf6e3bc16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#a49694c05c9120bf0e7207a8bf6e3bc16">trigger</a> = false</td></tr>
+<tr class="memdesc:a49694c05c9120bf0e7207a8bf6e3bc16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this collider a trigger.  <a href="classprometheus_1_1_box_collider.html#a49694c05c9120bf0e7207a8bf6e3bc16">More...</a><br /></td></tr>
+<tr class="separator:a49694c05c9120bf0e7207a8bf6e3bc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26adec042480edefe72d77b80667d4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#ad26adec042480edefe72d77b80667d4b">triggerCollided</a> = false</td></tr>
+<tr class="memdesc:ad26adec042480edefe72d77b80667d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has trigger collided.  <a href="classprometheus_1_1_box_collider.html#ad26adec042480edefe72d77b80667d4b">More...</a><br /></td></tr>
+<tr class="separator:ad26adec042480edefe72d77b80667d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b819dca9045c0ec91e60ab2ca38454"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_box_collider.html#aa4b819dca9045c0ec91e60ab2ca38454">uniqueID</a></td></tr>
+<tr class="memdesc:aa4b819dca9045c0ec91e60ab2ca38454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier for trigger.  <a href="classprometheus_1_1_box_collider.html#aa4b819dca9045c0ec91e60ab2ca38454">More...</a><br /></td></tr>
+<tr class="separator:aa4b819dca9045c0ec91e60ab2ca38454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -222,6 +252,30 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handles collisions between current box colliders in scene and this box collider. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_cgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_cgraph" id="classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_cgraph">
+<area shape="rect" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="5,89,169,131"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a61c042a98905a647f1f6e3b687fedfac" title="Get collision response for box of this position and size." alt="" coords="217,5,381,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="641,56,805,97"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="853,115,1017,156"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a10fd3406489fe3bc08219b76e6d34915" title="Get current core instance." alt="" coords="429,173,593,215"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f" title="Is box colliding with box of position and size." alt="" coords="429,5,593,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_icgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_icgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_icgraph" id="classprometheus_1_1_box_collider_a145cb04deb34bfa3a56f6f213ddcadbe_icgraph">
+<area shape="rect" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="217,5,381,47"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455" title="Handles functions called every tick, called before on tick." alt="" coords="5,5,169,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -286,6 +340,49 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get collision response for box of this position and size. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_cgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_cgraph" id="classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_cgraph">
+<area shape="rect" title="Get collision response for box of this position and size." alt="" coords="5,5,169,47"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f" title="Is box colliding with box of position and size." alt="" coords="217,5,381,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="429,5,593,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="641,5,805,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_icgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_icgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_icgraph" id="classprometheus_1_1_box_collider_a61c042a98905a647f1f6e3b687fedfac_icgraph">
+<area shape="rect" title="Get collision response for box of this position and size." alt="" coords="429,5,593,47"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a145cb04deb34bfa3a56f6f213ddcadbe" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="217,5,381,47"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455" title="Handles functions called every tick, called before on tick." alt="" coords="5,5,169,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91bfe393c7c41913962369a564d568a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bfe393c7c41913962369a564d568a7">&#9670;&nbsp;</a></span>GetTriggerCollided()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prometheus::BoxCollider::GetTriggerCollided </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return if trigger has been collided in this update. </p>
+<dl class="section return"><dt>Returns</dt><dd>if trigger has collided to another collider this tick. </dd></dl>
+
 </div>
 </div>
 <a id="a34a174da21b0a97ef177b4e6531e735f"></a>
@@ -322,6 +419,92 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Is box colliding with box of position and size. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_cgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_cgraph" id="classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_cgraph">
+<area shape="rect" title="Is box colliding with box of position and size." alt="" coords="5,5,169,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="217,5,381,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="429,5,593,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_icgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_icgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_icgraph" id="classprometheus_1_1_box_collider_a34a174da21b0a97ef177b4e6531e735f_icgraph">
+<area shape="rect" title="Is box colliding with box of position and size." alt="" coords="641,5,805,47"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a61c042a98905a647f1f6e3b687fedfac" title="Get collision response for box of this position and size." alt="" coords="429,5,593,47"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a145cb04deb34bfa3a56f6f213ddcadbe" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="217,5,381,47"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a62010e889b87bfa97b180f9b9a38a455" title="Handles functions called every tick, called before on tick." alt="" coords="5,5,169,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a45cc390f698a547a71394bd38bd02d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a45cc390f698a547a71394bd38bd02d">&#9670;&nbsp;</a></span>IsTrigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prometheus::BoxCollider::IsTrigger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns if collider is trigger. </p>
+<dl class="section return"><dt>Returns</dt><dd>Bool denoting if box collider is trigger. </dd></dl>
+
+</div>
+</div>
+<a id="a62010e889b87bfa97b180f9b9a38a455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62010e889b87bfa97b180f9b9a38a455">&#9670;&nbsp;</a></span>OnEarlyUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prometheus::BoxCollider::OnEarlyUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles functions called every tick, called before on tick. </p>
+
+<p>Reimplemented from <a class="el" href="classprometheus_1_1_component.html#acffb71584b5a1b4df7cad1d116123a17">prometheus::Component</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a62010e889b87bfa97b180f9b9a38a455_cgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a62010e889b87bfa97b180f9b9a38a455_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a62010e889b87bfa97b180f9b9a38a455_cgraph" id="classprometheus_1_1_box_collider_a62010e889b87bfa97b180f9b9a38a455_cgraph">
+<area shape="rect" title="Handles functions called every tick, called before on tick." alt="" coords="5,89,169,131"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a145cb04deb34bfa3a56f6f213ddcadbe" title="Handles collisions between current box colliders in scene and this box collider." alt="" coords="217,89,381,131"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a61c042a98905a647f1f6e3b687fedfac" title="Get collision response for box of this position and size." alt="" coords="429,5,593,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="853,56,1017,97"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="1065,115,1229,156"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a10fd3406489fe3bc08219b76e6d34915" title="Get current core instance." alt="" coords="641,173,805,215"/>
+<area shape="rect" href="classprometheus_1_1_box_collider.html#a34a174da21b0a97ef177b4e6531e735f" title="Is box colliding with box of position and size." alt="" coords="641,5,805,47"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a1f124f914aad1316c35c2e1d922d8968"></a>
@@ -351,6 +534,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets size and and orgin. </p>
 
 <p>Reimplemented from <a class="el" href="classprometheus_1_1_component.html#ad01696160bf83dfc8af2b20a07118af0">prometheus::Component</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_box_collider_a1f124f914aad1316c35c2e1d922d8968_cgraph.png" border="0" usemap="#classprometheus_1_1_box_collider_a1f124f914aad1316c35c2e1d922d8968_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_box_collider_a1f124f914aad1316c35c2e1d922d8968_cgraph" id="classprometheus_1_1_box_collider_a1f124f914aad1316c35c2e1d922d8968_cgraph">
+<area shape="rect" title="Initializes box collider component." alt="" coords="5,5,169,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521" title="Get transform of parent entity." alt="" coords="217,5,381,47"/>
+<area shape="rect" href="classprometheus_1_1_component.html#a3a4072763657591de601dd7063a6ba1c" title="Get entity that this component is parented to." alt="" coords="429,5,593,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -432,6 +625,58 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a5a802f37d70e00e0375e3ace1ebcac96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a802f37d70e00e0375e3ace1ebcac96">&#9670;&nbsp;</a></span>SetTrigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prometheus::BoxCollider::SetTrigger </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set box collider to type trigger, changes trigger variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Bool denoting if box collider has been collided with this tick. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a22dfbb63c7c729cb1362b175f44c40c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22dfbb63c7c729cb1362b175f44c40c4">&#9670;&nbsp;</a></span>SetUniqueID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prometheus::BoxCollider::SetUniqueID </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>uID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set unique ID for collider. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uID</td><td>String to be set to new ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a470118e2bab426eec01e8e4fafe81e24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a470118e2bab426eec01e8e4fafe81e24">&#9670;&nbsp;</a></span>lastPosition</h2>
@@ -452,6 +697,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Last position of transform. </p>
 
 </div>
 </div>
@@ -475,6 +722,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Offset from entity transform. </p>
+
 </div>
 </div>
 <a id="a2829700852da492d620174cff58035d4"></a>
@@ -496,6 +745,80 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Size of box collider. </p>
+
+</div>
+</div>
+<a id="a49694c05c9120bf0e7207a8bf6e3bc16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49694c05c9120bf0e7207a8bf6e3bc16">&#9670;&nbsp;</a></span>trigger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prometheus::BoxCollider::trigger = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this collider a trigger. </p>
+
+</div>
+</div>
+<a id="ad26adec042480edefe72d77b80667d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26adec042480edefe72d77b80667d4b">&#9670;&nbsp;</a></span>triggerCollided</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prometheus::BoxCollider::triggerCollided = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Has trigger collided. </p>
+
+</div>
+</div>
+<a id="aa4b819dca9045c0ec91e60ab2ca38454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b819dca9045c0ec91e60ab2ca38454">&#9670;&nbsp;</a></span>uniqueID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string prometheus::BoxCollider::uniqueID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unique identifier for trigger. </p>
 
 </div>
 </div>

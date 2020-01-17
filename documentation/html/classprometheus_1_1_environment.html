@@ -103,39 +103,57 @@ $(document).ready(function(){initNavTree('classprometheus_1_1_environment.html',
 </div><!--header-->
 <div class="contents">
 
+<p>Handles time and FPS functions across the engine.  
+ <a href="classprometheus_1_1_environment.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_environment_8h_source.html">Environment.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a75bd5866e44a2fdb0516895041a9d694"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a75bd5866e44a2fdb0516895041a9d694">Environment</a> ()</td></tr>
+<tr class="memdesc:a75bd5866e44a2fdb0516895041a9d694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for environment object.  <a href="classprometheus_1_1_environment.html#a75bd5866e44a2fdb0516895041a9d694">More...</a><br /></td></tr>
 <tr class="separator:a75bd5866e44a2fdb0516895041a9d694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78d91ca3d38d21e878b112b3fbd16021"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a78d91ca3d38d21e878b112b3fbd16021">~Environment</a> ()</td></tr>
+<tr class="memdesc:a78d91ca3d38d21e878b112b3fbd16021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for environment object.  <a href="classprometheus_1_1_environment.html#a78d91ca3d38d21e878b112b3fbd16021">More...</a><br /></td></tr>
 <tr class="separator:a78d91ca3d38d21e878b112b3fbd16021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10f0fac852e02af4801d7154b89f41f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a10f0fac852e02af4801d7154b89f41f2">Initialize</a> ()</td></tr>
-<tr class="separator:a10f0fac852e02af4801d7154b89f41f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f90790399dacceca708fc4e99d9633c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a5f90790399dacceca708fc4e99d9633c">OnInit</a> ()</td></tr>
+<tr class="memdesc:a5f90790399dacceca708fc4e99d9633c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes environment instance, called at beginning of game loop.  <a href="classprometheus_1_1_environment.html#a5f90790399dacceca708fc4e99d9633c">More...</a><br /></td></tr>
+<tr class="separator:a5f90790399dacceca708fc4e99d9633c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56093784b456973c87f7d0f140206487"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a56093784b456973c87f7d0f140206487">GetDeltaTime</a> ()</td></tr>
+<tr class="memdesc:a56093784b456973c87f7d0f140206487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets delta time.  <a href="classprometheus_1_1_environment.html#a56093784b456973c87f7d0f140206487">More...</a><br /></td></tr>
 <tr class="separator:a56093784b456973c87f7d0f140206487"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d547808ec8ad83e5d710bef28dcef9a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a2d547808ec8ad83e5d710bef28dcef9a">GetIdealTime</a> ()</td></tr>
+<tr class="memdesc:a2d547808ec8ad83e5d710bef28dcef9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ideal delta time.  <a href="classprometheus_1_1_environment.html#a2d547808ec8ad83e5d710bef28dcef9a">More...</a><br /></td></tr>
 <tr class="separator:a2d547808ec8ad83e5d710bef28dcef9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f07ccfa4fe9d1551295529db5c2eaad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a2f07ccfa4fe9d1551295529db5c2eaad">SetDeltaTime</a> (float _deltaTime)</td></tr>
-<tr class="separator:a2f07ccfa4fe9d1551295529db5c2eaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ff49029f3c4274788e75d3778828b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a82ff49029f3c4274788e75d3778828b4">SetDeltaTime</a> (float <a class="el" href="classprometheus_1_1_environment.html#a8e527845432b06ecb1a48617aa82040a">deltaTime</a>)</td></tr>
+<tr class="memdesc:a82ff49029f3c4274788e75d3778828b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set delta time.  <a href="classprometheus_1_1_environment.html#a82ff49029f3c4274788e75d3778828b4">More...</a><br /></td></tr>
+<tr class="separator:a82ff49029f3c4274788e75d3778828b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e5e79359f59a51f044626c956b8abc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a5e5e79359f59a51f044626c956b8abc0">UpdateDeltaTime</a> ()</td></tr>
+<tr class="memdesc:a5e5e79359f59a51f044626c956b8abc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current delta time.  <a href="classprometheus_1_1_environment.html#a5e5e79359f59a51f044626c956b8abc0">More...</a><br /></td></tr>
 <tr class="separator:a5e5e79359f59a51f044626c956b8abc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f36b4f178f03533aa66288d53d48a91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a3f36b4f178f03533aa66288d53d48a91">SleepOffTime</a> ()</td></tr>
+<tr class="memdesc:a3f36b4f178f03533aa66288d53d48a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleeps off remaining time if deltatime is less than idealTime.  <a href="classprometheus_1_1_environment.html#a3f36b4f178f03533aa66288d53d48a91">More...</a><br /></td></tr>
 <tr class="separator:a3f36b4f178f03533aa66288d53d48a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8e527845432b06ecb1a48617aa82040a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a8e527845432b06ecb1a48617aa82040a">deltaTime</a></td></tr>
+<tr class="memdesc:a8e527845432b06ecb1a48617aa82040a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time between ticks.  <a href="classprometheus_1_1_environment.html#a8e527845432b06ecb1a48617aa82040a">More...</a><br /></td></tr>
 <tr class="separator:a8e527845432b06ecb1a48617aa82040a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af32fb6018d351d359de23bf538ca921e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#af32fb6018d351d359de23bf538ca921e">lastTime</a></td></tr>
+<tr class="memdesc:af32fb6018d351d359de23bf538ca921e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last time measured.  <a href="classprometheus_1_1_environment.html#af32fb6018d351d359de23bf538ca921e">More...</a><br /></td></tr>
 <tr class="separator:af32fb6018d351d359de23bf538ca921e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bc9d385c6d11de2be9885535f10307"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#ad3bc9d385c6d11de2be9885535f10307">idealFPS</a></td></tr>
+<tr class="memdesc:ad3bc9d385c6d11de2be9885535f10307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target number of FPS.  <a href="classprometheus_1_1_environment.html#ad3bc9d385c6d11de2be9885535f10307">More...</a><br /></td></tr>
 <tr class="separator:ad3bc9d385c6d11de2be9885535f10307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ab3efde49557d8ae27be3c27c600e5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_environment.html#a42ab3efde49557d8ae27be3c27c600e5">idealTime</a></td></tr>
+<tr class="memdesc:a42ab3efde49557d8ae27be3c27c600e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target deltatime.  <a href="classprometheus_1_1_environment.html#a42ab3efde49557d8ae27be3c27c600e5">More...</a><br /></td></tr>
 <tr class="separator:a42ab3efde49557d8ae27be3c27c600e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles time and FPS functions across the engine. </p>
+<p>Manages delta time and handles standardising loop time and FPS. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a75bd5866e44a2fdb0516895041a9d694"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75bd5866e44a2fdb0516895041a9d694">&#9670;&nbsp;</a></span>Environment()</h2>
 
@@ -150,6 +168,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor for environment object. </p>
 
 </div>
 </div>
@@ -167,6 +187,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destructor for environment object. </p>
 
 </div>
 </div>
@@ -186,6 +208,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets delta time. </p>
+<p>Returns time since last tick. </p><dl class="section return"><dt>Returns</dt><dd>Float delta time. </dd></dl>
+
 </div>
 </div>
 <a id="a2d547808ec8ad83e5d710bef28dcef9a"></a>
@@ -203,16 +228,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get ideal delta time. </p>
+<p>Returns the goal delta time calculated from goal FPS. </p><dl class="section return"><dt>Returns</dt><dd>float ideal time. </dd></dl>
+
 </div>
 </div>
-<a id="a10f0fac852e02af4801d7154b89f41f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10f0fac852e02af4801d7154b89f41f2">&#9670;&nbsp;</a></span>Initialize()</h2>
+<a id="a5f90790399dacceca708fc4e99d9633c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f90790399dacceca708fc4e99d9633c">&#9670;&nbsp;</a></span>OnInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void prometheus::Environment::Initialize </td>
+          <td class="memname">void prometheus::Environment::OnInit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -220,10 +248,23 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes environment instance, called at beginning of game loop. </p>
+<p>Called before entities are intialises, sets up FPS variables and sets baseline time. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_environment_a5f90790399dacceca708fc4e99d9633c_cgraph.png" border="0" usemap="#classprometheus_1_1_environment_a5f90790399dacceca708fc4e99d9633c_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_environment_a5f90790399dacceca708fc4e99d9633c_cgraph" id="classprometheus_1_1_environment_a5f90790399dacceca708fc4e99d9633c_cgraph">
+<area shape="rect" title="Initializes environment instance, called at beginning of game loop." alt="" coords="5,5,175,47"/>
+<area shape="rect" href="classprometheus_1_1_environment.html#a5e5e79359f59a51f044626c956b8abc0" title="Updates the current delta time." alt="" coords="223,5,392,47"/>
+<area shape="rect" href="classprometheus_1_1_environment.html#a3f36b4f178f03533aa66288d53d48a91" title="Sleeps off remaining time if deltatime is less than idealTime." alt="" coords="440,5,609,47"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a2f07ccfa4fe9d1551295529db5c2eaad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f07ccfa4fe9d1551295529db5c2eaad">&#9670;&nbsp;</a></span>SetDeltaTime()</h2>
+<a id="a82ff49029f3c4274788e75d3778828b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ff49029f3c4274788e75d3778828b4">&#9670;&nbsp;</a></span>SetDeltaTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,11 +273,19 @@ Private Attributes</h2></td></tr>
           <td class="memname">void prometheus::Environment::SetDeltaTime </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_deltaTime</em></td><td>)</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set delta time. </p>
+<p>Allows the setting of a delta time. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>Time to set deltatime to. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -255,6 +304,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sleeps off remaining time if deltatime is less than idealTime. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_environment_a3f36b4f178f03533aa66288d53d48a91_icgraph.png" border="0" usemap="#classprometheus_1_1_environment_a3f36b4f178f03533aa66288d53d48a91_icgraph" alt=""/></div>
+<map name="classprometheus_1_1_environment_a3f36b4f178f03533aa66288d53d48a91_icgraph" id="classprometheus_1_1_environment_a3f36b4f178f03533aa66288d53d48a91_icgraph">
+<area shape="rect" title="Sleeps off remaining time if deltatime is less than idealTime." alt="" coords="440,5,609,47"/>
+<area shape="rect" href="classprometheus_1_1_environment.html#a5e5e79359f59a51f044626c956b8abc0" title="Updates the current delta time." alt="" coords="223,5,392,47"/>
+<area shape="rect" href="classprometheus_1_1_environment.html#a5f90790399dacceca708fc4e99d9633c" title="Initializes environment instance, called at beginning of game loop." alt="" coords="5,5,175,47"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a5e5e79359f59a51f044626c956b8abc0"></a>
@@ -271,6 +332,27 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the current delta time. </p>
+<p>Gets current time and uses the last measure time to calculate deltatime. Sleeps off remaining time in <a class="el" href="classprometheus_1_1_environment.html#a3f36b4f178f03533aa66288d53d48a91" title="Sleeps off remaining time if deltatime is less than idealTime.">Environment::SleepOffTime()</a> </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_cgraph.png" border="0" usemap="#classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_cgraph" id="classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_cgraph">
+<area shape="rect" title="Updates the current delta time." alt="" coords="5,5,175,47"/>
+<area shape="rect" href="classprometheus_1_1_environment.html#a3f36b4f178f03533aa66288d53d48a91" title="Sleeps off remaining time if deltatime is less than idealTime." alt="" coords="223,5,392,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_icgraph.png" border="0" usemap="#classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_icgraph" alt=""/></div>
+<map name="classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_icgraph" id="classprometheus_1_1_environment_a5e5e79359f59a51f044626c956b8abc0_icgraph">
+<area shape="rect" title="Updates the current delta time." alt="" coords="223,5,392,47"/>
+<area shape="rect" href="classprometheus_1_1_environment.html#a5f90790399dacceca708fc4e99d9633c" title="Initializes environment instance, called at beginning of game loop." alt="" coords="5,5,175,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -295,6 +377,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Time between ticks. </p>
+
 </div>
 </div>
 <a id="ad3bc9d385c6d11de2be9885535f10307"></a>
@@ -316,6 +400,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Target number of FPS. </p>
 
 </div>
 </div>
@@ -339,6 +425,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Target deltatime. </p>
+
 </div>
 </div>
 <a id="af32fb6018d351d359de23bf538ca921e"></a>
@@ -360,6 +448,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Last time measured. </p>
 
 </div>
 </div>

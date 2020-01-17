@@ -1,7 +1,7 @@
 var classprometheus_1_1_entity =
 [
     [ "Entity", "classprometheus_1_1_entity.html#acd2ba70c5fa63bad48b73c8fa8500552", null ],
-    [ "Entity", "classprometheus_1_1_entity.html#a61c4324b1e3450ae08a639bd9e386388", null ],
+    [ "Entity", "classprometheus_1_1_entity.html#a2e6eda50c57ee785b374c5d633902e95", null ],
     [ "addComponent", "classprometheus_1_1_entity.html#a5e6357d901937823e5f53548979644f8", null ],
     [ "addComponent", "classprometheus_1_1_entity.html#adfdd9b23403585b4a327a309a7f8a041", null ],
     [ "addComponent", "classprometheus_1_1_entity.html#a2baccd375440a74f22e7e4e662617948", null ],
@@ -12,11 +12,12 @@ var classprometheus_1_1_entity =
     [ "GetTransform", "classprometheus_1_1_entity.html#a2693c5db2d48a02a320cf5a75fd49c0a", null ],
     [ "HasComponent", "classprometheus_1_1_entity.html#adfb455a21fee24ffdcd8611bbf1b7edb", null ],
     [ "OnDisplay", "classprometheus_1_1_entity.html#ae7719f055ab9b9d2f91846eb7b2ceecd", null ],
+    [ "OnEarlyUpdate", "classprometheus_1_1_entity.html#a7e04dc7f1b41605192d23d80a1da7299", null ],
     [ "OnGUI", "classprometheus_1_1_entity.html#aacc58d252c186a3d8e9922f5e9f7613f", null ],
     [ "OnInit", "classprometheus_1_1_entity.html#a3665209d544e0d736c5f1de3ffce2e89", null ],
     [ "OnTick", "classprometheus_1_1_entity.html#aebdd7198fc5ead00f53ba18f0b9105bd", null ],
-    [ "SetPosition", "classprometheus_1_1_entity.html#abd7e8f25475f0bb1708b51eb4897962d", null ],
-    [ "SetRotation", "classprometheus_1_1_entity.html#a1727fc45f63190e360b332e10fe90ba0", null ],
+    [ "SetPosition", "classprometheus_1_1_entity.html#aa40fe6dbc2c9ad4d851d58ebecef7447", null ],
+    [ "SetRotation", "classprometheus_1_1_entity.html#a8dcf8a89adcef5ea58ca9ad1919cc258", null ],
     [ "Core", "classprometheus_1_1_entity.html#a4107254ac74f90d4f91e810d755b98c2", null ],
     [ "components", "classprometheus_1_1_entity.html#a8ddbbcc487c2d3d892e470826f7a7a27", null ],
     [ "core", "classprometheus_1_1_entity.html#af9b8a8c8b996134810b4d61a6b4536b0", null ],

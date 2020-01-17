@@ -107,44 +107,52 @@ $(document).ready(function(){initNavTree('_gui_8h_source.html',''); initResizabl
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;rend/rend.h&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceprometheus.html">prometheus</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">class </span>Model;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">class </span>Material;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">class </span>Core;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">class </span>Texture;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html">   21</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classprometheus_1_1_gui.html">Gui</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classprometheus_1_1_gui.html#afb7367d51be7613eed174c0e819ddac8">Gui</a>(std::shared_ptr&lt;Core&gt; <a class="code" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">core</a>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classprometheus_1_1_gui.html#a77ef2d0dd2337f24b9c835c6eb25e83c">~Gui</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_gui.html#a7cb0a2364b162b65efc7a80043c85668">OnInit</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::shared_ptr&lt;Core&gt; <a class="code" href="classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7">GetCore</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_gui.html#a5de6a1e917940b836f98a99e0bc45a1b">Texture</a>(glm::vec4 position, std::shared_ptr&lt;rend::Texture&gt; texture);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">   30</a></span>&#160;        std::shared_ptr&lt;rend::Mesh&gt; <a class="code" href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">mesh</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">   31</a></span>&#160;        std::shared_ptr&lt;rend::Shader&gt; <a class="code" href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">shader</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">   32</a></span>&#160;        glm::mat4 <a class="code" href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">projection</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">   33</a></span>&#160;        std::weak_ptr&lt;Core&gt; <a class="code" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">core</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceprometheus.html">prometheus</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">class </span>Model;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">class </span>Material;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">class </span>Core;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">class </span>Texture;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classprometheus_1_1_gui.html">Gui</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classprometheus_1_1_gui.html#afb7367d51be7613eed174c0e819ddac8">Gui</a>(std::shared_ptr&lt;Core&gt; <a class="code" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">core</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classprometheus_1_1_gui.html#a77ef2d0dd2337f24b9c835c6eb25e83c">~Gui</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_gui.html#a7cb0a2364b162b65efc7a80043c85668">OnInit</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::shared_ptr&lt;Core&gt; <a class="code" href="classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7">GetCore</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classprometheus_1_1_gui.html#a5de6a1e917940b836f98a99e0bc45a1b">Texture</a>(glm::vec4 position, std::shared_ptr&lt;rend::Texture&gt; texture);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">   45</a></span>&#160;        std::shared_ptr&lt;rend::Mesh&gt; <a class="code" href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">mesh</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">   47</a></span>&#160;        std::shared_ptr&lt;rend::Shader&gt; <a class="code" href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">shader</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">   49</a></span>&#160;        glm::mat4 <a class="code" href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">projection</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">   51</a></span>&#160;        std::weak_ptr&lt;Core&gt; <a class="code" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">core</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassprometheus_1_1_gui_html_a7cb0a2364b162b65efc7a80043c85668"><div class="ttname"><a href="classprometheus_1_1_gui.html#a7cb0a2364b162b65efc7a80043c85668">prometheus::Gui::OnInit</a></div><div class="ttdeci">void OnInit()</div><div class="ttdef"><b>Definition:</b> Gui.cpp:24</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html_a2d38c8f5128d099caa4fac05886aa8c9"><div class="ttname"><a href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">prometheus::Gui::projection</a></div><div class="ttdeci">glm::mat4 projection</div><div class="ttdef"><b>Definition:</b> Gui.h:32</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html_a94e836550da53ea1c327688c6b2a2b19"><div class="ttname"><a href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">prometheus::Gui::mesh</a></div><div class="ttdeci">std::shared_ptr&lt; rend::Mesh &gt; mesh</div><div class="ttdef"><b>Definition:</b> Gui.h:30</div></div>
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_a7cb0a2364b162b65efc7a80043c85668"><div class="ttname"><a href="classprometheus_1_1_gui.html#a7cb0a2364b162b65efc7a80043c85668">prometheus::Gui::OnInit</a></div><div class="ttdeci">void OnInit()</div><div class="ttdoc">Functio to create mesh and shader for GUI element.</div><div class="ttdef"><b>Definition:</b> Gui.cpp:24</div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_a2d38c8f5128d099caa4fac05886aa8c9"><div class="ttname"><a href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">prometheus::Gui::projection</a></div><div class="ttdeci">glm::mat4 projection</div><div class="ttdoc">Camera projection used for shader.</div><div class="ttdef"><b>Definition:</b> Gui.h:49</div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_a94e836550da53ea1c327688c6b2a2b19"><div class="ttname"><a href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">prometheus::Gui::mesh</a></div><div class="ttdeci">std::shared_ptr&lt; rend::Mesh &gt; mesh</div><div class="ttdoc">Pointer to GUI mesh.</div><div class="ttdef"><b>Definition:</b> Gui.h:45</div></div>
 <div class="ttc" id="aclassprometheus_1_1_gui_html_a77ef2d0dd2337f24b9c835c6eb25e83c"><div class="ttname"><a href="classprometheus_1_1_gui.html#a77ef2d0dd2337f24b9c835c6eb25e83c">prometheus::Gui::~Gui</a></div><div class="ttdeci">~Gui()</div><div class="ttdef"><b>Definition:</b> Gui.cpp:20</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html_aae6588b9b8c826d6f4901dd2ef2836e9"><div class="ttname"><a href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">prometheus::Gui::core</a></div><div class="ttdeci">std::weak_ptr&lt; Core &gt; core</div><div class="ttdef"><b>Definition:</b> Gui.h:33</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html"><div class="ttname"><a href="classprometheus_1_1_gui.html">prometheus::Gui</a></div><div class="ttdef"><b>Definition:</b> Gui.h:21</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html_acc3b5501bf095d7bf7587371050a5022"><div class="ttname"><a href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">prometheus::Gui::shader</a></div><div class="ttdeci">std::shared_ptr&lt; rend::Shader &gt; shader</div><div class="ttdef"><b>Definition:</b> Gui.h:31</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html_a5de6a1e917940b836f98a99e0bc45a1b"><div class="ttname"><a href="classprometheus_1_1_gui.html#a5de6a1e917940b836f98a99e0bc45a1b">prometheus::Gui::Texture</a></div><div class="ttdeci">void Texture(glm::vec4 position, std::shared_ptr&lt; rend::Texture &gt; texture)</div><div class="ttdef"><b>Definition:</b> Gui.cpp:47</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html_afb7367d51be7613eed174c0e819ddac8"><div class="ttname"><a href="classprometheus_1_1_gui.html#afb7367d51be7613eed174c0e819ddac8">prometheus::Gui::Gui</a></div><div class="ttdeci">Gui(std::shared_ptr&lt; Core &gt; core)</div><div class="ttdoc">Allows GUI elements to be displayed on the screen.</div><div class="ttdef"><b>Definition:</b> Gui.cpp:15</div></div>
-<div class="ttc" id="aclassprometheus_1_1_gui_html_ac26817ec023c23a5d1e96f1d5a5d0bf7"><div class="ttname"><a href="classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7">prometheus::Gui::GetCore</a></div><div class="ttdeci">std::shared_ptr&lt; Core &gt; GetCore()</div><div class="ttdef"><b>Definition:</b> Gui.cpp:43</div></div>
-<div class="ttc" id="anamespaceprometheus_html"><div class="ttname"><a href="namespaceprometheus.html">prometheus</a></div><div class="ttdoc">Manages rendering of GUI elements to screen.</div><div class="ttdef"><b>Definition:</b> AudioContext.cpp:5</div></div>
+<div class="ttc" id="a_material_8h_html"><div class="ttname"><a href="_material_8h.html">Material.h</a></div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_aae6588b9b8c826d6f4901dd2ef2836e9"><div class="ttname"><a href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">prometheus::Gui::core</a></div><div class="ttdeci">std::weak_ptr&lt; Core &gt; core</div><div class="ttdoc">Weak pointer to active core instance.</div><div class="ttdef"><b>Definition:</b> Gui.h:51</div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html"><div class="ttname"><a href="classprometheus_1_1_gui.html">prometheus::Gui</a></div><div class="ttdoc">Manages rendering of GUI elements to screen.</div><div class="ttdef"><b>Definition:</b> Gui.h:20</div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_acc3b5501bf095d7bf7587371050a5022"><div class="ttname"><a href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">prometheus::Gui::shader</a></div><div class="ttdeci">std::shared_ptr&lt; rend::Shader &gt; shader</div><div class="ttdoc">Pointer to GUI shader.</div><div class="ttdef"><b>Definition:</b> Gui.h:47</div></div>
+<div class="ttc" id="a_screen_8h_html"><div class="ttname"><a href="_screen_8h.html">Screen.h</a></div></div>
+<div class="ttc" id="a_resources_8h_html"><div class="ttname"><a href="_resources_8h.html">Resources.h</a></div></div>
+<div class="ttc" id="a_model_8h_html"><div class="ttname"><a href="_model_8h.html">Model.h</a></div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_a5de6a1e917940b836f98a99e0bc45a1b"><div class="ttname"><a href="classprometheus_1_1_gui.html#a5de6a1e917940b836f98a99e0bc45a1b">prometheus::Gui::Texture</a></div><div class="ttdeci">void Texture(glm::vec4 position, std::shared_ptr&lt; rend::Texture &gt; texture)</div><div class="ttdoc">Assigns texture to mesh, finishes shader and renders GUI element.</div><div class="ttdef"><b>Definition:</b> Gui.cpp:46</div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_afb7367d51be7613eed174c0e819ddac8"><div class="ttname"><a href="classprometheus_1_1_gui.html#afb7367d51be7613eed174c0e819ddac8">prometheus::Gui::Gui</a></div><div class="ttdeci">Gui(std::shared_ptr&lt; Core &gt; core)</div><div class="ttdoc">Constructor taking a pointer to the core as a parameter.</div><div class="ttdef"><b>Definition:</b> Gui.cpp:15</div></div>
+<div class="ttc" id="aclassprometheus_1_1_gui_html_ac26817ec023c23a5d1e96f1d5a5d0bf7"><div class="ttname"><a href="classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7">prometheus::Gui::GetCore</a></div><div class="ttdeci">std::shared_ptr&lt; Core &gt; GetCore()</div><div class="ttdoc">Returns a pointer to the current instance of core.</div><div class="ttdef"><b>Definition:</b> Gui.cpp:42</div></div>
+<div class="ttc" id="a_gui_8h_html"><div class="ttname"><a href="_gui_8h.html">Gui.h</a></div></div>
+<div class="ttc" id="anamespaceprometheus_html"><div class="ttname"><a href="namespaceprometheus.html">prometheus</a></div><div class="ttdef"><b>Definition:</b> AudioContext.cpp:5</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

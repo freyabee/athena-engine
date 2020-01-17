@@ -1,7 +1,7 @@
 var classprometheus_1_1_mouse =
 [
     [ "Mouse", "classprometheus_1_1_mouse.html#a6fd110e9b55dbfda94fc574ab6cf6a14", null ],
-    [ "Mouse", "classprometheus_1_1_mouse.html#a0033e717f4371b0a6fad999e8d219ca7", null ],
+    [ "Mouse", "classprometheus_1_1_mouse.html#a77d4fc2474e81aa3e3bfad5171258b9a", null ],
     [ "~Mouse", "classprometheus_1_1_mouse.html#a7fc7b5cef18613a3807b69628ac826da", null ],
     [ "GetRelativeMousePosition", "classprometheus_1_1_mouse.html#a4c66c68f0fd4b82dcd213cf95d1a79a8", null ],
     [ "HideCursor", "classprometheus_1_1_mouse.html#aa0c9346855b7cc369760f9f1a3795342", null ],

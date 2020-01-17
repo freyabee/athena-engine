@@ -104,14 +104,17 @@ $(document).ready(function(){initNavTree('classprometheus_1_1_sound.html',''); i
 </div><!--header-->
 <div class="contents">
 
+<p>Encapsulates the loading of sound resources and handling of sound playing.  
+ <a href="classprometheus_1_1_sound.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_sound_8h_source.html">Sound.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for prometheus::Sound:</div>
 <div class="dyncontent">
 <div class="center"><img src="classprometheus_1_1_sound__inherit__graph.png" border="0" usemap="#prometheus_1_1_sound_inherit__map" alt="Inheritance graph"/></div>
 <map name="prometheus_1_1_sound_inherit__map" id="prometheus_1_1_sound_inherit__map">
-<area shape="rect" title=" " alt="" coords="15,80,149,107"/>
-<area shape="rect" href="classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" title="Encapsulates the loading of sound resources and handling of sound playing." alt="" coords="15,80,149,107"/>
+<area shape="rect" href="classprometheus_1_1_resource.html" title="Parent class for all types of resources in the engine management." alt="" coords="5,5,159,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -119,23 +122,28 @@ Collaboration diagram for prometheus::Sound:</div>
 <div class="dyncontent">
 <div class="center"><img src="classprometheus_1_1_sound__coll__graph.png" border="0" usemap="#prometheus_1_1_sound_coll__map" alt="Collaboration graph"/></div>
 <map name="prometheus_1_1_sound_coll__map" id="prometheus_1_1_sound_coll__map">
-<area shape="rect" title=" " alt="" coords="15,80,149,107"/>
-<area shape="rect" href="classprometheus_1_1_resource.html" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" title="Encapsulates the loading of sound resources and handling of sound playing." alt="" coords="15,80,149,107"/>
+<area shape="rect" href="classprometheus_1_1_resource.html" title="Parent class for all types of resources in the engine management." alt="" coords="5,5,159,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c6cf2fb807cb716eca8a514aa7a79e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_sound.html#a8c6cf2fb807cb716eca8a514aa7a79e7">Load</a> (std::string path)</td></tr>
+<tr class="memdesc:a8c6cf2fb807cb716eca8a514aa7a79e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to load .ogg file into sound buffer.  <a href="classprometheus_1_1_sound.html#a8c6cf2fb807cb716eca8a514aa7a79e7">More...</a><br /></td></tr>
 <tr class="separator:a8c6cf2fb807cb716eca8a514aa7a79e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a412c470d47a5ce9df1f07acd552d898b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_sound.html#a412c470d47a5ce9df1f07acd552d898b">Play</a> (float volume, float min, float max)</td></tr>
 <tr class="separator:a412c470d47a5ce9df1f07acd552d898b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac544541cf6aeaac0f72f66da9815ec3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_sound.html#ac544541cf6aeaac0f72f66da9815ec3f">Play</a> ()</td></tr>
 <tr class="separator:ac544541cf6aeaac0f72f66da9815ec3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1249c3efff7140fe4c6ad34fda498f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_sound.html#ab1249c3efff7140fe4c6ad34fda498f4">LoadOgg</a> (const std::string &amp;fileName, std::vector&lt; char &gt; &amp;buffer, ALenum &amp;format, ALsizei &amp;freq)</td></tr>
+<tr class="memdesc:ab1249c3efff7140fe4c6ad34fda498f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loading of .ogg file to buffer.  <a href="classprometheus_1_1_sound.html#ab1249c3efff7140fe4c6ad34fda498f4">More...</a><br /></td></tr>
+<tr class="separator:ab1249c3efff7140fe4c6ad34fda498f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a74d695c71af2d1baa8080a784ff763d4"><td class="memItemLeft" align="right" valign="top">ALuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">bufferId</a></td></tr>
+<tr class="memdesc:a74d695c71af2d1baa8080a784ff763d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer ID.  <a href="classprometheus_1_1_sound.html#a74d695c71af2d1baa8080a784ff763d4">More...</a><br /></td></tr>
 <tr class="separator:a74d695c71af2d1baa8080a784ff763d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -147,9 +155,13 @@ Friends</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classprometheus_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classprometheus_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classprometheus_1_1_resource.html">prometheus::Resource</a></td></tr>
 <tr class="memitem:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_resource.html#a216e07b6b83ccb81dfaa71949ac5db17">core</a></td></tr>
+<tr class="memdesc:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the active core.  <a href="classprometheus_1_1_resource.html#a216e07b6b83ccb81dfaa71949ac5db17">More...</a><br /></td></tr>
 <tr class="separator:a216e07b6b83ccb81dfaa71949ac5db17 inherit pro_attribs_classprometheus_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Encapsulates the loading of sound resources and handling of sound playing. </p>
+<p>Loads ogg files to buffer and contains functions to initiate playing. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8c6cf2fb807cb716eca8a514aa7a79e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c6cf2fb807cb716eca8a514aa7a79e7">&#9670;&nbsp;</a></span>Load()</h2>
 
@@ -165,6 +177,65 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to load .ogg file into sound buffer. </p>
+<p>Sets buffer id and generates buffers, loads ogg into that buffer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path of audio file in directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1249c3efff7140fe4c6ad34fda498f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1249c3efff7140fe4c6ad34fda498f4">&#9670;&nbsp;</a></span>LoadOgg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prometheus::Sound::LoadOgg </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALenum &amp;&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALsizei &amp;&#160;</td>
+          <td class="paramname"><em>freq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loading of .ogg file to buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Path to audio file in directory. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Pointer to buffer object to load audio into. </td></tr>
+    <tr><td class="paramname">format</td><td>Pointer to format flag. </td></tr>
+    <tr><td class="paramname">freq</td><td>Pointer to frequency flag. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -262,6 +333,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Buffer ID. </p>
 
 </div>
 </div>

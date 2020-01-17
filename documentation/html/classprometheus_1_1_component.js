@@ -9,6 +9,7 @@ var classprometheus_1_1_component =
     [ "GetScreen", "classprometheus_1_1_component.html#a3b801a7120f4a4606f0fcfa2c5fda334", null ],
     [ "GetTransform", "classprometheus_1_1_component.html#a674a723ffd88e80145b786c918ac6521", null ],
     [ "OnDisplay", "classprometheus_1_1_component.html#a45b2b966491ccf058a33bd01412610bb", null ],
+    [ "OnEarlyUpdate", "classprometheus_1_1_component.html#acffb71584b5a1b4df7cad1d116123a17", null ],
     [ "OnGUI", "classprometheus_1_1_component.html#a80b5162ba51ebde45376d13b2f0a7fe6", null ],
     [ "OnInit", "classprometheus_1_1_component.html#ad01696160bf83dfc8af2b20a07118af0", null ],
     [ "OnTick", "classprometheus_1_1_component.html#af58b7e3faab6e3c8dbc8e813062817c8", null ],

@@ -1,0 +1,4 @@
+<map id="prometheus::Transform::SetLocalRotation" name="prometheus::Transform::SetLocalRotation">
+<area shape="rect" id="node1" title="Sets local rotation from vec3 input." alt="" coords="208,5,363,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_transform.html#a0991d06b3f4321491fd149a3dccd690f" title="Sets local rotation from three floats." alt="" coords="5,5,160,47"/>
+</map>

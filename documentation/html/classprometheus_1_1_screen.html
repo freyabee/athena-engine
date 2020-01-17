@@ -103,35 +103,49 @@ $(document).ready(function(){initNavTree('classprometheus_1_1_screen.html',''); 
 </div><!--header-->
 <div class="contents">
 
+<p>Class to manage the initialisation and functions of the screen.  
+ <a href="classprometheus_1_1_screen.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_screen_8h_source.html">Screen.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a189e717b0196cc1d9e784f2bebf9e55d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#a189e717b0196cc1d9e784f2bebf9e55d">Screen</a> (int _w, int _h)</td></tr>
-<tr class="separator:a189e717b0196cc1d9e784f2bebf9e55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f87eac2b9a7bab8f1de73b883c02551"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#a7f87eac2b9a7bab8f1de73b883c02551">Screen</a> (int w, int h)</td></tr>
+<tr class="memdesc:a7f87eac2b9a7bab8f1de73b883c02551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor passing in width and height of new window.  <a href="classprometheus_1_1_screen.html#a7f87eac2b9a7bab8f1de73b883c02551">More...</a><br /></td></tr>
+<tr class="separator:a7f87eac2b9a7bab8f1de73b883c02551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec6cd4197d819ffd10488165f647b692"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#aec6cd4197d819ffd10488165f647b692">~Screen</a> ()</td></tr>
 <tr class="separator:aec6cd4197d819ffd10488165f647b692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ea189d312e7154b1efa82c577073604"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#a2ea189d312e7154b1efa82c577073604">DestroyScreen</a> ()</td></tr>
+<tr class="memdesc:a2ea189d312e7154b1efa82c577073604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles destroying SDL window and quitting the program.  <a href="classprometheus_1_1_screen.html#a2ea189d312e7154b1efa82c577073604">More...</a><br /></td></tr>
 <tr class="separator:a2ea189d312e7154b1efa82c577073604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29946f1d21eee843ab85d8c0dd3e399b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#a29946f1d21eee843ab85d8c0dd3e399b">SwapWindow</a> ()</td></tr>
+<tr class="memdesc:a29946f1d21eee843ab85d8c0dd3e399b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps current window with buffer object.  <a href="classprometheus_1_1_screen.html#a29946f1d21eee843ab85d8c0dd3e399b">More...</a><br /></td></tr>
 <tr class="separator:a29946f1d21eee843ab85d8c0dd3e399b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefd15b9aeeb1c69f9e63e2dcdba49eca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#aefd15b9aeeb1c69f9e63e2dcdba49eca">ClearWindow</a> ()</td></tr>
+<tr class="memdesc:aefd15b9aeeb1c69f9e63e2dcdba49eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears current window buffer to white.  <a href="classprometheus_1_1_screen.html#aefd15b9aeeb1c69f9e63e2dcdba49eca">More...</a><br /></td></tr>
 <tr class="separator:aefd15b9aeeb1c69f9e63e2dcdba49eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba0d5b6e32222a4252ab974d0588100"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#a6ba0d5b6e32222a4252ab974d0588100">GetWindowDimensions</a> ()</td></tr>
+<tr class="memdesc:a6ba0d5b6e32222a4252ab974d0588100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns window dimensions.  <a href="classprometheus_1_1_screen.html#a6ba0d5b6e32222a4252ab974d0588100">More...</a><br /></td></tr>
 <tr class="separator:a6ba0d5b6e32222a4252ab974d0588100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a0145bcd63e9887d5fa22ff2a060f783e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#a0145bcd63e9887d5fa22ff2a060f783e">windowHeight</a></td></tr>
+<tr class="memdesc:a0145bcd63e9887d5fa22ff2a060f783e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window height in pixels.  <a href="classprometheus_1_1_screen.html#a0145bcd63e9887d5fa22ff2a060f783e">More...</a><br /></td></tr>
 <tr class="separator:a0145bcd63e9887d5fa22ff2a060f783e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf3e1006ac8eaf700c984dcac05d7175"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#aaf3e1006ac8eaf700c984dcac05d7175">windowWidth</a></td></tr>
+<tr class="memdesc:aaf3e1006ac8eaf700c984dcac05d7175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window width in pixels.  <a href="classprometheus_1_1_screen.html#aaf3e1006ac8eaf700c984dcac05d7175">More...</a><br /></td></tr>
 <tr class="separator:aaf3e1006ac8eaf700c984dcac05d7175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69761fb8c2fc0a0306e228951d8a8a28"><td class="memItemLeft" align="right" valign="top">SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_screen.html#a69761fb8c2fc0a0306e228951d8a8a28">window</a></td></tr>
+<tr class="memdesc:a69761fb8c2fc0a0306e228951d8a8a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw pointer to the SDL_Window object.  <a href="classprometheus_1_1_screen.html#a69761fb8c2fc0a0306e228951d8a8a28">More...</a><br /></td></tr>
 <tr class="separator:a69761fb8c2fc0a0306e228951d8a8a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a189e717b0196cc1d9e784f2bebf9e55d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a189e717b0196cc1d9e784f2bebf9e55d">&#9670;&nbsp;</a></span>Screen()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class to manage the initialisation and functions of the screen. </p>
+<p>Initialises the screen and manages destroying, swapping and clearing the window. Class holds information about window and provides accesss functions. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7f87eac2b9a7bab8f1de73b883c02551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f87eac2b9a7bab8f1de73b883c02551">&#9670;&nbsp;</a></span>Screen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,13 +154,13 @@ Private Attributes</h2></td></tr>
           <td class="memname">prometheus::Screen::Screen </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_w</em>, </td>
+          <td class="paramname"><em>w</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_h</em>&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,6 +169,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor passing in width and height of new window. </p>
+<p>Window of w width and h height is initialised. </p>
 
 </div>
 </div>
@@ -191,6 +208,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Clears current window buffer to white. </p>
+
 </div>
 </div>
 <a id="a2ea189d312e7154b1efa82c577073604"></a>
@@ -207,6 +226,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Handles destroying SDL window and quitting the program. </p>
+<p>Invokes SDL_DestroyWindow() and SDL_Quit() </p>
 
 </div>
 </div>
@@ -225,6 +247,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns window dimensions. </p>
+<p>Returns an ivec2 containing the x and y pixel dimensions of the window. </p>
+
 </div>
 </div>
 <a id="a29946f1d21eee843ab85d8c0dd3e399b"></a>
@@ -241,6 +266,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Swaps current window with buffer object. </p>
+<p>Invokes SDL_GL_SwapWindow(); </p>
 
 </div>
 </div>
@@ -265,6 +293,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Raw pointer to the SDL_Window object. </p>
+
 </div>
 </div>
 <a id="a0145bcd63e9887d5fa22ff2a060f783e"></a>
@@ -287,6 +317,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Window height in pixels. </p>
+
 </div>
 </div>
 <a id="aaf3e1006ac8eaf700c984dcac05d7175"></a>
@@ -308,6 +340,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Window width in pixels. </p>
 
 </div>
 </div>

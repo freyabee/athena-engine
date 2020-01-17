@@ -3,11 +3,6 @@
 
 namespace prometheus
 {
-	void SoundSource::OnInit()
-	{
-		
-		
-	}
 	void SoundSource::OnInit(std::shared_ptr<Sound> audio)
 	{
 		sourceID = 0;
@@ -15,18 +10,22 @@ namespace prometheus
 		alListener3f(AL_POSITION, 0.0f, 0.0f, 0.0f);
 		alSource3f(sourceID, AL_POSITION, 0.0f, 0.0f, 0.0f);
 		alSourcei(sourceID, AL_BUFFER, audio->bufferId);
-		//alSourcePlay(sourceID);
 	}
 	void SoundSource::OnTick()
 	{
 
 	}
-	void SoundSource::setAutoRemove(bool _autoRemove)
+	void SoundSource::SetAutoRemove(bool aautoRemove)
 	{
 
 	}
-	void SoundSource::setAudio(std::shared_ptr<Sound> audio)
+	void SoundSource::SetAudio(std::shared_ptr<Sound> audio)
 	{
 		alSourcei(sourceID, AL_BUFFER, audio->bufferId);
 	}
+	void SoundSource::Play()
+	{
+		alSourcePlay(sourceID);
+	}
+
 }

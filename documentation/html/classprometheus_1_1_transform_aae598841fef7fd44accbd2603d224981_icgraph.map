@@ -1,0 +1,4 @@
+<map id="prometheus::Transform::SetLocalPosition" name="prometheus::Transform::SetLocalPosition">
+<area shape="rect" id="node1" title="Sets local from vec3 input." alt="" coords="208,5,363,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_transform.html#a3a03b4f53f9d3282cf6aede5350e878f" title="Sets local position from three floats." alt="" coords="5,5,160,47"/>
+</map>

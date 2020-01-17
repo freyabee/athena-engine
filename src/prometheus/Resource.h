@@ -11,6 +11,9 @@ namespace prometheus
 	class Core;
 	class Resources;
 
+	/// Parent class for all types of resources in the engine management. 
+	/// Inherited from to provide polymorphism when adding multiple types of resources to a resources vector.
+	///
 	class Resource
 	{
 		friend class Resources;
@@ -19,6 +22,7 @@ namespace prometheus
 
 	protected:
 
+		/// Reference to the active core.
 		std::weak_ptr<Core> core;
 
 	};

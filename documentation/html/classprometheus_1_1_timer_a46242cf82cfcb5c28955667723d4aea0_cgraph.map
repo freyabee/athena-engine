@@ -1,0 +1,4 @@
+<map id="prometheus::Timer::OnTick" name="prometheus::Timer::OnTick">
+<area shape="rect" id="node1" title="Calculates delta time and sets currentTime variable." alt="" coords="5,5,144,47"/>
+<area shape="rect" id="node2" href="$classprometheus_1_1_timer.html#aa35a567ddea053ea73e613f59458fed9" title="Returns time since start of timer object in ms." alt="" coords="192,5,331,47"/>
+</map>

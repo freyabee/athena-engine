@@ -103,34 +103,47 @@ $(document).ready(function(){initNavTree('classprometheus_1_1_gui.html',''); ini
 </div><!--header-->
 <div class="contents">
 
+<p>Manages rendering of GUI elements to screen.  
+ <a href="classprometheus_1_1_gui.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_gui_8h_source.html">Gui.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afb7367d51be7613eed174c0e819ddac8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#afb7367d51be7613eed174c0e819ddac8">Gui</a> (std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt; <a class="el" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">core</a>)</td></tr>
-<tr class="memdesc:afb7367d51be7613eed174c0e819ddac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows GUI elements to be displayed on the screen.  <a href="classprometheus_1_1_gui.html#afb7367d51be7613eed174c0e819ddac8">More...</a><br /></td></tr>
+<tr class="memdesc:afb7367d51be7613eed174c0e819ddac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking a pointer to the core as a parameter.  <a href="classprometheus_1_1_gui.html#afb7367d51be7613eed174c0e819ddac8">More...</a><br /></td></tr>
 <tr class="separator:afb7367d51be7613eed174c0e819ddac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77ef2d0dd2337f24b9c835c6eb25e83c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#a77ef2d0dd2337f24b9c835c6eb25e83c">~Gui</a> ()</td></tr>
 <tr class="separator:a77ef2d0dd2337f24b9c835c6eb25e83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cb0a2364b162b65efc7a80043c85668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#a7cb0a2364b162b65efc7a80043c85668">OnInit</a> ()</td></tr>
+<tr class="memdesc:a7cb0a2364b162b65efc7a80043c85668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functio to create mesh and shader for GUI element.  <a href="classprometheus_1_1_gui.html#a7cb0a2364b162b65efc7a80043c85668">More...</a><br /></td></tr>
 <tr class="separator:a7cb0a2364b162b65efc7a80043c85668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26817ec023c23a5d1e96f1d5a5d0bf7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7">GetCore</a> ()</td></tr>
+<tr class="memdesc:ac26817ec023c23a5d1e96f1d5a5d0bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the current instance of core.  <a href="classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7">More...</a><br /></td></tr>
 <tr class="separator:ac26817ec023c23a5d1e96f1d5a5d0bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5de6a1e917940b836f98a99e0bc45a1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#a5de6a1e917940b836f98a99e0bc45a1b">Texture</a> (glm::vec4 position, std::shared_ptr&lt; rend::Texture &gt; texture)</td></tr>
+<tr class="memdesc:a5de6a1e917940b836f98a99e0bc45a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns texture to mesh, finishes shader and renders GUI element.  <a href="classprometheus_1_1_gui.html#a5de6a1e917940b836f98a99e0bc45a1b">More...</a><br /></td></tr>
 <tr class="separator:a5de6a1e917940b836f98a99e0bc45a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a94e836550da53ea1c327688c6b2a2b19"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; rend::Mesh &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">mesh</a></td></tr>
+<tr class="memdesc:a94e836550da53ea1c327688c6b2a2b19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to GUI mesh.  <a href="classprometheus_1_1_gui.html#a94e836550da53ea1c327688c6b2a2b19">More...</a><br /></td></tr>
 <tr class="separator:a94e836550da53ea1c327688c6b2a2b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3b5501bf095d7bf7587371050a5022"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; rend::Shader &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">shader</a></td></tr>
+<tr class="memdesc:acc3b5501bf095d7bf7587371050a5022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to GUI shader.  <a href="classprometheus_1_1_gui.html#acc3b5501bf095d7bf7587371050a5022">More...</a><br /></td></tr>
 <tr class="separator:acc3b5501bf095d7bf7587371050a5022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d38c8f5128d099caa4fac05886aa8c9"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">projection</a></td></tr>
+<tr class="memdesc:a2d38c8f5128d099caa4fac05886aa8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classprometheus_1_1_camera.html" title="Class handling camera creation and handling.">Camera</a> projection used for shader.  <a href="classprometheus_1_1_gui.html#a2d38c8f5128d099caa4fac05886aa8c9">More...</a><br /></td></tr>
 <tr class="separator:a2d38c8f5128d099caa4fac05886aa8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae6588b9b8c826d6f4901dd2ef2836e9"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="classprometheus_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">core</a></td></tr>
+<tr class="memdesc:aae6588b9b8c826d6f4901dd2ef2836e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to active core instance.  <a href="classprometheus_1_1_gui.html#aae6588b9b8c826d6f4901dd2ef2836e9">More...</a><br /></td></tr>
 <tr class="separator:aae6588b9b8c826d6f4901dd2ef2836e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages rendering of GUI elements to screen. </p>
+<p>Holds projections, shaders and meshes and textures for GUI elements. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afb7367d51be7613eed174c0e819ddac8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb7367d51be7613eed174c0e819ddac8">&#9670;&nbsp;</a></span>Gui()</h2>
 
@@ -147,7 +160,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allows GUI elements to be displayed on the screen. </p>
+<p>Constructor taking a pointer to the core as a parameter. </p>
+<p>Allows GUI elements to be displayed on the screen.</p>
+<p>Sets the member variable core to parameter core. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td>Pointer to current instance of core. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -184,6 +204,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns a pointer to the current instance of core. </p>
+<p>Uses core.lock() to return pointer to active core instance. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to current active core instance. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_gui_ac26817ec023c23a5d1e96f1d5a5d0bf7_icgraph.png" border="0" usemap="#classprometheus_1_1_gui_ac26817ec023c23a5d1e96f1d5a5d0bf7_icgraph" alt=""/></div>
+<map name="classprometheus_1_1_gui_ac26817ec023c23a5d1e96f1d5a5d0bf7_icgraph" id="classprometheus_1_1_gui_ac26817ec023c23a5d1e96f1d5a5d0bf7_icgraph">
+<area shape="rect" title="Returns a pointer to the current instance of core." alt="" coords="223,5,397,32"/>
+<area shape="rect" href="classprometheus_1_1_gui.html#a5de6a1e917940b836f98a99e0bc45a1b" title="Assigns texture to mesh, finishes shader and renders GUI element." alt="" coords="5,5,175,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a7cb0a2364b162b65efc7a80043c85668"></a>
@@ -200,6 +232,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Functio to create mesh and shader for GUI element. </p>
+<p>Creates a shader in the active context and pushes mesh coordinates to the buffer. </p>
 
 </div>
 </div>
@@ -229,6 +264,24 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Assigns texture to mesh, finishes shader and renders GUI element. </p>
+<p>Takes in position and texture and pushes them to shader and mesh. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Position of the GUI element on screen. </td></tr>
+    <tr><td class="paramname">texture</td><td>Pointer to rend::Texture instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classprometheus_1_1_gui_a5de6a1e917940b836f98a99e0bc45a1b_cgraph.png" border="0" usemap="#classprometheus_1_1_gui_a5de6a1e917940b836f98a99e0bc45a1b_cgraph" alt=""/></div>
+<map name="classprometheus_1_1_gui_a5de6a1e917940b836f98a99e0bc45a1b_cgraph" id="classprometheus_1_1_gui_a5de6a1e917940b836f98a99e0bc45a1b_cgraph">
+<area shape="rect" title="Assigns texture to mesh, finishes shader and renders GUI element." alt="" coords="5,5,175,32"/>
+<area shape="rect" href="classprometheus_1_1_gui.html#ac26817ec023c23a5d1e96f1d5a5d0bf7" title="Returns a pointer to the current instance of core." alt="" coords="223,5,397,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -252,6 +305,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Weak pointer to active core instance. </p>
+
 </div>
 </div>
 <a id="a94e836550da53ea1c327688c6b2a2b19"></a>
@@ -273,6 +328,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pointer to GUI mesh. </p>
 
 </div>
 </div>
@@ -296,6 +353,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classprometheus_1_1_camera.html" title="Class handling camera creation and handling.">Camera</a> projection used for shader. </p>
+
 </div>
 </div>
 <a id="acc3b5501bf095d7bf7587371050a5022"></a>
@@ -317,6 +376,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pointer to GUI shader. </p>
 
 </div>
 </div>

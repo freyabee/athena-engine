@@ -20,14 +20,14 @@ namespace prometheus
 		this->entityName = entityName;
 	}
 
-	void Entity::SetPosition(glm::vec3 _position)
+	void Entity::SetPosition(glm::vec3 position)
 	{
-		GetTransform()->SetLocalPosition(_position);
+		GetTransform()->SetLocalPosition(position);
 	}
 
-	void Entity::SetRotation(glm::vec3 _rotation)
+	void Entity::SetRotation(glm::vec3 rotation)
 	{
-		GetTransform()->SetLocalRotation(_rotation);
+		GetTransform()->SetLocalRotation(rotation);
 	}
 
 	std::shared_ptr<Transform> Entity::GetTransform()

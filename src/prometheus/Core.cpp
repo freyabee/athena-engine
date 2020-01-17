@@ -36,8 +36,8 @@ namespace prometheus
 		}
 		catch (const std::exception& e)
 		{
-		std::cout << "failure" << std::endl;
-		std::cout << &e << std::endl;
+		std::cout << "failed ";
+		std::cout << e.what() << std::endl;
 		}
 		
 		int windowHeight =800;
@@ -51,8 +51,8 @@ namespace prometheus
 		}
 		catch (const std::exception& e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 		try 
 		{
@@ -62,8 +62,8 @@ namespace prometheus
 		}
 		catch (const std::exception& e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 		
 		try 
@@ -76,8 +76,8 @@ namespace prometheus
 		}
 		catch (const std::exception & e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 
 		
@@ -90,8 +90,8 @@ namespace prometheus
 		}
 		catch(std::exception & e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 
 		try
@@ -102,8 +102,8 @@ namespace prometheus
 		}
 		catch (std::exception&e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 		try
 		{
@@ -113,8 +113,8 @@ namespace prometheus
 		}
 		catch (std::exception&e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 
 		try
@@ -125,8 +125,8 @@ namespace prometheus
 		}
 		catch (std::exception&e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 
 		try
@@ -137,8 +137,8 @@ namespace prometheus
 		}
 		catch (std::exception&e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 
 		try
@@ -149,8 +149,8 @@ namespace prometheus
 		}
 		catch (std::exception&e)
 		{
-			std::cout << "failed" << std::endl;
-			std::cout << &e << std::endl;
+			std::cout << "failed ";
+			std::cout << e.what() << std::endl;
 		}
 		std::cout << "Core initalization completed in " << rtn->timer->GetTimeS() << "s." << std::endl;
 
@@ -166,7 +166,7 @@ namespace prometheus
 	void Core::start()
 	{
 		running = true;
-		environment->Initialize();
+		environment->OnInit();
 		camera->Initialize();
 		gui->OnInit();
 
@@ -180,22 +180,32 @@ namespace prometheus
 		{
 			mouse->OnTick();
 			keyboard->OnTick();
-			
 			timer->OnTick();
-
 			screen->ClearWindow();
-			//On tick
-
-
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
-				(*it)->OnEarlyUpdate();
+				
+				try
+				{
+					(*it)->OnEarlyUpdate();
+				}
+				catch (std::exception& e)
+				{
+					std::cout << "Error calling OnEarlyUpdate: " << e.what() << std::endl;
+				}
 			}
 
 
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
-				(*it)->OnTick();
+				try
+				{
+					(*it)->OnTick();
+				}
+				catch (std::exception& e)
+				{
+					std::cout << "Error calling OnTick: " << e.what() << std::endl;
+				}
 			}
 
 			camera->OnTick();
@@ -208,31 +218,35 @@ namespace prometheus
 				}
 				catch (std::exception& e)
 				{
-
+					std::cout << "Error calling OnDisplay: " << e.what() << std::endl;
 				}
-					
-				
 			}
 
 			for (std::vector<std::shared_ptr<Entity>>::iterator it = entities.begin(); it != entities.end(); ++it)
 			{
-				(*it)->OnGUI();
+				try
+				{
+					(*it)->OnGUI();
+				}
+				catch (std::exception& e)
+				{
+					std::cout << "Error calling OnGUI: " << e.what() << std::endl;
+				}
 			}
-			
-			screen->SwapWindow();
-			environment->UpdateDeltaTime();
 
 			if (keyboard->GetKey(SDLK_ESCAPE))
 			{
-				screen->DestroyScreen();
+				stop();
 				break;
 			}
+			screen->SwapWindow();
+			environment->UpdateDeltaTime();
 		}
 	}
 
 	void Core::stop()
 	{
-
+		screen->DestroyScreen();
 	}
 
 	std::shared_ptr<Entity> Core::addEntity()

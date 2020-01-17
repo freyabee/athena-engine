@@ -1,5 +1,7 @@
 #include "Keyboard.h"
 #include <iostream>
+
+
 namespace prometheus
 {
 	Keyboard::Keyboard()
@@ -11,15 +13,16 @@ namespace prometheus
 	{
 	}
 
-	bool Keyboard::GetKey(SDL_Keycode _key)
+	bool Keyboard::GetKey(SDL_Keycode key)
 	{
-		SDL_Scancode scan = SDL_GetScancodeFromKey(_key);
+		SDL_Scancode scan = SDL_GetScancodeFromKey(key);
 		if (keystate[scan])
 		{
 			return true;
 		}
 		return false;
 	}
+	/*
 	bool Keyboard::GetKeyDown(int _keyCode)
 	{
 		return false;
@@ -29,14 +32,14 @@ namespace prometheus
 	{
 		return false;
 	}
-
-
+	*/
 
 	void Keyboard::OnTick()
 	{
 		SDL_PumpEvents();
 	}
 
+	/*
 	void Keyboard::IsKey(int _key)
 	{
 
@@ -54,6 +57,8 @@ namespace prometheus
 	{
 
 	}
+	*/
+	
 
 }
 
