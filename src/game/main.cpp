@@ -11,22 +11,22 @@ int main()
 {
 	//Models
 	//Coin
-	std::string coinModel = "../resources/objs/final/coin.obj";
-	std::string coinTexture = "../resources/images/coin.png";
+	std::string coinModel = "resources/objs/coin.obj";
+	std::string coinTexture = "resources/images/textures/coin.png";
 	//Ship
-	std::string shipModel = "../resources/objs/sailboat.obj";
-	std::string shipTexture = "../resources/images/sailboat.png";
+	std::string shipModel = "resources/objs/sailboat.obj";
+	std::string shipTexture = "resources/images/textures/sailboat.png";
 	//Park
-	std::string parkModel = "../resources/objs/final/lake.obj";
-	std::string parkTexture = "../resources/images/textures/lake.png";
+	std::string parkModel = "resources/objs/lake.obj";
+	std::string parkTexture = "resources/images/textures/lake.png";
 	//Trees
-	std::string mTree = "../resources/objs/final/grove.obj";
-	std::string tTree = "../resources/images/textures/grove.png";
+	std::string mTree = "resources/objs/grove.obj";
+	std::string tTree = "resources/images/textures/grove.png";
 	//Waterplane
-	std::string mWater = "../resources/objs/final/waterplane.obj";
-	std::string tWater = "../resources/images/textures/waterplane.png";
+	std::string mWater = "resources/objs/waterplane.obj";
+	std::string tWater = "resources/images/textures/waterplane.png";
 	//Shaders
-	std::string materialShader = "../resources/shaders/matShader.txt";
+	std::string materialShader = "resources/shaders/matShader.txt";
 	//std::string waterShader = "../resources/shaders/waterShader.txt";
 
 	//GUI
@@ -82,7 +82,7 @@ int main()
 	eGUI->addComponent<Score>(eShip);
 
 	//SOUND SOURCE
-	std::shared_ptr<prometheus::Sound> coinSound = core->GetResources()->load<prometheus::Sound>("../resources/sounds/coin.ogg");
+	std::shared_ptr<prometheus::Sound> coinSound = core->GetResources()->load<prometheus::Sound>("resources/sounds/coin.ogg");
 	//std::shared_ptr<prometheus::Entity> soundPlayer = core->addEntity();
 	std::shared_ptr<prometheus::SoundSource> sound = eCoin->addComponent <prometheus::SoundSource>();
 	sound->OnInit(coinSound);

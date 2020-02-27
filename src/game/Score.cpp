@@ -14,7 +14,7 @@ void Score::OnInit()
 	try
 	{
 		scoreGUI = std::make_shared<prometheus::Material>();
-		scoreGUI->LoadTexture("../resources/images/ui/score.png", GetCore());
+		scoreGUI->LoadTexture("resources/images/ui/score.png", GetCore());
 	}
 	catch (std::exception &e)
 	{
@@ -27,7 +27,7 @@ void Score::OnInit()
 		try
 		{
 			std::cout << "Initialising UI textures: ";
-			std::string path = "../resources/images/ui/" + std::to_string(i) + ".png";
+			std::string path = "resources/images/ui/" + std::to_string(i) + ".png";
 
 			std::shared_ptr<prometheus::Material> temp = std::make_shared<prometheus::Material>();
 			temp->LoadTexture(path, GetCore());

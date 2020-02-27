@@ -1,0 +1,228 @@
+commit a4ae90a5cfbd9f92e31a6e748c92f4c757ab8c83
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Jan 17 11:08:50 2020 +0000
+
+    Final update
+
+commit a3cc10905b33938f0b85dc6015b823d4051dd1a5
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Thu Jan 16 15:14:26 2020 +0000
+
+    Score system and coin get
+
+commit 02eeee99643f6d098b02bf0331858cd3a2e17bae
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Wed Jan 15 23:51:10 2020 +0000
+
+    Documentation started
+
+commit 7db1f23d8d8a1c685d97de2f22ee04fc1fcf480c
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Wed Jan 15 20:03:21 2020 +0000
+
+    Added various resources
+
+commit 0bb12639c79ab6f275698d7784a7c65d0f99b145
+Author: Freya Brightwater (s4921584) <s4921584@bournemouth.ac.uk>
+Date:   Wed Jan 15 17:03:10 2020 +0000
+
+    Changed some shaders
+
+commit 5eec6572922569ca2b344061ae25175d37887b54
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Wed Jan 15 14:38:08 2020 +0000
+
+    GUI working
+
+commit c4212e4a10822b3e7fa8fa671dc59ced8bac4c90
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Tue Jan 14 19:13:05 2020 +0000
+
+    continued gui
+
+commit 47420cf771a871ce3b240771c02d9aeb34abf0a6
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Tue Jan 14 18:00:53 2020 +0000
+
+    Started gui
+
+commit ae3a1fa6316f23c11ee4af519dd475c2e9a63afc
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Tue Jan 14 17:06:36 2020 +0000
+
+    Camera movement updated, now follows player movement and allows rotation by user.
+
+commit 0a6b55fd877d8157c565265780ec09bf378ee330
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Tue Jan 14 13:55:41 2020 +0000
+
+    Started GUI stuff
+
+commit 56bc2690f9e2ab61ebf4125e5b31a5c805efeb5f
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Tue Jan 14 00:16:55 2020 +0000
+
+    Steering working, changed screen size.
+
+commit 77a451b925cb5aaaf83076596cffa2017a5dc3ca
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Mon Jan 13 21:05:41 2020 +0000
+
+    Got box collision partiall working, pushing coin around
+
+commit b5c80c5b673667f185e315f09844e6e288678250
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Jan 10 18:03:01 2020 +0000
+
+    Added static model collider and box collider classes, not currently working but some integration complete
+
+commit 7e83903c79ef3d19b3f636f907a571481f0d24b7
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Mon Jan 6 23:50:31 2020 +0000
+
+    Many new changes including models
+
+commit 682ec2bd108f691c1e7144e718a6d6a07d665128
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Tue Dec 24 18:32:45 2019 +0000
+
+    Added camera class (unfinished) and graveyard scene
+
+commit 2be1457a7e046b036cea262110108ef106eb7753
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Mon Dec 23 13:34:50 2019 +0000
+
+    Abstracted model loading to MeshRenderer
+
+commit 86513d78369801ef23ba60314b63c5ad9dff0b0f
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Dec 13 13:18:24 2019 +0000
+
+    got model working and added delta time and started keyboard implementation
+
+commit 7ff34d3ba659df1788bf5c977f77b2b0f989ad21
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Nov 29 14:03:48 2019 +0000
+
+    changed some stuff
+
+commit f6b259f2b7ac4402e36f12b7b3d4edbdcb9493df
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Nov 29 12:26:37 2019 +0000
+
+    added sounds and models
+
+commit ef1359a27db8ed0a3102e8043730ddf0498a1940
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Thu Nov 28 17:51:40 2019 +0000
+
+    Added audio libraries and components - not yet fully functional
+
+commit 8b6642b058b5470ef39fd6a12d91e460e89ada4a
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Nov 22 13:01:54 2019 +0000
+
+    friday labs
+
+commit 784086a2dfffc18e19a822dbc48f532e452fb104
+Author: Freya Brightwater (s4921584) <s4921584@bournemouth.ac.uk>
+Date:   Fri Nov 15 12:57:53 2019 +0000
+
+    added screen class
+
+commit de6fedd5fe7d3f8f7efbfb4ccf8e4b1f7cb3ebfd
+Author: Freya Brightwater (s4921584) <s4921584@bournemouth.ac.uk>
+Date:   Fri Nov 15 11:51:27 2019 +0000
+
+    Merged rend into my engine and updated triangle renderer to mesh
+    renderer
+
+commit b14bbe865ad977c7a5d0a59d7af6dcb67cff38fa
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Nov 1 14:41:47 2019 +0000
+
+    added rend library, mesh renderer, and camera classes.
+
+commit 591248df19e5c625bb7e6130ebba98b9ea72c635
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Nov 1 11:01:24 2019 +0000
+
+    Added transform classes
+
+commit 6a56715e223b78fbe9f1f9f53cafa7479376d298
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Oct 25 15:53:41 2019 +0100
+
+    SDL working with TriangleRenderer
+
+commit 1a5804d4805dd1e7f1344c0b01abc74d00e32c15
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Oct 25 14:05:05 2019 +0100
+
+    dded non copyable
+
+commit 02132862dfc7ebd708fc433ab4a80daa0234c9b6
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Mon Oct 21 16:30:26 2019 +0100
+
+    Added entity creationg
+
+commit 6d23b941d34a8e9bda662e70b2dd1671b5cdffcb
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Mon Oct 21 15:43:48 2019 +0100
+
+    Added new classes and functions, namespace to all classes
+
+commit 3951cf4e5ea40b6dfeef127d6fdc68b68addbfdc
+Author: Freya Brightwater (s4921584) <s4921584@bournemouth.ac.uk>
+Date:   Fri Oct 18 10:39:00 2019 +0100
+
+    Added function definitions.
+
+commit 61b5d75c61893e0b1eaf15d07833ca3e9a4c4d8d
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Thu Oct 17 16:14:46 2019 +0100
+
+    Added functionss to the class files.
+
+commit db2b7b530bcc2ea063d2b8f0d9938ec5f973c46f
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Thu Oct 17 14:55:09 2019 +0100
+
+    Added UML diagram.
+
+commit 9cbe91cacebb650889f64a5f912e8e6a6e331d2b
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Thu Oct 17 14:53:57 2019 +0100
+
+    Added engine class and header files.
+
+commit 4aae4ef968e9a5d02ed49a0eb4d3cd9db38a9ce8
+Author: Freya Brightwater (s4921584) <s4921584@bournemouth.ac.uk>
+Date:   Fri Oct 4 10:52:19 2019 +0100
+
+    Change to readme
+
+commit de47571274e0152f6618d175875cf463b2fd9c93
+Author: Freya Brightwater (s4921584) <s4921584@bournemouth.ac.uk>
+Date:   Fri Oct 4 10:43:35 2019 +0100
+
+    Changed the README
+
+commit 82743033db401eff5b1579b15db20cd4afe4006d
+Author: Freya Brightwater (s4921584) <s4921584@bournemouth.ac.uk>
+Date:   Fri Oct 4 10:32:32 2019 +0100
+
+    Initial import.
+
+commit 2b2960aab730f9bf33e4eeef72038b564de7efb1
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Oct 4 09:59:48 2019 +0100
+
+    Update README.md
+
+commit 9ad58a355ae5b135b5683eac9d3464d813e71074
+Author: freyabee <freyabrightwater@gmail.com>
+Date:   Fri Oct 4 09:54:32 2019 +0100
+
+    Initial commit

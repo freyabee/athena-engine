@@ -23,21 +23,29 @@ namespace prometheus
 	}
 	void Gui::OnInit()
 	{
-		shader = core.lock()->GetContext()->createShader();
-		shader->ParseFromPath("../resources/shaders/guiShader.txt");
-		std::shared_ptr<rend::Buffer> buffer = core.lock()->GetContext()->createBuffer();
+		try
+		{
+			shader = core.lock()->GetContext()->createShader();
+			shader->ParseFromPath("resources/shaders/guiShader.txt");
+			std::shared_ptr<rend::Buffer> buffer = core.lock()->GetContext()->createBuffer();
 
-		buffer->add(glm::vec2(1, 1));
-		buffer->add(glm::vec2(1, 0));
-		buffer->add(glm::vec2(0, 0));
+			buffer->add(glm::vec2(1, 1));
+			buffer->add(glm::vec2(1, 0));
+			buffer->add(glm::vec2(0, 0));
 
-		buffer->add(glm::vec2(0, 0));
-		buffer->add(glm::vec2(0, 1));
-		buffer->add(glm::vec2(1, 1));
+			buffer->add(glm::vec2(0, 0));
+			buffer->add(glm::vec2(0, 1));
+			buffer->add(glm::vec2(1, 1));
 
-		mesh = core.lock()->GetContext()->createMesh();
-		mesh->setBuffer("a_Position", buffer);
-		mesh->setBuffer("a_TexCoord", buffer);
+			mesh = core.lock()->GetContext()->createMesh();
+			mesh->setBuffer("a_Position", buffer);
+			mesh->setBuffer("a_TexCoord", buffer);
+		}
+		catch (std::exception &e)
+		{
+			std::cout << "Problem loading gui: " << e.what() << std::endl;
+		}
+		
 	}
 	std::shared_ptr<Core> Gui::GetCore()
 	{
@@ -55,7 +63,7 @@ namespace prometheus
 		}
 		catch (std::exception&e)
 		{
-			std::cout << e.what() << std::endl;
+			std::cout << "Problem setting projection uniform in GUI: " << e.what() << std::endl;
 		}
 		
 		glm::mat4 model(1.f);
@@ -72,7 +80,7 @@ namespace prometheus
 		}
 		catch (std::exception &e)
 		{
-			std::cout << e.what() << std::endl;
+			std::cout << "Problem rending GUI: "<< e.what() << std::endl;
 		}
 		
 	}
